@@ -1,6 +1,7 @@
-package com.mycompany.clinica2;
+package com.mycompany.clinica.ws;
 
-import com.mycompany.clinica2.model.EnderecoModel;
+import com.mycompany.clinica.ws.model.EnderecoModel;
+import com.mycompany.clinica.ws.model.EspecialidadeModel;
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;
 
@@ -10,8 +11,6 @@ import jakarta.ws.rs.core.Application;
  */
 @ApplicationPath("resources")
 public class JakartaRestConfiguration extends Application {
-    
-    EnderecoModel endereco = new EnderecoModel();
     
     
 }
