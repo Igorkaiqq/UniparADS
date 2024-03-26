@@ -15,69 +15,53 @@ import java.util.ArrayList;
 public class EnderecoService implements EnderecoInterface {
 
     @Override
-    public ArrayList<EnderecoModel> findByBairro (String bairro) {
+    public ArrayList<EnderecoModel> findByBairroEndereco (String bairro) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public ArrayList<EnderecoModel> findByLikeLogradouro (String logradouro) {
+    public ArrayList<EnderecoModel> findByLikeLogradouroEndereco (String logradouro) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public ArrayList<EnderecoModel> listAll () {
+    public ArrayList<EnderecoModel> listAllEndereco () {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public EnderecoModel findById (int id) {
+    public EnderecoModel findByIdEndereco (int id) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public EnderecoModel inserir (EnderecoModel endereco) {
+    public EnderecoModel inserirEndereco (EnderecoModel endereco) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public EnderecoModel atualizar (EnderecoModel endereco) {
+    public EnderecoModel atualizarEndereco (EnderecoModel endereco) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public void deletar (int id) {
+    public void deletarEndereco (int id) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public ArrayList<EnderecoModel> findByCidadeNome (String nome) {
+    public ArrayList<EnderecoModel> findByCidadeNomeEndereco (String nome) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public ArrayList<EnderecoModel> findByLikeCidadeNome (String nome) {
+    public ArrayList<EnderecoModel> findByLikeCidadeNomeEndereco (String nome) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public ArrayList<EnderecoModel> findByCEP (String cep) {
+    public ArrayList<EnderecoModel> findByCEPEndereco (String cep) {
         throw new UnsupportedOperationException("Not supported yet."); 
-    }
-    
-    public boolean existeLogradouro(EnderecoModel endereco) {
-        return false;
-    }
-    
-    public boolean enderecoVazio(EnderecoModel endereco) {
-        return false;
-    }
-    
-    public boolean cepValido(EnderecoModel endereco){
-        return false;
-    }
-    
-    public boolean existeCidade (EnderecoModel endereco){
-        return false;
     }
     
 }

@@ -22,18 +22,18 @@ public interface EspecialidadeInterface {
     ArrayList<EspecialidadeModel> findByLikeEspecialidade(@WebParam String especialidade);
     
     @WebMethod
-    ArrayList<EspecialidadeModel> listAll();
+    ArrayList<EspecialidadeModel> listAllEspecialidade();
     
     @WebMethod
-    EspecialidadeModel findById(@WebParam int id);
+    EspecialidadeModel findByIdEspecialidade(@WebParam int id);
     
     @WebMethod
-    EspecialidadeModel inserir(EspecialidadeModel especialidade);
+    EspecialidadeModel inserirEspecialidade(EspecialidadeModel especialidade);
     
     @WebMethod
-    EspecialidadeModel atualizar(EspecialidadeModel especialidade);
+    EspecialidadeModel atualizarEspecialidade(EspecialidadeModel especialidade);
     
     @WebMethod
-    void deletar(int id);
+    void deletarEspecialidade(int id);
     
 }

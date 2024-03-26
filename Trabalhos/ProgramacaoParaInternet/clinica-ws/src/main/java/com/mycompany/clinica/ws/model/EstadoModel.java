@@ -4,42 +4,23 @@
  */
 package com.mycompany.clinica.ws.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
  *
  * @author igork
  */
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class EstadoModel {
     
     private int id;
     private String nome;
     private String sigla;
-
-    public EstadoModel () {
-    }
-
-    public EstadoModel (String nome, String sigla) {
-        this.nome = nome;
-        this.sigla = sigla;
-    }
-
-    public int getId () {
-        return id;
-    }
-
-    public String getNome () {
-        return nome;
-    }
-
-    public void setNome (String nome) {
-        this.nome = nome;
-    }
-
-    public String getSigla () {
-        return sigla;
-    }
-
-    public void setSigla (String sigla) {
-        this.sigla = sigla;
-    }
     
 }

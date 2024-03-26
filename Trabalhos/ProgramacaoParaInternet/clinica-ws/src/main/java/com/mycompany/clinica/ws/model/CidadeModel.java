@@ -4,42 +4,23 @@
  */
 package com.mycompany.clinica.ws.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 /**
  *
  * @author igork
  */
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class CidadeModel {
     
     private int id;
     private String nome;
     private EstadoModel estado;
-
-    public CidadeModel () {
-    }
-
-    public CidadeModel (String nome, EstadoModel estado) {
-        this.nome = nome;
-        this.estado = estado;
-    }
-
-    public int getId () {
-        return id;
-    }
-
-    public String getNome () {
-        return nome;
-    }
-
-    public void setNome (String nome) {
-        this.nome = nome;
-    }
-
-    public EstadoModel getEstado () {
-        return estado;
-    }
-
-    public void setEstado (EstadoModel estado) {
-        this.estado = estado;
-    }
     
 }

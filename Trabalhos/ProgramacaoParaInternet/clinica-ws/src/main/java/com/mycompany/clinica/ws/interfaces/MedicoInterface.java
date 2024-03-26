@@ -17,33 +17,33 @@ import java.util.ArrayList;
 public interface MedicoInterface {
     
     @WebMethod
-    ArrayList<MedicoModel> findByNome(@WebParam String nome);
+    ArrayList<MedicoModel> findByNomeMedico(@WebParam String nome);
     
     @WebMethod
-    ArrayList<MedicoModel> findByLikeNome(@WebParam String nome);
+    ArrayList<MedicoModel> findByLikeNomeMedico(@WebParam String nome);
     
     @WebMethod
-    EnderecoModel findByCRM(@WebParam String crm);
+    EnderecoModel findByCRMMedico(@WebParam String crm);
     
     @WebMethod
-    ArrayList<MedicoModel> findByEspecialidade(@WebParam String nome);
+    ArrayList<MedicoModel> findByEspecialidadeMedico(@WebParam String nome);
     
     @WebMethod
-    ArrayList<MedicoModel> listAll();
+    ArrayList<MedicoModel> listAllMedico();
     
     @WebMethod
-    ArrayList<MedicoModel> findByStatus(@WebParam String nome);
+    ArrayList<MedicoModel> findByStatusMedico(@WebParam String nome);
     
     @WebMethod
-    EnderecoModel findById(@WebParam int id);
+    EnderecoModel findByIdMedico(@WebParam int id);
     
     @WebMethod
-    EnderecoModel inserir(MedicoModel medico);
+    EnderecoModel inserirMedico(MedicoModel medico);
     
     @WebMethod
-    EnderecoModel atualizar(MedicoModel medico);
+    EnderecoModel atualizarMedico(MedicoModel medico);
     
     @WebMethod
-    void deletar(int id);
+    void deletarMedico(int id);
     
 }

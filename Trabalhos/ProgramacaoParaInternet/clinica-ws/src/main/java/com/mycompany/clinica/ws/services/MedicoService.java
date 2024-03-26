@@ -16,52 +16,52 @@ import java.util.ArrayList;
 public class MedicoService implements MedicoInterface {
 
     @Override
-    public ArrayList<MedicoModel> findByNome (String nome) {
+    public ArrayList<MedicoModel> findByNomeMedico (String nome) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public ArrayList<MedicoModel> findByLikeNome (String nome) {
+    public ArrayList<MedicoModel> findByLikeNomeMedico (String nome) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public EnderecoModel findByCRM (String crm) {
+    public EnderecoModel findByCRMMedico (String crm) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public ArrayList<MedicoModel> findByEspecialidade (String nome) {
+    public ArrayList<MedicoModel> findByEspecialidadeMedico (String nome) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public ArrayList<MedicoModel> listAll () {
+    public ArrayList<MedicoModel> listAllMedico () {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public ArrayList<MedicoModel> findByStatus (String nome) {
+    public ArrayList<MedicoModel> findByStatusMedico (String nome) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public EnderecoModel findById (int id) {
+    public EnderecoModel findByIdMedico (int id) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public EnderecoModel inserir (MedicoModel endereco) {
+    public EnderecoModel inserirMedico (MedicoModel endereco) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public EnderecoModel atualizar (MedicoModel endereco) {
+    public EnderecoModel atualizarMedico (MedicoModel endereco) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public void deletar (int id) {
+    public void deletarMedico (int id) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
     

@@ -25,36 +25,29 @@ public class EspecialidadeService implements EspecialidadeInterface {
     }
 
     @Override
-    public ArrayList<EspecialidadeModel> listAll () {
+    public ArrayList<EspecialidadeModel> listAllEspecialidade () {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public EspecialidadeModel findById (int id) {
+    public EspecialidadeModel findByIdEspecialidade (int id) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public EspecialidadeModel inserir (EspecialidadeModel especialidade) {
+    public EspecialidadeModel inserirEspecialidade (EspecialidadeModel especialidade) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public EspecialidadeModel atualizar (EspecialidadeModel especialidade) {
+    public EspecialidadeModel atualizarEspecialidade (EspecialidadeModel especialidade) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public void deletar (int id) {
+    public void deletarEspecialidade (int id) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
-    
-    public boolean validaEspecialidade(EspecialidadeModel especialidade){
-        return false;
-    }
-    
-    public boolean existeEspecialidade(EspecialidadeModel especialidade){
-        return false;
-    }
+
     
 }

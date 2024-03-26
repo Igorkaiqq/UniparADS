@@ -16,27 +16,27 @@ import java.util.ArrayList;
 public interface EstadoInterface {
     
     @WebMethod
-    ArrayList<EstadoModel> findByNome(@WebParam String nome);
+    ArrayList<EstadoModel> findByNomeEstado(@WebParam String nome);
     
     @WebMethod
-    ArrayList<EstadoModel> findByLikeNome(@WebParam String nome);
+    ArrayList<EstadoModel> findByLikeNomeEstado(@WebParam String nome);
     
     @WebMethod
-    ArrayList<EstadoModel> findBySigla(@WebParam String nome);
+    EstadoModel findBySiglaEstado(@WebParam String nome);
     
     @WebMethod
-    ArrayList<EstadoModel> listAll();
+    ArrayList<EstadoModel> listAllEstado();
     
     @WebMethod
-    EstadoModel findById(@WebParam int id);
+    EstadoModel findByIdEstado(@WebParam int id);
     
     @WebMethod
-    EstadoModel inserir(EstadoModel estado);
+    EstadoModel inserirEstado(EstadoModel estado);
     
     @WebMethod
-    EstadoModel atualizar(EstadoModel estado);
+    EstadoModel atualizarEstado(EstadoModel estado);
     
     @WebMethod
-    void deletar(int id);
+    boolean deletarEstado(int id);
     
 }

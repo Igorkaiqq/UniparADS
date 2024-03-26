@@ -18,35 +18,33 @@ import java.util.ArrayList;
 public interface EnderecoInterface {
     
     @WebMethod
-    ArrayList<EnderecoModel> findByBairro(@WebParam String bairro);
+    ArrayList<EnderecoModel> findByBairroEndereco(@WebParam String bairro);
     
     @WebMethod
-    ArrayList<EnderecoModel> findByLikeLogradouro(@WebParam String logradouro);
+    ArrayList<EnderecoModel> findByLikeLogradouroEndereco(@WebParam String logradouro);
     
     @WebMethod
-    ArrayList<EnderecoModel> findByCidadeNome(@WebParam String nome);
+    ArrayList<EnderecoModel> findByCidadeNomeEndereco(@WebParam String nome);
     
     @WebMethod
-    ArrayList<EnderecoModel> findByLikeCidadeNome(@WebParam String nome);
-    
-    
+    ArrayList<EnderecoModel> findByLikeCidadeNomeEndereco(@WebParam String nome);
+
+    @WebMethod
+    ArrayList<EnderecoModel> findByCEPEndereco(@WebParam String cep);
     
     @WebMethod
-    ArrayList<EnderecoModel> findByCEP(@WebParam String cep);
+    ArrayList<EnderecoModel> listAllEndereco();
     
     @WebMethod
-    ArrayList<EnderecoModel> listAll();
+    EnderecoModel findByIdEndereco(@WebParam int id);
     
     @WebMethod
-    EnderecoModel findById(@WebParam int id);
+    EnderecoModel inserirEndereco(EnderecoModel endereco);
     
     @WebMethod
-    EnderecoModel inserir(EnderecoModel endereco);
+    EnderecoModel atualizarEndereco(EnderecoModel endereco);
     
     @WebMethod
-    EnderecoModel atualizar(EnderecoModel endereco);
-    
-    @WebMethod
-    void deletar(int id);
+    void deletarEndereco(int id);
     
 }

@@ -15,56 +15,43 @@ import java.util.ArrayList;
 public class EstadoService implements EstadoInterface {
 
     @Override
-    public ArrayList<EstadoModel> findByNome (String nome) {
+    public ArrayList<EstadoModel> findByNomeEstado (String nome) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public ArrayList<EstadoModel> findByLikeNome (String nome) {
+    public ArrayList<EstadoModel> findByLikeNomeEstado (String nome) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public ArrayList<EstadoModel> findBySigla (String nome) {
+    public EstadoModel findBySiglaEstado (String nome) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public ArrayList<EstadoModel> listAll () {
+    public ArrayList<EstadoModel> listAllEstado () {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public EstadoModel findById (int id) {
+    public EstadoModel findByIdEstado (int id) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public EstadoModel inserir (EstadoModel estado) {
+    public EstadoModel inserirEstado (EstadoModel estado) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public EstadoModel atualizar (EstadoModel estado) {
+    public EstadoModel atualizarEstado (EstadoModel estado) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public void deletar (int id) {
+    public boolean deletarEstado (int id) {
         throw new UnsupportedOperationException("Not supported yet."); 
-    }
-    
-    public boolean camposVazio(EstadoModel estado){
-        return false;
-    }
-    
-    public boolean tamanhoSigla(EstadoModel estado){
-        return false;
-    }
-    
-    public boolean existeEstado(EstadoModel estado){
-        
-        return false;
     }
     
 }

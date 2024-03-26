@@ -17,27 +17,27 @@ import java.util.ArrayList;
 public interface PessoaInterface {
     
     @WebMethod
-    ArrayList<PessoaModel> findByNome(@WebParam String nome);
+    ArrayList<PessoaModel> findByNomePessoa(@WebParam String nome);
     
     @WebMethod
-    ArrayList<PessoaModel> findByLikeNome(@WebParam String nome);
+    ArrayList<PessoaModel> findByLikeNomePessoa(@WebParam String nome);
     
     @WebMethod
-    EnderecoModel findByCPF(@WebParam String crm);
+    PessoaModel findByCPFPessoa(@WebParam String cpf);
     
     @WebMethod
-    ArrayList<PessoaModel> listAll();
+    ArrayList<PessoaModel> listAllPessoa();
     
     @WebMethod
-    EnderecoModel findById(@WebParam int id);
+    PessoaModel findByIdPessoa(@WebParam int id);
     
     @WebMethod
-    EnderecoModel inserir(PessoaModel pessoa);
+    PessoaModel inserirPessoa(PessoaModel pessoa);
     
     @WebMethod
-    EnderecoModel atualizar(PessoaModel pessoa);
+    PessoaModel atualizarPessoa(PessoaModel pessoa);
     
     @WebMethod
-    void deletar(int id);
+    boolean deletarPessoa(int id);
     
 }

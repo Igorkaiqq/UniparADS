@@ -16,62 +16,48 @@ import java.util.ArrayList;
 public class CidadeService implements CidadeInterface {
 
     @Override
-    public ArrayList<CidadeModel> findByCidadeNome (String nome) {
+    public ArrayList<CidadeModel> findByCidadeNomeCidade (String nome) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public ArrayList<CidadeModel> findByLikeCidadeNome (String nome) {
+    public ArrayList<CidadeModel> findByLikeCidadeNomeCidade (String nome) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public ArrayList<CidadeModel> findByEstadoNome (String nome) {
+    public ArrayList<CidadeModel> findByEstadoNomeCidade (String nome) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public ArrayList<CidadeModel> findByEstadoSigla (String sigla) {
+    public ArrayList<CidadeModel> findByEstadoSiglaCidade (String sigla) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public ArrayList<CidadeModel> listAll () {
+    public ArrayList<CidadeModel> listAllCidade () {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public CidadeModel findById (int id) {
+    public CidadeModel findByIdCidade (int id) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public CidadeModel inserir (CidadeModel cidade) {
+    public CidadeModel inserirCidade (CidadeModel cidade) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public CidadeModel atualizar (CidadeModel cidade) {
+    public CidadeModel atualizarCidade (CidadeModel cidade) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public void deletar (int id) {
+    public void deletarCidade (int id) {
         throw new UnsupportedOperationException("Not supported yet."); 
-    }
-    
-    public boolean camposVazio(CidadeModel cidade){
-        return false;
-    }
-    
-    public boolean existeCidade(EstadoModel estado){
-        
-        return false;
-    }
-    
-    public boolean existeEstado(EstadoModel estado){
-        
-        return false;
     }
     
 }

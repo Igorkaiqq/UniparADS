@@ -5,6 +5,7 @@
 package com.mycompany.clinica.ws.infraestructure;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import javax.naming.Context;
@@ -19,11 +20,12 @@ import javax.swing.JOptionPane;
  */
 public class Conexao {
     
-    private Connection con = null;
+    public Connection con = null;
     private Statement stm = null;
-    private ResultSet rs = null;
+    public ResultSet rs = null;
     private DataSource dataSource;
-
+    public PreparedStatement pstm = null;
+    
     private static final String RESOURCE_NAME = "postgresResource";
     
     private DataSource getDatasource() throws NamingException {

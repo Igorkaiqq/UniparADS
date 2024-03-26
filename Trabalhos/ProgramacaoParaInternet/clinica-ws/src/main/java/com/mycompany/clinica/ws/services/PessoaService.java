@@ -16,42 +16,42 @@ import java.util.ArrayList;
 public class PessoaService implements PessoaInterface {
 
     @Override
-    public ArrayList<PessoaModel> findByNome (String nome) {
+    public ArrayList<PessoaModel> findByNomePessoa (String nome) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public ArrayList<PessoaModel> findByLikeNome (String nome) {
+    public ArrayList<PessoaModel> findByLikeNomePessoa (String nome) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public EnderecoModel findByCPF (String crm) {
+    public PessoaModel findByCPFPessoa (String crm) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public ArrayList<PessoaModel> listAll () {
+    public ArrayList<PessoaModel> listAllPessoa () {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public EnderecoModel findById (int id) {
+    public PessoaModel findByIdPessoa (int id) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public EnderecoModel inserir (PessoaModel pessoa) {
+    public PessoaModel inserirPessoa (PessoaModel pessoa) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public EnderecoModel atualizar (PessoaModel pessoa) {
+    public PessoaModel atualizarPessoa (PessoaModel pessoa) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 
     @Override
-    public void deletar (int id) {
+    public boolean deletarPessoa (int id) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
     
