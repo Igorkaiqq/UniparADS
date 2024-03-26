@@ -21,5 +21,16 @@ public enum StatusRegistroEnum {
     public int getValor() {
         return valor;
     }
+
+    public static StatusRegistroEnum getINATIVO() {
+        return INATIVO;
+    }
+
+    public static StatusRegistroEnum getATIVO() {
+        return ATIVO;
+    }
+    
+    
+    
 }
 
