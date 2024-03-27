@@ -1,0 +1,65 @@
+
+C
+java:S1604L"(Make this anonymous inner class a lambda(£À¿Óüÿÿÿÿ
+>
+java:S1604U"(Make this anonymous inner class a lambda(ÿóÎ×
+>
+java:S1604^"(Make this anonymous inner class a lambda(•à‚Ò
+D
+java:S1604ï"(Make this anonymous inner class a lambda(¨í¡§úÿÿÿÿ
+n
+java:S1450÷"WRemove the "jButton1" field and declare it as a local variable in the relevant methods.(å……¶
+n
+java:S1450ø"WRemove the "jButton2" field and declare it as a local variable in the relevant methods.(¤½ÃÜ
+s
+java:S1450ù"WRemove the "jButton3" field and declare it as a local variable in the relevant methods.(ĞäğËıÿÿÿÿ
+p
+java:S1450ú"YRemove the "jCheckBox1" field and declare it as a local variable in the relevant methods.(×µ„Ò
+r
+java:S1450û"VRemove the "jLabel1" field and declare it as a local variable in the relevant methods.(°ãÉ¸ÿÿÿÿÿ
+r
+java:S1450ü"VRemove the "jLabel2" field and declare it as a local variable in the relevant methods.(™úòˆüÿÿÿÿ
+r
+java:S1450ı"VRemove the "jLabel3" field and declare it as a local variable in the relevant methods.(Îä€øÿÿÿÿ
+m
+java:S1450ş"VRemove the "jLabel4" field and declare it as a local variable in the relevant methods.(«¢•ã
+m
+java:S1450ÿ"VRemove the "jLabel5" field and declare it as a local variable in the relevant methods.(ó Ù®
+r
+java:S1450€"VRemove the "jLabel6" field and declare it as a local variable in the relevant methods.(¸ôÂøÿÿÿÿ
+m
+java:S1450"VRemove the "jLabel7" field and declare it as a local variable in the relevant methods.(×ê˜Ÿ
+r
+java:S1450‚"VRemove the "jPanel1" field and declare it as a local variable in the relevant methods.(´œ½ÿÿÿÿÿ
+q
+java:S1450ƒ"ZRemove the "jTextField1" field and declare it as a local variable in the relevant methods.(’É´š
+v
+java:S1450„"ZRemove the "jTextField2" field and declare it as a local variable in the relevant methods.(Ô¯ĞÜøÿÿÿÿ
+v
+java:S1450…"ZRemove the "jTextField3" field and declare it as a local variable in the relevant methods.(ˆ‘ó©ÿÿÿÿÿ
+q
+java:S1450†"ZRemove the "jTextField4" field and declare it as a local variable in the relevant methods.(××çÑ
+v
+java:S1450‡"ZRemove the "jTextField5" field and declare it as a local variable in the relevant methods.(¢€Ğ…ûÿÿÿÿ
+q
+java:S1450ˆ"ZRemove the "jTextField6" field and declare it as a local variable in the relevant methods.(Ü€†ı
+A
+java:S1172Ç"*Remove this unused method parameter "evt".(Âî»ü
+N
+java:S1135È"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+F
+java:S1172Ë"*Remove this unused method parameter "evt".(¹¾ûüÿÿÿÿ
+N
+java:S1135Ì"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+F
+java:S1172Ï"*Remove this unused method parameter "evt".(íÜßóûÿÿÿÿ
+N
+java:S1135Ğ"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ
+F
+java:S1197Ö"*Move the array designators [] to the type.(¡şÏÖøÿÿÿÿ
+\
+java:S2147å"ECombine this catch with the one at line 227, which has the same body.(¨¦Š½
+\
+java:S2147ç"ECombine this catch with the one at line 229, which has the same body.(ã€ 
+[
+java:S2147é"ECombine this catch with the one at line 231, which has the same body.(ñÎ¯%

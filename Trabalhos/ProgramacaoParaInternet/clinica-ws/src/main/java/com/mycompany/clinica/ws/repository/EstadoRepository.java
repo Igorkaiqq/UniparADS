@@ -25,11 +25,11 @@ public class EstadoRepository extends Conexao implements EstadoInterface {
             this.executarSQL(
                     "SELECT * FROM estado WHERE sigla = '" + nome + "';"
             );
-            while(rs.next()){
+            while(getRs().next()){
                 EstadoModel estado = new EstadoModel();
-                estado.setId(rs.getInt("id"));
-                estado.setNome(rs.getString("nome"));
-                estado.setSigla(rs.getString("sigla"));
+                estado.setId(getRs().getInt("id"));
+                estado.setNome(getRs().getString("nome"));
+                estado.setSigla(getRs().getString("sigla"));
                 return estado;
             }
         } catch (Exception e) {
@@ -49,11 +49,11 @@ public class EstadoRepository extends Conexao implements EstadoInterface {
             this.executarSQL(
                     "SELECT * FROM estado;"
             );
-            while(rs.next()){
+            while(getRs().next()){
                 EstadoModel estado = new EstadoModel();
-                estado.setId(rs.getInt("id"));
-                estado.setNome(rs.getString("nome"));
-                estado.setSigla(rs.getString("sigla"));
+                estado.setId(getRs().getInt("id"));
+                estado.setNome(getRs().getString("nome"));
+                estado.setSigla(getRs().getString("sigla"));
                 listaEstado.add(estado);
             }
             return listaEstado;
@@ -72,11 +72,11 @@ public class EstadoRepository extends Conexao implements EstadoInterface {
             this.executarSQL(
                     "SELECT * FROM estado WHERE id = '" + id + "';"
             );
-            while(rs.next()){
+            while(getRs().next()){
                 EstadoModel estado = new EstadoModel();
-                estado.setId(rs.getInt("id"));
-                estado.setNome(rs.getString("nome"));
-                estado.setSigla(rs.getString("sigla"));
+                estado.setId(getRs().getInt("id"));
+                estado.setNome(getRs().getString("nome"));
+                estado.setSigla(getRs().getString("sigla"));
                 return estado;
             }
         } catch (Exception e) {
@@ -89,10 +89,10 @@ public class EstadoRepository extends Conexao implements EstadoInterface {
     public EstadoModel inserirEstado(EstadoModel estado) {
         try {
             this.conectar();
-            pstm = con.prepareStatement("INSERT INTO estado (nome, sigla) VALUES (?, ?)");
-            pstm.setString(1, estado.getNome());
-            pstm.setString(2, estado.getSigla());
-            pstm.executeUpdate();
+            setPstm(getCon().prepareStatement("INSERT INTO estado (nome, sigla) VALUES (?, ?)"));
+            getPstm().setString(1, estado.getNome());
+            getPstm().setString(2, estado.getSigla());
+            getPstm().executeUpdate();
             return estado;
         } catch (Exception e) {
             e.printStackTrace();
@@ -106,11 +106,13 @@ public class EstadoRepository extends Conexao implements EstadoInterface {
     public EstadoModel atualizarEstado(EstadoModel estado) {
         try {
             this.conectar();
-            pstm = con.prepareStatement("UPDATE estado SET nome = ?, sigla = ? WHERE id = ?");
-            pstm.setString(1, estado.getNome());
-            pstm.setString(2, estado.getSigla());
-            pstm.setInt(3, estado.getId());
-            pstm.executeUpdate();
+            
+            this.getPstm();
+            setPstm(getCon().prepareStatement("UPDATE estado SET nome = ?, sigla = ? WHERE id = ?"));
+            getPstm().setString(1, estado.getNome());
+            getPstm().setString(2, estado.getSigla());
+            getPstm().setInt(3, estado.getId());
+            getPstm().executeUpdate();
             return estado;
         } catch (Exception e) {
             e.printStackTrace();
@@ -124,9 +126,9 @@ public class EstadoRepository extends Conexao implements EstadoInterface {
     public boolean deletarEstado(int id) {
         try {
             this.conectar();
-            pstm = con.prepareStatement("DELETE FROM estado WHERE id = ?");
-            pstm.setInt(1, id);
-            pstm.executeUpdate();
+            setPstm(getCon().prepareStatement("DELETE FROM estado WHERE id = ?"));
+            getPstm().setInt(1, id);
+            getPstm().executeUpdate();
             return true;
         } catch (Exception e) {
             e.printStackTrace();

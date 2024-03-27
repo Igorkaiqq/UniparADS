@@ -1,0 +1,5 @@
+CREATE TABLE estado (
+    Id SERIAL PRIMARY KEY,
+    Nome VARCHAR(100) NOT NULL,
+    Sigla VARCHAR(2) NOT NULL
+);

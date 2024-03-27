@@ -4,6 +4,9 @@
  */
 package com.mycompany.clinica.ws.infraestructure;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,13 +21,15 @@ import javax.swing.JOptionPane;
  *
  * @author igork
  */
+@Getter
+@Setter
 public class Conexao {
     
-    public Connection con = null;
+    private Connection con = null;
     private Statement stm = null;
-    public ResultSet rs = null;
+    private ResultSet rs = null;
     private DataSource dataSource;
-    public PreparedStatement pstm = null;
+    private PreparedStatement pstm = null;
     
     private static final String RESOURCE_NAME = "postgresResource";
     
@@ -39,8 +44,7 @@ public class Conexao {
         
         try {
             
-            con = getDatasource().getConnection();
-            return con;
+            this.setCon(getDatasource().getConnection());
             
         } catch (Exception ex) {
             
@@ -48,44 +52,48 @@ public class Conexao {
         
         } 
         
-        return null;
+        return this.getCon();
         
     }
     
     public boolean executarSQL (String sql){
         
         try {
-            stm = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            rs = stm.executeQuery(sql);
-            return true;
+            
+            this.setStm(this.getCon().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY));
+            this.setRs(this.getStm().executeQuery(sql));
+            fecharConexao();
             
         } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
-        
+        return true;
     }
     
     public boolean executarUpdateDelete(String sql) {
         try {
-            stm = con.createStatement();
-            stm.executeUpdate(sql);
-            return true;
+
+            this.setStm(this.getCon().createStatement());
+            this.getStm().executeUpdate(sql);
+            fecharConexao();
         } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
+        return true;
     }
     
     public int insertSql(String sql){
         int status = 0;
         try {
-            stm = con.createStatement();
-            stm.executeUpdate(sql);
-            rs = stm.executeQuery("SELECT last_insert_id();");
-            while (rs.next()) {                
-                status = rs.getInt(1);
+            this.setStm(this.getCon().createStatement());
+            this.getStm().executeUpdate(sql);
+            this.setRs(this.getStm().getGeneratedKeys());
+            while (this.getRs().next()) {
+                status = this.getRs().getInt(1);
             }
+            fecharConexao();
             return status;
         } catch (Exception e) {
             e.printStackTrace();
@@ -93,19 +101,19 @@ public class Conexao {
         }
     }
     
-    public boolean fecharConexao(){
+    public boolean fecharConexao() {
         try {
-                if (rs != null && stm != null) {
-                stm.close();
-                rs.close();
-                con.close();
-           }                
+            if ((this.getRs() != null) && (this.getStm() != null)) {
+                this.getRs().close();
+                this.getStm().close();
+            }
+            this.getCon().close();
             return true;
         } catch (Exception e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(null, e.getMessage());    
-            return false;
+            JOptionPane.showMessageDialog(null, e.getMessage());
         }
+        return false;
     }
     
 }

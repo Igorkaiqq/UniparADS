@@ -57,9 +57,10 @@ public class CidadeRepository extends Conexao implements CidadeInterface {
             );
         } catch (Exception e) {
             e.printStackTrace();
-
-        return null;
+        }
+         return null;
     }
+    
 
     @Override
     public void deletarCidade(int id) {

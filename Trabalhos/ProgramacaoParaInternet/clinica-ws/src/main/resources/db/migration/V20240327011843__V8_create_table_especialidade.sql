@@ -1,0 +1,4 @@
+CREATE TABLE especialidade (
+    Id SERIAL PRIMARY KEY,
+    Nome VARCHAR(100) NOT NULL
+);
