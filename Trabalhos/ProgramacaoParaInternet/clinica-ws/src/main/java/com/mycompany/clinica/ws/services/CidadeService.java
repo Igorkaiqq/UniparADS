@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class CidadeService implements CidadeInterface {
 
     @Override
-    public ArrayList<CidadeModel> findByCidadeNomeCidade (String nome) {
+    public CidadeModel findByCidadeNomeCidade (String nome) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 

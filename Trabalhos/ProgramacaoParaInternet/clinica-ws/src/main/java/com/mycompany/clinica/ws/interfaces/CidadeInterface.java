@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public interface CidadeInterface {
     
     @WebMethod
-    ArrayList<CidadeModel> findByCidadeNomeCidade(@WebParam String nome);
+    CidadeModel findByCidadeNomeCidade(@WebParam String nome);
     
     @WebMethod
     ArrayList<CidadeModel> findByLikeCidadeNomeCidade(@WebParam String nome);

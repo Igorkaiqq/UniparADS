@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class EstadoService implements EstadoInterface {
 
     @Override
-    public ArrayList<EstadoModel> findByNomeEstado (String nome) {
+    public EstadoModel findByNomeEstado (String nome) {
         throw new UnsupportedOperationException("Not supported yet."); 
     }
 

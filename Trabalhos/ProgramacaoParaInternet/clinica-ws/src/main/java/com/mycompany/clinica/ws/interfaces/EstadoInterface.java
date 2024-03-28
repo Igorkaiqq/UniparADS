@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public interface EstadoInterface {
     
     @WebMethod
-    ArrayList<EstadoModel> findByNomeEstado(@WebParam String nome);
+    EstadoModel findByNomeEstado(@WebParam String nome);
     
     @WebMethod
     ArrayList<EstadoModel> findByLikeNomeEstado(@WebParam String nome);

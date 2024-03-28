@@ -1,11 +1,19 @@
 
-H
-java:S1168"+Return an empty collection instead of null.(¥¹ï8Í×ıñç1
-H
-java:S1168"+Return an empty collection instead of null.(¥¹ï8Î×ıñç1
-H
-java:S1168"+Return an empty collection instead of null.(¥¹ï8Î×ıñç1
-H
-java:S1168"+Return an empty collection instead of null.(¥¹ï8Î×ıñç1
-H
-java:S1168""+Return an empty collection instead of null.(¥¹ï8Ï×ıñç1
+œ
+java:S2293$"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ç®ïş8š£»—è1J$a621b89c-0501-4a2c-9594-27f6934a4768
+Œ
+java:S1192"IDefine a constant instead of duplicating this literal "EstadoId" 4 times.(â¬•ñ8¡£»—è1J$e31b0e45-6624-4197-8b7d-b75f2d33c3b0
+d
+java:S11161"Remove this empty statement.(ôŸìúÿÿÿÿ8³£»—è1J$ee6c5fd0-b45f-4a4f-a468-7051cf1ebfa5
+n
+java:S11686"+Return an empty collection instead of null.(¥¹ï8´£»—è1J$b3684ca0-2d17-4ccc-9f3f-8da4d7eaea81
+‚
+java:S1854;"?Remove this useless assignment to local variable "listaCidade".(õ—Î8´£»—è1J$019c6df4-d9fe-4611-a820-c03bfd7fefe4
+s
+java:S1481;"0Remove this unused "listaCidade" local variable.(õ—Î8µ£»—è1J$358a1a1f-8f75-48e7-bedf-81d2840f3c57
+n
+java:S1168O"+Return an empty collection instead of null.(¥¹ï8¶£»—è1J$f14a4ae3-0dc6-47a5-b48c-bacf27ab7b89
+n
+java:S1168h"+Return an empty collection instead of null.(¥¹ï8¸£»—è1J$55eb224b-b7ff-4479-abf8-b6144715624a
+n
+java:S1168{"+Return an empty collection instead of null.(¥¹ï8¹£»—è1J$fb5bfcfd-c907-4291-b6ce-441df54d9cb8

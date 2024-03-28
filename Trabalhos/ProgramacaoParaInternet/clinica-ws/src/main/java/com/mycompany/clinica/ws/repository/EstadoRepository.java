@@ -8,12 +8,47 @@ import java.util.ArrayList;
 
 public class EstadoRepository extends Conexao implements EstadoInterface {
     @Override
-    public ArrayList<EstadoModel> findByNomeEstado(String nome) {
+    public EstadoModel findByNomeEstado(String nome) {
+
+        try {
+            this.conectar();
+            setPstm(getCon().prepareStatement("SELECT * FROM estado WHERE Nome = ?"));
+            getPstm().setString(1, nome);
+            setRs(getPstm().executeQuery());
+            if (getRs().next()){
+                EstadoModel estado = new EstadoModel();
+                estado.setId(getRs().getInt("id"));
+                estado.setNome(getRs().getString("nome"));
+                estado.setSigla(getRs().getString("sigla"));
+                return estado;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return null;
     }
 
     @Override
     public ArrayList<EstadoModel> findByLikeNomeEstado(String nome) {
+        ArrayList<EstadoModel> listaEstado = new ArrayList<EstadoModel>();
+        try {
+            this.conectar();
+            setPstm(getCon().prepareStatement("SELECT * FROM estado WHERE Nome LIKE ?"));
+            getPstm().setString(1, "%"+nome+"%");
+            setRs(getPstm().executeQuery());
+            while(getRs().next()){
+                EstadoModel estado = new EstadoModel();
+                estado.setId(getRs().getInt("Id"));
+                estado.setNome(getRs().getString("Nome"));
+                estado.setSigla(getRs().getString("Sigla"));
+                listaEstado.add(estado);
+            }
+            return listaEstado;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return null;
     }
 
@@ -22,10 +57,10 @@ public class EstadoRepository extends Conexao implements EstadoInterface {
 
         try {
             this.conectar();
-            this.executarSQL(
-                    "SELECT * FROM estado WHERE sigla = '" + nome + "';"
-            );
-            while(getRs().next()){
+            setPstm(getCon().prepareStatement("SELECT * FROM estado WHERE Sigla = ?"));
+            getPstm().executeQuery();
+            getPstm().setString(1, nome);
+            if (getRs().next()){
                 EstadoModel estado = new EstadoModel();
                 estado.setId(getRs().getInt("id"));
                 estado.setNome(getRs().getString("nome"));
@@ -46,21 +81,24 @@ public class EstadoRepository extends Conexao implements EstadoInterface {
 
         try {
             this.conectar();
-            this.executarSQL(
-                    "SELECT * FROM estado;"
-            );
+            setPstm(getCon().prepareStatement(
+                    "SELECT * FROM estado"
+            ));
+            getPstm().executeQuery();
             while(getRs().next()){
                 EstadoModel estado = new EstadoModel();
-                estado.setId(getRs().getInt("id"));
-                estado.setNome(getRs().getString("nome"));
-                estado.setSigla(getRs().getString("sigla"));
+                estado.setId(getRs().getInt("Id"));
+                estado.setNome(getRs().getString("Nome"));
+                estado.setSigla(getRs().getString("Sigla"));
                 listaEstado.add(estado);
             }
             return listaEstado;
         } catch (Exception e) {
             e.printStackTrace();
 
-    }
+        }finally {
+            this.fecharConexao();
+        }
         return null;
     }
 
@@ -69,19 +107,24 @@ public class EstadoRepository extends Conexao implements EstadoInterface {
 
         try {
             this.conectar();
-            this.executarSQL(
-                    "SELECT * FROM estado WHERE id = '" + id + "';"
-            );
-            while(getRs().next()){
+            setPstm(getCon().prepareStatement("SELECT * FROM estado WHERE id = ?"));
+            getPstm().setInt(1, id);
+            setRs(getPstm().executeQuery());
+
+            if (getRs().next()){
                 EstadoModel estado = new EstadoModel();
-                estado.setId(getRs().getInt("id"));
-                estado.setNome(getRs().getString("nome"));
-                estado.setSigla(getRs().getString("sigla"));
+                estado.setId(getRs().getInt("Id"));
+                estado.setNome(getRs().getString("Nome"));
+                estado.setSigla(getRs().getString("Sigla"));
                 return estado;
             }
+
         } catch (Exception e) {
             e.printStackTrace();
-    }
+        } finally {
+            this.fecharConexao();
+        }
+
         return null;
     }
 
@@ -126,7 +169,7 @@ public class EstadoRepository extends Conexao implements EstadoInterface {
     public boolean deletarEstado(int id) {
         try {
             this.conectar();
-            setPstm(getCon().prepareStatement("DELETE FROM estado WHERE id = ?"));
+            setPstm(getCon().prepareStatement("DELETE FROM estado WHERE Id = ?"));
             getPstm().setInt(1, id);
             getPstm().executeUpdate();
             return true;
