@@ -15,44 +15,29 @@ import java.util.ArrayList;
  */
 public class PacienteService implements PacienteInterface {
 
+
     @Override
-    public ArrayList<PacienteModel> findByNomePaciente (String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public ArrayList<PacienteModel> listAllPaciente() {
+        return null;
     }
 
     @Override
-    public ArrayList<PacienteModel> findByLikeNomePaciente (String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public ArrayList<PacienteModel> findByStatusPaciente(String nome) {
+        return null;
     }
 
     @Override
-    public ArrayList<PacienteModel> listAllPaciente () {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public PacienteModel findByIdPaciente(int id) {
+        return null;
     }
 
     @Override
-    public ArrayList<PacienteModel> findByStatusPaciente (String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public PacienteModel inserirPaciente(PacienteModel paciente) {
+        return null;
     }
 
     @Override
-    public EnderecoModel findByIdPaciente (int id) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public PacienteModel atualizarPaciente(PacienteModel paciente) {
+        return null;
     }
-
-    @Override
-    public EnderecoModel inserirPaciente (PacienteModel paciente) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    @Override
-    public EnderecoModel atualizarPaciente (PacienteModel paciente) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    @Override
-    public void deletarPaciente (int id) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-    
 }

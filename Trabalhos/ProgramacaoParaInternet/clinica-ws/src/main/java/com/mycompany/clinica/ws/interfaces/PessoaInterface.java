@@ -15,29 +15,29 @@ import java.util.ArrayList;
  * @author igork
  */
 public interface PessoaInterface {
-    
-    @WebMethod
-    ArrayList<PessoaModel> findByNomePessoa(@WebParam String nome);
-    
-    @WebMethod
-    ArrayList<PessoaModel> findByLikeNomePessoa(@WebParam String nome);
-    
-    @WebMethod
-    PessoaModel findByCPFPessoa(@WebParam String cpf);
-    
+
     @WebMethod
     ArrayList<PessoaModel> listAllPessoa();
-    
+
     @WebMethod
     PessoaModel findByIdPessoa(@WebParam int id);
-    
+
     @WebMethod
     PessoaModel inserirPessoa(PessoaModel pessoa);
-    
+
     @WebMethod
     PessoaModel atualizarPessoa(PessoaModel pessoa);
-    
+
     @WebMethod
     boolean deletarPessoa(int id);
+
+//    @WebMethod
+//    ArrayList<PessoaModel> findByNomePessoa(@WebParam String nome);
+//
+//    @WebMethod
+//    ArrayList<PessoaModel> findByLikeNomePessoa(@WebParam String nome);
+//
+//    @WebMethod
+//    PessoaModel findByCPFPessoa(@WebParam String cpf);
     
 }

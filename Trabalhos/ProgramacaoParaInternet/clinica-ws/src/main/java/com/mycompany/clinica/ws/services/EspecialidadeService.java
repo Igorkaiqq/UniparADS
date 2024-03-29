@@ -14,40 +14,29 @@ import java.util.ArrayList;
  */
 public class EspecialidadeService implements EspecialidadeInterface {
 
+
     @Override
-    public ArrayList<EspecialidadeModel> findByEspecialidade (String especialidade) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public ArrayList<EspecialidadeModel> listAllEspecialidade() {
+        return null;
     }
 
     @Override
-    public ArrayList<EspecialidadeModel> findByLikeEspecialidade (String especialidade) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public EspecialidadeModel findByIdEspecialidade(int id) {
+        return null;
     }
 
     @Override
-    public ArrayList<EspecialidadeModel> listAllEspecialidade () {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public EspecialidadeModel inserirEspecialidade(EspecialidadeModel especialidade) {
+        return null;
     }
 
     @Override
-    public EspecialidadeModel findByIdEspecialidade (int id) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public EspecialidadeModel atualizarEspecialidade(EspecialidadeModel especialidade) {
+        return null;
     }
 
     @Override
-    public EspecialidadeModel inserirEspecialidade (EspecialidadeModel especialidade) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
+    public void deletarEspecialidade(int id) {
 
-    @Override
-    public EspecialidadeModel atualizarEspecialidade (EspecialidadeModel especialidade) {
-        throw new UnsupportedOperationException("Not supported yet."); 
     }
-
-    @Override
-    public void deletarEspecialidade (int id) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    
 }

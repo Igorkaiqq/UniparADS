@@ -16,29 +16,28 @@ import java.util.ArrayList;
  * @author igork
  */
 public interface PacienteInterface {
-    
+
    @WebMethod
-    ArrayList<PacienteModel> findByNomePaciente(@WebParam String nome);
-    
-    @WebMethod
-    ArrayList<PacienteModel> findByLikeNomePaciente(@WebParam String nome);
-    
-    @WebMethod
-    ArrayList<PacienteModel> listAllPaciente();
-    
-    @WebMethod
-    ArrayList<PacienteModel> findByStatusPaciente(@WebParam String nome);
-    
-    @WebMethod
-    EnderecoModel findByIdPaciente(@WebParam int id);
-    
-    @WebMethod
-    EnderecoModel inserirPaciente(PacienteModel paciente);
-    
-    @WebMethod
-    EnderecoModel atualizarPaciente(PacienteModel paciente);
-    
-    @WebMethod
-    void deletarPaciente(int id);
+   ArrayList<PacienteModel> listAllPaciente();
+
+   @WebMethod
+   ArrayList<PacienteModel> findByStatusPaciente(@WebParam String nome);
+
+   @WebMethod
+   PacienteModel findByIdPaciente(@WebParam int id);
+
+   @WebMethod
+   PacienteModel inserirPaciente(PacienteModel paciente);
+
+   @WebMethod
+   PacienteModel atualizarPaciente(PacienteModel paciente);
+
+//   @WebMethod
+//   void deletarPaciente(int id);
+//   @WebMethod
+//    ArrayList<PacienteModel> findByNomePaciente(@WebParam String nome);
+//
+//    @WebMethod
+//    ArrayList<PacienteModel> findByLikeNomePaciente(@WebParam String nome);
     
 }

@@ -14,26 +14,26 @@ import java.util.ArrayList;
  * @author igork
  */
 public interface EspecialidadeInterface {
-    
-        @WebMethod
-    ArrayList<EspecialidadeModel> findByEspecialidade(@WebParam String especialidade);
-    
-    @WebMethod
-    ArrayList<EspecialidadeModel> findByLikeEspecialidade(@WebParam String especialidade);
-    
+
     @WebMethod
     ArrayList<EspecialidadeModel> listAllEspecialidade();
-    
+
     @WebMethod
     EspecialidadeModel findByIdEspecialidade(@WebParam int id);
-    
+
     @WebMethod
     EspecialidadeModel inserirEspecialidade(EspecialidadeModel especialidade);
-    
+
     @WebMethod
     EspecialidadeModel atualizarEspecialidade(EspecialidadeModel especialidade);
-    
+
     @WebMethod
     void deletarEspecialidade(int id);
-    
+
+//    @WebMethod
+//    ArrayList<EspecialidadeModel> findByEspecialidade(@WebParam String especialidade);
+//
+//    @WebMethod
+//    ArrayList<EspecialidadeModel> findByLikeEspecialidade(@WebParam String especialidade);
+
 }

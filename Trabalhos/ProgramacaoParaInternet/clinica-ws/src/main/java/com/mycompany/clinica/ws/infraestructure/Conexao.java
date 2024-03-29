@@ -56,51 +56,6 @@ public class Conexao {
         
     }
     
-    public boolean executarSQL (String sql){
-        
-        try {
-            
-            this.setStm(this.getCon().createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY));
-            this.setRs(this.getStm().executeQuery(sql));
-            fecharConexao();
-            
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-        return true;
-    }
-    
-    public boolean executarUpdateDelete(String sql) {
-        try {
-
-            this.setStm(this.getCon().createStatement());
-            this.getStm().executeUpdate(sql);
-            fecharConexao();
-        } catch (Exception e) {
-            e.printStackTrace();
-            return false;
-        }
-        return true;
-    }
-    
-    public int insertSql(String sql){
-        int status = 0;
-        try {
-            this.setStm(this.getCon().createStatement());
-            this.getStm().executeUpdate(sql);
-            this.setRs(this.getStm().getGeneratedKeys());
-            while (this.getRs().next()) {
-                status = this.getRs().getInt(1);
-            }
-            fecharConexao();
-            return status;
-        } catch (Exception e) {
-            e.printStackTrace();
-            return status;
-        }
-    }
-    
     public boolean fecharConexao() {
         try {
             if ((this.getRs() != null) && (this.getStm() != null)) {

@@ -4,23 +4,20 @@
  */
 package com.mycompany.clinica.ws.Enums;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
 /**
  *
  * @author igork
  */
+@Getter
+@AllArgsConstructor
 public enum StatusRegistroEnum {
     INATIVO(0),
     ATIVO(1);
 
     private final int valor;
-
-    StatusRegistroEnum(int valor) {
-        this.valor = valor;
-    }
-
-    public int getValor() {
-        return valor;
-    }
 
     public static StatusRegistroEnum getINATIVO() {
         return INATIVO;

@@ -14,32 +14,32 @@ import java.util.ArrayList;
  * @author igork
  */
 public interface CidadeInterface {
-    
-    @WebMethod
-    CidadeModel findByCidadeNomeCidade(@WebParam String nome);
-    
-    @WebMethod
-    ArrayList<CidadeModel> findByLikeCidadeNomeCidade(@WebParam String nome);
-    
-    @WebMethod
-    ArrayList<CidadeModel> findByEstadoNomeCidade(@WebParam String nome);
-    
-    @WebMethod
-    ArrayList<CidadeModel> findByEstadoSiglaCidade(@WebParam String sigla);
-    
+
     @WebMethod
     ArrayList<CidadeModel> listAllCidade();
-    
+
     @WebMethod
     CidadeModel findByIdCidade(@WebParam int id);
-    
+
     @WebMethod
     CidadeModel inserirCidade(CidadeModel cidade);
-    
+
     @WebMethod
     CidadeModel atualizarCidade(CidadeModel cidade);
-    
+
     @WebMethod
     void deletarCidade(int id);
+
+//    @WebMethod
+//    CidadeModel findByCidadeNomeCidade(@WebParam String nome);
+//
+//    @WebMethod
+//    ArrayList<CidadeModel> findByLikeCidadeNomeCidade(@WebParam String nome);
+//
+//    @WebMethod
+//    ArrayList<CidadeModel> findByEstadoNomeCidade(@WebParam String nome);
+//
+//    @WebMethod
+//    ArrayList<CidadeModel> findByEstadoSiglaCidade(@WebParam String sigla);
     
 }

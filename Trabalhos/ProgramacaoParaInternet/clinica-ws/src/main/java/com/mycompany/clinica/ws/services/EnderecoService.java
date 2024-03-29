@@ -15,55 +15,29 @@ import java.util.ArrayList;
 public class EnderecoService implements EnderecoInterface {
 
     @Override
-    public ArrayList<EnderecoModel> findByBairroEndereco (String bairro) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public ArrayList<EnderecoModel> listAllEndereco() {
+        return null;
     }
 
     @Override
-    public ArrayList<EnderecoModel> findByLikeLogradouroEndereco (String logradouro) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public EnderecoModel findByIdEndereco(int id) {
+        return null;
     }
 
     @Override
-    public ArrayList<EnderecoModel> listAllEndereco () {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public EnderecoModel inserirEndereco(EnderecoModel endereco) {
+        return null;
     }
 
     @Override
-    public EnderecoModel findByIdEndereco (int id) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public EnderecoModel atualizarEndereco(EnderecoModel endereco) {
+        return null;
     }
 
     @Override
-    public EnderecoModel inserirEndereco (EnderecoModel endereco) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
+    public void deletarEndereco(int id) {
 
-    @Override
-    public EnderecoModel atualizarEndereco (EnderecoModel endereco) {
-        throw new UnsupportedOperationException("Not supported yet."); 
     }
-
-    @Override
-    public void deletarEndereco (int id) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    @Override
-    public ArrayList<EnderecoModel> findByCidadeNomeEndereco (String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    @Override
-    public ArrayList<EnderecoModel> findByLikeCidadeNomeEndereco (String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    @Override
-    public ArrayList<EnderecoModel> findByCEPEndereco (String cep) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-    
 }
 
 

@@ -15,54 +15,34 @@ import java.util.ArrayList;
  */
 public class MedicoService implements MedicoInterface {
 
+
     @Override
-    public ArrayList<MedicoModel> findByNomeMedico (String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public ArrayList<MedicoModel> listAllMedico() {
+        return null;
     }
 
     @Override
-    public ArrayList<MedicoModel> findByLikeNomeMedico (String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public ArrayList<MedicoModel> findByStatusMedico(String nome) {
+        return null;
     }
 
     @Override
-    public EnderecoModel findByCRMMedico (String crm) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public MedicoModel findByIdMedico(int id) {
+        return null;
     }
 
     @Override
-    public ArrayList<MedicoModel> findByEspecialidadeMedico (String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public MedicoModel inserirMedico(MedicoModel medico) {
+        return null;
     }
 
     @Override
-    public ArrayList<MedicoModel> listAllMedico () {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public MedicoModel atualizarMedico(MedicoModel medico) {
+        return null;
     }
 
     @Override
-    public ArrayList<MedicoModel> findByStatusMedico (String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
+    public void ativarMedico(int id) {
 
-    @Override
-    public EnderecoModel findByIdMedico (int id) {
-        throw new UnsupportedOperationException("Not supported yet."); 
     }
-
-    @Override
-    public EnderecoModel inserirMedico (MedicoModel endereco) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    @Override
-    public EnderecoModel atualizarMedico (MedicoModel endereco) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    @Override
-    public void deletarMedico (int id) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-    
 }

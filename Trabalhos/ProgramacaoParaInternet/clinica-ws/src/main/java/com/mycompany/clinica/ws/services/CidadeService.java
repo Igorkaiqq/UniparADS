@@ -15,49 +15,29 @@ import java.util.ArrayList;
  */
 public class CidadeService implements CidadeInterface {
 
+
     @Override
-    public CidadeModel findByCidadeNomeCidade (String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public ArrayList<CidadeModel> listAllCidade() {
+        return null;
     }
 
     @Override
-    public ArrayList<CidadeModel> findByLikeCidadeNomeCidade (String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public CidadeModel findByIdCidade(int id) {
+        return null;
     }
 
     @Override
-    public ArrayList<CidadeModel> findByEstadoNomeCidade (String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public CidadeModel inserirCidade(CidadeModel cidade) {
+        return null;
     }
 
     @Override
-    public ArrayList<CidadeModel> findByEstadoSiglaCidade (String sigla) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public CidadeModel atualizarCidade(CidadeModel cidade) {
+        return null;
     }
 
     @Override
-    public ArrayList<CidadeModel> listAllCidade () {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
+    public void deletarCidade(int id) {
 
-    @Override
-    public CidadeModel findByIdCidade (int id) {
-        throw new UnsupportedOperationException("Not supported yet."); 
     }
-
-    @Override
-    public CidadeModel inserirCidade (CidadeModel cidade) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    @Override
-    public CidadeModel atualizarCidade (CidadeModel cidade) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    @Override
-    public void deletarCidade (int id) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-    
 }

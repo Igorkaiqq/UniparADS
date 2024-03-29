@@ -6,75 +6,74 @@ import com.mycompany.clinica.ws.model.EstadoModel;
 
 import java.util.ArrayList;
 
-public class EstadoRepository extends Conexao implements EstadoInterface {
-    @Override
-    public EstadoModel findByNomeEstado(String nome) {
+public class EstadoRepository extends Conexao {
+//    @Override
+//    public EstadoModel findByNomeEstado(String nome) {
+//
+//        try {
+//            this.conectar();
+//            setPstm(getCon().prepareStatement("SELECT * FROM estado WHERE Nome = ?"));
+//            getPstm().setString(1, nome);
+//            setRs(getPstm().executeQuery());
+//            if (getRs().next()){
+//                EstadoModel estado = new EstadoModel();
+//                estado.setId(getRs().getInt("id"));
+//                estado.setNome(getRs().getString("nome"));
+//                estado.setSigla(getRs().getString("sigla"));
+//                return estado;
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        return null;
+//    }
+//
+//    @Override
+//    public ArrayList<EstadoModel> findByLikeNomeEstado(String nome) {
+//        ArrayList<EstadoModel> listaEstado = new ArrayList<EstadoModel>();
+//        try {
+//            this.conectar();
+//            setPstm(getCon().prepareStatement("SELECT * FROM estado WHERE Nome LIKE ?"));
+//            getPstm().setString(1, "%"+nome+"%");
+//            setRs(getPstm().executeQuery());
+//            while(getRs().next()){
+//                EstadoModel estado = new EstadoModel();
+//                estado.setId(getRs().getInt("Id"));
+//                estado.setNome(getRs().getString("Nome"));
+//                estado.setSigla(getRs().getString("Sigla"));
+//                listaEstado.add(estado);
+//            }
+//            return listaEstado;
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//
+//        return null;
+//    }
+//
+//    @Override
+//    public EstadoModel findBySiglaEstado(String nome) {
+//
+//        try {
+//            this.conectar();
+//            setPstm(getCon().prepareStatement("SELECT * FROM estado WHERE Sigla = ?"));
+//            getPstm().executeQuery();
+//            getPstm().setString(1, nome);
+//            if (getRs().next()){
+//                EstadoModel estado = new EstadoModel();
+//                estado.setId(getRs().getInt("id"));
+//                estado.setNome(getRs().getString("nome"));
+//                estado.setSigla(getRs().getString("sigla"));
+//                return estado;
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//
+//    }
+//        return null;
+//    }
 
-        try {
-            this.conectar();
-            setPstm(getCon().prepareStatement("SELECT * FROM estado WHERE Nome = ?"));
-            getPstm().setString(1, nome);
-            setRs(getPstm().executeQuery());
-            if (getRs().next()){
-                EstadoModel estado = new EstadoModel();
-                estado.setId(getRs().getInt("id"));
-                estado.setNome(getRs().getString("nome"));
-                estado.setSigla(getRs().getString("sigla"));
-                return estado;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return null;
-    }
-
-    @Override
-    public ArrayList<EstadoModel> findByLikeNomeEstado(String nome) {
-        ArrayList<EstadoModel> listaEstado = new ArrayList<EstadoModel>();
-        try {
-            this.conectar();
-            setPstm(getCon().prepareStatement("SELECT * FROM estado WHERE Nome LIKE ?"));
-            getPstm().setString(1, "%"+nome+"%");
-            setRs(getPstm().executeQuery());
-            while(getRs().next()){
-                EstadoModel estado = new EstadoModel();
-                estado.setId(getRs().getInt("Id"));
-                estado.setNome(getRs().getString("Nome"));
-                estado.setSigla(getRs().getString("Sigla"));
-                listaEstado.add(estado);
-            }
-            return listaEstado;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return null;
-    }
-
-    @Override
-    public EstadoModel findBySiglaEstado(String nome) {
-
-        try {
-            this.conectar();
-            setPstm(getCon().prepareStatement("SELECT * FROM estado WHERE Sigla = ?"));
-            getPstm().executeQuery();
-            getPstm().setString(1, nome);
-            if (getRs().next()){
-                EstadoModel estado = new EstadoModel();
-                estado.setId(getRs().getInt("id"));
-                estado.setNome(getRs().getString("nome"));
-                estado.setSigla(getRs().getString("sigla"));
-                return estado;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-
-    }
-        return null;
-    }
-
-    @Override
     public ArrayList<EstadoModel> listAllEstado() {
 
         ArrayList<EstadoModel> listaEstado = new ArrayList<EstadoModel>();
@@ -102,7 +101,6 @@ public class EstadoRepository extends Conexao implements EstadoInterface {
         return null;
     }
 
-    @Override
     public EstadoModel findByIdEstado(int id) {
 
         try {
@@ -128,7 +126,6 @@ public class EstadoRepository extends Conexao implements EstadoInterface {
         return null;
     }
 
-    @Override
     public EstadoModel inserirEstado(EstadoModel estado) {
         try {
             this.conectar();
@@ -145,7 +142,6 @@ public class EstadoRepository extends Conexao implements EstadoInterface {
         return null;
     }
 
-    @Override
     public EstadoModel atualizarEstado(EstadoModel estado) {
         try {
             this.conectar();
@@ -165,7 +161,6 @@ public class EstadoRepository extends Conexao implements EstadoInterface {
         return null;
     }
 
-    @Override
     public boolean deletarEstado(int id) {
         try {
             this.conectar();

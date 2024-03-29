@@ -14,44 +14,29 @@ import java.util.ArrayList;
  */
 public class EstadoService implements EstadoInterface {
 
+
     @Override
-    public EstadoModel findByNomeEstado (String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public ArrayList<EstadoModel> listAllEstado() {
+        return null;
     }
 
     @Override
-    public ArrayList<EstadoModel> findByLikeNomeEstado (String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public EstadoModel findByIdEstado(int id) {
+        return null;
     }
 
     @Override
-    public EstadoModel findBySiglaEstado (String nome) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public EstadoModel inserirEstado(EstadoModel estado) {
+        return null;
     }
 
     @Override
-    public ArrayList<EstadoModel> listAllEstado () {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public EstadoModel atualizarEstado(EstadoModel estado) {
+        return null;
     }
 
     @Override
-    public EstadoModel findByIdEstado (int id) {
-        throw new UnsupportedOperationException("Not supported yet."); 
+    public boolean deletarEstado(int id) {
+        return false;
     }
-
-    @Override
-    public EstadoModel inserirEstado (EstadoModel estado) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    @Override
-    public EstadoModel atualizarEstado (EstadoModel estado) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-
-    @Override
-    public boolean deletarEstado (int id) {
-        throw new UnsupportedOperationException("Not supported yet."); 
-    }
-    
 }
