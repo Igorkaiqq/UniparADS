@@ -22,7 +22,7 @@ import lombok.Setter;
 public class EnderecoModel {
     
     private int id;
-    private String Logradouro;
+    private String logradouro;
     private String bairro;
     private int numero;
     private String complemento;

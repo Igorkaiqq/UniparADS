@@ -33,7 +33,10 @@ public class MedicoRepository extends Conexao {
         ArrayList<MedicoModel> listaMedico = new ArrayList<>();
         try {
             this.conectar();
-            setPstm(getCon().prepareStatement("SELECT * FROM medico"));
+            setPstm(getCon().prepareStatement("SELECT pes.Nome, pes.Email, med.CRM, esp.Nome FROM medico med " +
+                    "INNER JOIN pessoa pes ON (med.PessoaId = pes.Id) " +
+                    "INNER JOIN especialidade esp ON (med.EspecialidadeId = esp.Id) " +
+                    "ORDER BY pes.Nome ASC"));
             getPstm().executeQuery();
             while(getRs().next()){
                 MedicoModel medico = new MedicoModel();
@@ -42,7 +45,7 @@ public class MedicoRepository extends Conexao {
                 medico.getEspecialidade().setId(getRs().getInt("EspecialidadeId"));
                 medico.setStatusRegistro(getRs().getInt("StatusRegistro") == 1 ? StatusRegistroEnum.ATIVO
                         : StatusRegistroEnum.INATIVO);
-                medico.setCRM(getRs().getString("CRM"));
+                medico.setCrm(getRs().getString("CRM"));
                 listaMedico.add(medico);
             }
             return listaMedico;
@@ -62,7 +65,11 @@ public class MedicoRepository extends Conexao {
     public MedicoModel findByIdMedico(int id) {
         ArrayList<MedicoModel> listaMedico = new ArrayList<>();
         try {
-            setPstm(getCon().prepareStatement("SELECT * FROM medico WHERE Id = ?"));
+            setPstm(getCon().prepareStatement("SELECT pes.Nome, pes.Email, med.CRM, esp.Nome FROM medico med " +
+                    "INNER JOIN pessoa pes ON (med.PessoaId = pes.Id) " +
+                    "INNER JOIN especialidade esp ON (med.EspecialidadeId = esp.Id) " +
+                    "WHERE med.Id = ? " +
+                    "ORDER BY pes.Nome ASC"));
             getPstm().setInt(1, id);
             getPstm().executeQuery();
             if (getRs().first()){
@@ -72,7 +79,7 @@ public class MedicoRepository extends Conexao {
                 medico.getEspecialidade().setId(getRs().getInt("EspecialidadeId"));
                 medico.setStatusRegistro(getRs().getInt("StatusRegistro") == 1 ? StatusRegistroEnum.ATIVO
                         : StatusRegistroEnum.INATIVO);
-                medico.setCRM(getRs().getString("CRM"));
+                medico.setCrm(getRs().getString("CRM"));
                 listaMedico.add(medico);
                 return medico;
             }
@@ -94,7 +101,7 @@ public class MedicoRepository extends Conexao {
             getPstm().setInt(1, medico.getPessoa().getId());
             getPstm().setInt(2, medico.getEspecialidade().getId());
             getPstm().setInt(2, medico.getStatusRegistro().equals(StatusRegistroEnum.ATIVO) ? 1 : 0);
-            getPstm().setString(4, medico.getCRM());
+            getPstm().setString(4, medico.getCrm());
             getPstm().executeUpdate();
             return medico;
         } catch (Exception e) {
@@ -119,7 +126,7 @@ public class MedicoRepository extends Conexao {
             getPstm().setInt(2, medico.getPessoa().getId());
             getPstm().setInt(3, medico.getEspecialidade().getId());
             getPstm().setInt(2, medico.getStatusRegistro().equals(StatusRegistroEnum.ATIVO) ? 1 : 0);
-            getPstm().setString(5, medico.getCRM());
+            getPstm().setString(5, medico.getCrm());
             getPstm().executeUpdate();
             return medico;
         } catch (Exception e) {

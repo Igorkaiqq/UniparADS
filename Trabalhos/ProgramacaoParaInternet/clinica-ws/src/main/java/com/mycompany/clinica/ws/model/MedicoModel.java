@@ -23,7 +23,7 @@ public class MedicoModel {
     private int id;
     private PessoaModel pessoa;
     private EspecialidadeModel especialidade;
-    private String CRM;
+    private String crm;
     private StatusRegistroEnum statusRegistro;
 
 }

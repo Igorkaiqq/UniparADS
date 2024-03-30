@@ -24,7 +24,9 @@ public class PacienteRepository extends Conexao {
         ArrayList<PacienteModel> listaPaciente = new ArrayList<>();
         try {
             this.conectar();
-            setPstm(getCon().prepareStatement("SELECT * FROM paciente"));
+            setPstm(getCon().prepareStatement("SELECT pes.Nome, pes.Email, pes.CPF FROM paciente pac " +
+                    "INNER JOIN pessoa pes ON (pac.PessoaId = pes.Id) " +
+                    "ORDER BY pes.Nome ASC"));
             getPstm().executeQuery();
             while (getRs().next()) {
                 PacienteModel paciente = new PacienteModel();
@@ -52,7 +54,10 @@ public class PacienteRepository extends Conexao {
     public PacienteModel findByIdPaciente(int id) {
         try {
             this.conectar();
-            setPstm(getCon().prepareStatement("SELECT * FROM paciente WHERE Id = ?"));
+            setPstm(getCon().prepareStatement("SELECT pes.Nome, pes.Email, pes.CPF FROM paciente pac " +
+                    "INNER JOIN pessoa pes ON (pac.PessoaId = pes.Id) " +
+                    "WHERE pac.Id = ?" +
+                    "ORDER BY pes.Nome ASC"));
             getPstm().executeQuery();
             if (getRs().first()) {
                 PacienteModel paciente = new PacienteModel();

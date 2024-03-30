@@ -1,0 +1,12 @@
+
+‹
+java:S1192"HDefine a constant instead of duplicating this literal "MÃ©dico" 4 times.(ÃÉĞ§8äÿé1J$cd062b7a-cd27-44e2-9976-b8296a06a91f
+}
+java:S1118
+":Add a private constructor to hide the implicit public one.(˜ò¸8¨Ë‚‚é1J$84972eb6-7b7d-472b-8637-1438293141bf
+”
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(Îğº,8±¤ÿé1J$75eaf8de-5c96-4188-a56b-671f7a3dd331
+
+java:S6201"KReplace this instanceof check and cast with 'instanceof MedicoModel medico'(‘îã¦8íÿé1J$77b532fa-fa32-45d0-9833-e84babdbca88
+‘
+java:S6201-"OReplace this instanceof check and cast with 'instanceof PacienteModel paciente'(”¾Ëo8¹¤ÿé1J$aa753f64-b460-42c7-8add-0f2e24700af3

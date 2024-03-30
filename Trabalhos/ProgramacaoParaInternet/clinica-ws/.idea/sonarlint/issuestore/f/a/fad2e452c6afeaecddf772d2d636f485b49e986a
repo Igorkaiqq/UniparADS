@@ -1,0 +1,14 @@
+
+‚
+java:S1118":Add a private constructor to hide the implicit public one.(¸íå“üÿÿÿÿ8¶®³„é1J$0f6f6bf7-78b0-499e-9ff4-04dae4dd468a
+•
+java:S3776
+"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(€÷®Ÿ8¹®³„é1J$e13a33d9-e938-4ab8-b87b-5cad24be999d
+‘
+java:S6201"OReplace this instanceof check and cast with 'instanceof EnderecoModel endereco'(…êßw8¼®³„é1J$7c3ca1ab-c0f4-4985-a780-9792c3303e03
+œ
+java:S6201%"YReplace this instanceof check and cast with 'instanceof EspecialidadeModel especialidade'(—–›ý8¼®³„é1J$f5f2e761-85a6-42e5-a802-66dfa133f67e
+Ž
+java:S62013"KReplace this instanceof check and cast with 'instanceof MedicoModel medico'(‘îã¦8½®³„é1J$532ee1e8-5530-4776-b8d5-14bc06dd679a
+‘
+java:S6201:"OReplace this instanceof check and cast with 'instanceof PacienteModel paciente'(”¾Ëo8¾®³„é1J$ccddc567-dd37-4d47-a28d-9c38df6806ac

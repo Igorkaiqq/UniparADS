@@ -6,7 +6,11 @@ package com.mycompany.clinica.ws.services;
 
 import com.mycompany.clinica.ws.interfaces.CidadeInterface;
 import com.mycompany.clinica.ws.model.CidadeModel;
-import com.mycompany.clinica.ws.model.EstadoModel;
+import com.mycompany.clinica.ws.repository.CidadeRepository;
+import com.mycompany.clinica.ws.services.validation.ValidationCampoVazio;
+import com.mycompany.clinica.ws.services.validation.ValidationId;
+import com.mycompany.clinica.ws.services.validation.ValidationQuantidadeCaracteres;
+
 import java.util.ArrayList;
 
 /**
@@ -15,29 +19,69 @@ import java.util.ArrayList;
  */
 public class CidadeService implements CidadeInterface {
 
+    private final CidadeRepository cidadeRepository;
+
+    public CidadeService(CidadeRepository cidadeRepository) {
+        this.cidadeRepository = cidadeRepository;
+    }
 
     @Override
     public ArrayList<CidadeModel> listAllCidade() {
+
+        try {
+            return cidadeRepository.listAllCidade();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
     @Override
     public CidadeModel findByIdCidade(int id) {
+        try {
+            ValidationId.validaId(id);
+            CidadeModel cidade = cidadeRepository.findByIdCidade(id);
+            ValidationId.validaExiste(cidade, id);
+            return cidade;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
     @Override
     public CidadeModel inserirCidade(CidadeModel cidade) {
-        return null;
+        try {
+            ValidationCampoVazio.validaCamposVazio(cidade);
+            ValidationQuantidadeCaracteres.validaTamanhoCampo(cidade);
+            return cidadeRepository.inserirCidade(cidade);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
-    @Override
-    public CidadeModel atualizarCidade(CidadeModel cidade) {
-        return null;
-    }
+        @Override
+        public CidadeModel atualizarCidade (CidadeModel cidade){
+            try {
+                ValidationCampoVazio.validaCamposVazio(cidade);
+                ValidationQuantidadeCaracteres.validaTamanhoCampo(cidade);
+                return cidadeRepository.atualizarCidade(cidade);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
 
-    @Override
-    public void deletarCidade(int id) {
-
+        @Override
+        public void deletarCidade ( int id){
+            try {
+                ValidationId.validaId(id);
+                CidadeModel cidade = cidadeRepository.findByIdCidade(id);
+                ValidationId.validaExiste(cidade, id);
+                cidadeRepository.deletarCidade(id);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
-}
