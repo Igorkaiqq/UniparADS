@@ -1,3 +1,9 @@
 
-‚
-java:S1118":Add a private constructor to hide the implicit public one.(¦ïï¾úÿÿÿÿ8ŞÓ¯é1J$23ae1417-01f2-43f7-a9af-6d07670534be
+{
+java:S1118":Add a private constructor to hide the implicit public one.(¦ïï¾úÿÿÿÿJ$e469c34f-c904-498a-a73f-129f496474c4
+‡
+java:S6201"KReplace this instanceof check and cast with 'instanceof PessoaModel pessoa'(ùÊª¯J$a717deaa-41c4-4d3f-887f-e4e2080bec99
+w
+java:S6353"<Use concise character class syntax '\\d' instead of '[0-9]'.(ìÊÂ]J$e6de1062-50d7-4d55-8948-da4fa9463194
+}
+java:S6353"<Use concise character class syntax '\\d' instead of '[0-9]'.(ğ×ÌíúÿÿÿÿJ$763be47d-adb1-40f2-b2c9-8974021c33ce

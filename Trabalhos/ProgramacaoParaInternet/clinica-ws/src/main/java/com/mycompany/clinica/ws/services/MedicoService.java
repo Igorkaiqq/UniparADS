@@ -7,22 +7,23 @@ package com.mycompany.clinica.ws.services;
 import com.mycompany.clinica.ws.interfaces.MedicoInterface;
 import com.mycompany.clinica.ws.model.EnderecoModel;
 import com.mycompany.clinica.ws.model.MedicoModel;
+import com.mycompany.clinica.ws.repository.MedicoRepository;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import java.util.ArrayList;
 
-/**
- *
- * @author igork
- */
+
 public class MedicoService implements MedicoInterface {
 
-
+    public final MedicoRepository medicoRepository = null;
+    
+    public MedicoService(){
+        
+    }
+    
     @Override
     public ArrayList<MedicoModel> listAllMedico() {
-        return null;
-    }
-
-    @Override
-    public ArrayList<MedicoModel> findByStatusMedico(String nome) {
         return null;
     }
 
@@ -39,6 +40,11 @@ public class MedicoService implements MedicoInterface {
     @Override
     public MedicoModel atualizarMedico(MedicoModel medico) {
         return null;
+    }
+
+    @Override
+    public void deletarMedico(int id) {
+
     }
 
     @Override

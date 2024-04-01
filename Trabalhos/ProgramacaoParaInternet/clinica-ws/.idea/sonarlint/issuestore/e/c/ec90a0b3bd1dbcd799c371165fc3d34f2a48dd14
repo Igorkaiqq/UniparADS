@@ -1,5 +1,13 @@
 
-~	java:S125"<This block of commented-out lines of code should be removed.(èğ„8­©»€é1J$b6b20829-aaaf-4b81-958e-641bd083a88e
+¸
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(óÆš’øÿÿÿÿ8æò¼·é1J$140247ac-d92c-491a-b7a8-6e04deae3aff
+~	java:S125"<This block of commented-out lines of code should be removed.(èğ„8­©»€é1J$80d0f4dd-e322-4865-aa1c-e714b02f9660
 n
-java:S1168-"+Return an empty collection instead of null.(¥¹ï8°©»€é1J$4ced12e3-723c-4515-b520-c2b8c69fd50b
-~	java:S1251"<This block of commented-out lines of code should be removed.(øŸÖæ8°©»€é1J$a6956837-f2d4-4844-9634-a6352a4082cf
+java:S1168-"+Return an empty collection instead of null.(¥¹ï8°©»€é1J$48a0fbc8-4cb0-46d9-8304-3545424ac191
+k
+java:S11726")Remove this unused method parameter "id".(™‡öB8¥ó¼·é1J$315ff1c4-e8f5-44fe-934b-293c3e9cbbe9
+~	java:S1251"<This block of commented-out lines of code should be removed.(øŸÖæ8°©»€é1J$2a52d648-4b82-45fb-b648-9b5c5d9d60f8
+•
+java:S1128"RRemove this unused import 'com.mycompany.clinica.ws.interfaces.PacienteInterface'.(Úÿ¾€8«ó¼·é1J$8762dfb3-791f-4bbb-a2b1-e5201b17890a
+‘
+java:S1128"IRemove this unused import 'com.mycompany.clinica.ws.model.EnderecoModel'.(­õé®ıÿÿÿÿ8«ó¼·é1J$d96f750d-3d4a-4589-85a2-4a09935715f6

@@ -12,6 +12,8 @@ import com.mycompany.clinica.ws.repository.EstadoRepository;
 import com.mycompany.clinica.ws.services.validation.ValidationCampoVazio;
 import com.mycompany.clinica.ws.services.validation.ValidationId;
 import com.mycompany.clinica.ws.services.validation.ValidationQuantidadeCaracteres;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 
@@ -21,13 +23,12 @@ import java.util.ArrayList;
  */
 public class EstadoService implements EstadoInterface {
 
-    private final EstadoRepository estadoRepository;
-
-    public EstadoService(EstadoRepository estadoRepository) {
-        this.estadoRepository = estadoRepository;
+    private final EstadoRepository estadoRepository = null;
+    
+    public EstadoService(){
+        
     }
-
-
+    
     @Override
     public ArrayList<EstadoModel> listAllEstado() {
         try {
@@ -76,15 +77,15 @@ public class EstadoService implements EstadoInterface {
     }
 
     @Override
-    public boolean deletarEstado(int id) {
+    public void deletarEstado(int id) {
         try {
             ValidationId.validaId(id);
             EstadoModel estado = estadoRepository.findByIdEstado(id);
             ValidationId.validaExiste(estado, id);
-            return estadoRepository.deletarEstado(id);
+            estadoRepository.deletarEstado(id);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return false;
     }
+
 }

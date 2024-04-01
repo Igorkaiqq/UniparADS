@@ -5,24 +5,28 @@
 package com.mycompany.clinica.ws.services;
 
 import com.mycompany.clinica.ws.interfaces.PacienteInterface;
-import com.mycompany.clinica.ws.model.EnderecoModel;
 import com.mycompany.clinica.ws.model.PacienteModel;
+import com.mycompany.clinica.ws.repository.PacienteRepository;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import java.util.ArrayList;
 
 /**
  *
  * @author igork
  */
+
 public class PacienteService implements PacienteInterface {
 
-
+    public final PacienteRepository pacienteRepository = null;
+    
+    public PacienteService(){
+        
+    }
+    
     @Override
     public ArrayList<PacienteModel> listAllPaciente() {
-        return null;
-    }
-
-    @Override
-    public ArrayList<PacienteModel> findByStatusPaciente(String nome) {
         return null;
     }
 
@@ -39,5 +43,15 @@ public class PacienteService implements PacienteInterface {
     @Override
     public PacienteModel atualizarPaciente(PacienteModel paciente) {
         return null;
+    }
+
+    @Override
+    public void deletarPaciente(int id) {
+
+    }
+
+    @Override
+    public void ativarPaciente(int id) {
+
     }
 }

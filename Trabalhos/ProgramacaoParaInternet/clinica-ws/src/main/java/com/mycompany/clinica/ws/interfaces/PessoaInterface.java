@@ -29,7 +29,7 @@ public interface PessoaInterface {
     PessoaModel atualizarPessoa(PessoaModel pessoa);
 
     @WebMethod
-    boolean deletarPessoa(int id);
+    void deletarPessoa(int id);
 
 //    @WebMethod
 //    ArrayList<PessoaModel> findByNomePessoa(@WebParam String nome);

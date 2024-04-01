@@ -20,20 +20,26 @@ public interface PacienteInterface {
    @WebMethod
    ArrayList<PacienteModel> listAllPaciente();
 
-   @WebMethod
-   ArrayList<PacienteModel> findByStatusPaciente(@WebParam String nome);
+    PacienteModel findByIdPaciente(int id);
 
-   @WebMethod
-   PacienteModel findByIdPaciente(@WebParam int id);
-
-   @WebMethod
+    @WebMethod
    PacienteModel inserirPaciente(PacienteModel paciente);
 
    @WebMethod
    PacienteModel atualizarPaciente(PacienteModel paciente);
 
+  @WebMethod
+   void deletarPaciente(int id);
+
+  @WebMethod
+    void ativarPaciente(int id);
+
+//    @WebMethod
+//    ArrayList<PacienteModel> findByStatusPaciente(@WebParam String nome);
+
 //   @WebMethod
-//   void deletarPaciente(int id);
+//   PacienteModel findByIdPaciente(@WebParam int id);
+
 //   @WebMethod
 //    ArrayList<PacienteModel> findByNomePaciente(@WebParam String nome);
 //

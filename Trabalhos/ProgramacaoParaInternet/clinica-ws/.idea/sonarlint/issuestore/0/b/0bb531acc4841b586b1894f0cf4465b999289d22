@@ -1,0 +1,8 @@
+
+±
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Ùø‰¥ýÿÿÿÿJ$3757bb17-6c3a-45d5-a8cb-1f29e346bb9d
+|	java:S125"<This block of commented-out lines of code should be removed.(÷€ßëûÿÿÿÿJ$1ce63c2c-5810-4dc0-9f1c-87576543ebbe
+g
+java:S11680"+Return an empty collection instead of null.(¥¹ïJ$6f108388-203c-40ea-8911-310ff608158b
+j
+java:S11724")Remove this unused method parameter "id".(çÏŠöþÿÿÿÿJ$55663861-c304-4ae8-9361-e26f129ca7d8

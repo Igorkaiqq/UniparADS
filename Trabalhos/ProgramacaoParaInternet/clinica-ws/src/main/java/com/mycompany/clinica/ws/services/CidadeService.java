@@ -10,6 +10,8 @@ import com.mycompany.clinica.ws.repository.CidadeRepository;
 import com.mycompany.clinica.ws.services.validation.ValidationCampoVazio;
 import com.mycompany.clinica.ws.services.validation.ValidationId;
 import com.mycompany.clinica.ws.services.validation.ValidationQuantidadeCaracteres;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 
@@ -17,14 +19,16 @@ import java.util.ArrayList;
  *
  * @author igork
  */
+
 public class CidadeService implements CidadeInterface {
 
-    private final CidadeRepository cidadeRepository;
+    private static final CidadeRepository cidadeRepository = null;
 
-    public CidadeService(CidadeRepository cidadeRepository) {
-        this.cidadeRepository = cidadeRepository;
+    public CidadeService () {
     }
 
+    
+    
     @Override
     public ArrayList<CidadeModel> listAllCidade() {
 

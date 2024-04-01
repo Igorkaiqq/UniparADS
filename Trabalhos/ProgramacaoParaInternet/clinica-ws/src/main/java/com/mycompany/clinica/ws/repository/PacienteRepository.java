@@ -110,7 +110,7 @@ public class PacienteRepository extends Conexao {
     public void deletarPaciente(int id) {
         try {
             this.conectar();
-            setPstm(getCon().prepareStatement("DELETE FROM paciente WHERE Id = ?"));
+            setPstm(getCon().prepareStatement("UPDATE paciente SET StatusRegistro = 0 WHERE Id = ?"));
             getPstm().setInt(1, id);
             getPstm().executeUpdate();
         } catch (Exception e){
@@ -119,4 +119,17 @@ public class PacienteRepository extends Conexao {
             this.fecharConexao();
         }
         }
+
+    public void ativarPaciente(int id) {
+        try {
+            setPstm(getCon().prepareStatement("UPDATE paciente SET StatusRegistro = 1 WHERE Id = ? "));
+            getPstm().setInt(1, id);
+            getPstm().executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            this.fecharConexao();
+        }
+    }
+
 }

@@ -30,7 +30,7 @@ public interface EstadoInterface {
     EstadoModel atualizarEstado(EstadoModel estado);
 
     @WebMethod
-    boolean deletarEstado(int id);
+    void deletarEstado(int id);
 
 //    @WebMethod
 //    EstadoModel findByNomeEstado(@WebParam String nome);

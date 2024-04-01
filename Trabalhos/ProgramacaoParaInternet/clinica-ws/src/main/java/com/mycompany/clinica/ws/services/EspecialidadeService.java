@@ -6,15 +6,25 @@ package com.mycompany.clinica.ws.services;
 
 import com.mycompany.clinica.ws.interfaces.EspecialidadeInterface;
 import com.mycompany.clinica.ws.model.EspecialidadeModel;
+import com.mycompany.clinica.ws.repository.EspecialidadeRepository;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import java.util.ArrayList;
 
 /**
  *
  * @author igork
  */
+
 public class EspecialidadeService implements EspecialidadeInterface {
 
-
+    public final EspecialidadeRepository especialidadeRepositoy = null;
+    
+    public EspecialidadeService(){
+        
+    }
+    
     @Override
     public ArrayList<EspecialidadeModel> listAllEspecialidade() {
         return null;

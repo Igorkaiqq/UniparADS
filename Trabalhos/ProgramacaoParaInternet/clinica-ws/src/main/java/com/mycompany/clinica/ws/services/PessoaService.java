@@ -7,15 +7,21 @@ package com.mycompany.clinica.ws.services;
 import com.mycompany.clinica.ws.interfaces.PessoaInterface;
 import com.mycompany.clinica.ws.model.EnderecoModel;
 import com.mycompany.clinica.ws.model.PessoaModel;
+import com.mycompany.clinica.ws.repository.PessoaRepository;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
 import java.util.ArrayList;
 
-/**
- *
- * @author igork
- */
+
 public class PessoaService implements PessoaInterface {
 
-
+    public final PessoaRepository pessoaRepository = null;
+    
+    public PessoaService(){
+        
+    }
+    
     @Override
     public ArrayList<PessoaModel> listAllPessoa() {
         return null;
@@ -37,7 +43,6 @@ public class PessoaService implements PessoaInterface {
     }
 
     @Override
-    public boolean deletarPessoa(int id) {
-        return false;
+    public void deletarPessoa(int id) {;
     }
 }

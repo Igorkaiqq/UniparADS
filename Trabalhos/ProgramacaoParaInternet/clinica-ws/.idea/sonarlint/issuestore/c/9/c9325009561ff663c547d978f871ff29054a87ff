@@ -1,5 +1,5 @@
 
-‚
-java:S1118":Add a private constructor to hide the implicit public one.(ÿÿΈΐύÿÿÿÿ8ΐƒ³ι1J$526c1345-27f5-4476-8e78-587fd605322a
-‘
-java:S6201"OReplace this instanceof check and cast with 'instanceof EnderecoModel endereco'(…κίw8Βƒ³ι1J$b1a8a29b-05ad-44dd-a9e1-f7784c794912
+{
+java:S1118":Add a private constructor to hide the implicit public one.(ÿÿΈΐύÿÿÿÿJ$fbd4a1bf-c79e-436a-9d7e-3fbccbc68d71
+
+java:S6201"OReplace this instanceof check and cast with 'instanceof EnderecoModel endereco'(…κίwJ$e30f8a4f-e53d-40c7-a3f6-21955a0fdee0

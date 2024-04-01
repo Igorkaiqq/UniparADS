@@ -1,4 +1,10 @@
 
-v
-java:S2293O"YReplace the type specification in this constructor call with the diamond operator ("<>").(³êêÜ8²ËËƒé1
-W	java:S125"<This block of commented-out lines of code should be removed.(ážÑy8¹ËËƒé1
+œ
+java:S2293O"YReplace the type specification in this constructor call with the diamond operator ("<>").(³êêÜ8À„²¶é1J$032d436d-a8a4-4bb3-90ad-e9c92c2ffa37
+²
+java:S1319M"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(‰å—L8À„²¶é1J$4d4dcaa8-f63a-4a1d-88d8-5b444b7799ba
+}	java:S125"<This block of commented-out lines of code should be removed.(ážÑy8ê„²¶é1J$5bc257a9-cd96-4711-b263-802359a7b586
+n
+java:S1168e"+Return an empty collection instead of null.(¥¹ï8ð„²¶é1J$7da84968-9d6d-42f9-8dad-b099bd1e0b7f
+“
+java:S1128"PRemove this unused import 'com.mycompany.clinica.ws.interfaces.EstadoInterface'.(žíðŒ8ÿ„²¶é1J$0bed89a2-e48f-4fc1-9ded-b526e2656e77

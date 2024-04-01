@@ -20,9 +20,6 @@ public interface MedicoInterface {
     ArrayList<MedicoModel> listAllMedico();
 
     @WebMethod
-    ArrayList<MedicoModel> findByStatusMedico(@WebParam String nome);
-
-    @WebMethod
     MedicoModel findByIdMedico(@WebParam int id);
 
     @WebMethod
@@ -32,7 +29,13 @@ public interface MedicoInterface {
     MedicoModel atualizarMedico(MedicoModel medico);
 
     @WebMethod
+    void deletarMedico(int id);
+
+    @WebMethod
     void ativarMedico(int id);
+
+//    @WebMethod
+//    ArrayList<MedicoModel> findByStatusMedico(@WebParam String nome);
 
 //    @WebMethod
 //    ArrayList<MedicoModel> findByNomeMedico(@WebParam String nome);

@@ -1,12 +1,20 @@
 
-‹
-java:S1192"HDefine a constant instead of duplicating this literal "MÃ©dico" 4 times.(ÃÉĞ§8äÿé1J$cd062b7a-cd27-44e2-9976-b8296a06a91f
-}
-java:S1118
-":Add a private constructor to hide the implicit public one.(˜ò¸8¨Ë‚‚é1J$84972eb6-7b7d-472b-8637-1438293141bf
-”
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(Îğº,8±¤ÿé1J$75eaf8de-5c96-4188-a56b-671f7a3dd331
-
-java:S6201"KReplace this instanceof check and cast with 'instanceof MedicoModel medico'(‘îã¦8íÿé1J$77b532fa-fa32-45d0-9833-e84babdbca88
+„
+java:S1192"HDefine a constant instead of duplicating this literal "MÃ©dico" 4 times.(ÃÉĞ§J$37236c32-9535-4514-9049-8d33c4ace9ef
 ‘
-java:S6201-"OReplace this instanceof check and cast with 'instanceof PacienteModel paciente'(”¾Ëo8¹¤ÿé1J$aa753f64-b460-42c7-8add-0f2e24700af3
+java:S2259/"PA "NullPointerException" could be thrown; "pacienteRepository" is nullable here.(õøµ¦øÿÿÿÿJ$7284eb37-81e6-4747-8b78-44ddd38beca0
+Š
+java:S2259"NA "NullPointerException" could be thrown; "medicoRepository" is nullable here.(Šî€ÑJ$12a5b7b2-89b6-403b-993d-9c883eb3327b
+v
+java:S1118
+":Add a private constructor to hide the implicit public one.(˜ò¸J$05b70ee4-06c1-46fc-9002-3d8b9640992d
+
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(Îğº,J$403cdd55-2778-4cdc-89b8-7729a146ef9f
+‡
+java:S6201"KReplace this instanceof check and cast with 'instanceof MedicoModel medico'(‘îã¦J$de39e44d-ccdb-44e6-9f19-46e5991e4f03
+j
+java:S1905".Remove this unnecessary cast to "MedicoModel".(Šî€ÑJ$ac6f58ea-7222-42d8-848c-59aea0589a12
+Š
+java:S6201-"OReplace this instanceof check and cast with 'instanceof PacienteModel paciente'(”¾ËoJ$e68d0fc5-15ee-4899-8348-f0ef5005030e
+q
+java:S1905/"0Remove this unnecessary cast to "PacienteModel".(õøµ¦øÿÿÿÿJ$4072e3ef-d441-41c4-aadb-5785b22e14a0
