@@ -1,7 +1,6 @@
 package com.mycompany.clinica.ws.repository;
 
 import com.mycompany.clinica.ws.infraestructure.Conexao;
-import com.mycompany.clinica.ws.interfaces.EspecialidadeInterface;
 import com.mycompany.clinica.ws.model.EspecialidadeModel;
 
 import java.util.ArrayList;

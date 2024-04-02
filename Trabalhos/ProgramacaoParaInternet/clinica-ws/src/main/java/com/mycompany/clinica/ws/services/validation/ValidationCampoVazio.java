@@ -3,7 +3,6 @@ package com.mycompany.clinica.ws.services.validation;
 import com.mycompany.clinica.ws.exceptions.ExceptionCamposVazio;
 import com.mycompany.clinica.ws.exceptions.ExceptionEntedidadeNaoInformada;
 import com.mycompany.clinica.ws.model.*;
-import com.mycompany.clinica.ws.repository.*;
 
 public class ValidationCampoVazio {
 

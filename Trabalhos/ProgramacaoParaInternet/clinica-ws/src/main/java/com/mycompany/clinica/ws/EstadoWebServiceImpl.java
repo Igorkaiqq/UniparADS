@@ -8,7 +8,8 @@ import com.mycompany.clinica.ws.services.EstadoService;
 import jakarta.jws.WebService;
 
 import java.util.ArrayList;
-@WebService(endpointInterface = "com.mycompany.clinica.ws.interfaces.EstadoInterface")
+
+@WebService(serviceName = "EstadoWebServiceImpl")
 public class EstadoWebServiceImpl implements EstadoInterface {
 
     EstadoService estadoService = new EstadoService();

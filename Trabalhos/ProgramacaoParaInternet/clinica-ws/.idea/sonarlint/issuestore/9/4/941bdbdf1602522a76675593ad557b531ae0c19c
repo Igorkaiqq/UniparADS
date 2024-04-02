@@ -1,29 +1,23 @@
 
 “
-java:S22590"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(„ÃÌŸ8ÐÉÁ½é1J$afff1881-368a-4029-9cfa-7507f8fe1812
+java:S2259S"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(„ÃÌŸ8ÐÉÁ½é1J$afff1881-368a-4029-9cfa-7507f8fe1812
+“
+java:S2259H"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(½ç€é8Û´À½é1J$6383b28c-5495-4e44-b728-590b0311f058
 ˜
-java:S2259#"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(µý¡÷øÿÿÿÿ8Û´À½é1J$87332a3c-1b17-41e8-a7cb-893b9f84a1f9
+java:S2259 "PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(µý¡÷øÿÿÿÿ8Û´À½é1J$87332a3c-1b17-41e8-a7cb-893b9f84a1f9
 “
-java:S2259K"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(½ç€é8Û´À½é1J$6383b28c-5495-4e44-b728-590b0311f058
+java:S2259<"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(ÏÜ±8Û´À½é1J$459899f8-6743-4463-a8d3-2a9e462e4e16
 “
-java:S2259V"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(„ÃÌŸ8Û´À½é1J$ab5803ba-81b4-4d56-b6e4-15f4adb5e24b
-“
-java:S2259?"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(ÏÜ±8Û´À½é1J$459899f8-6743-4463-a8d3-2a9e462e4e16
-|
-java:S3516G"9Refactor this method to not always return the same value.(çŸèü8Ü´À½é1J$2cbcc666-3225-40c2-a5e4-f996e576d7d1
-|
-java:S3516,"9Refactor this method to not always return the same value.(¿ïò´8Û´À½é1J$26ab7f0b-15d5-4f60-a128-9fa16cb5ac5c
+java:S2259-"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(„ÃÌŸ8Û´À½é1J$ab5803ba-81b4-4d56-b6e4-15f4adb5e24b
 
-java:S3516;"9Refactor this method to not always return the same value.(óØ©’üÿÿÿÿ8Ü´À½é1J$073c41f9-12a0-461e-85a6-f173dab206f3
+java:S35168"9Refactor this method to not always return the same value.(óØ©’üÿÿÿÿ8Ü´À½é1J$073c41f9-12a0-461e-85a6-f173dab206f3
+|
+java:S3516)"9Refactor this method to not always return the same value.(¿ïò´8Û´À½é1J$26ab7f0b-15d5-4f60-a128-9fa16cb5ac5c
+|
+java:S3516D"9Refactor this method to not always return the same value.(çŸèü8Ü´À½é1J$2cbcc666-3225-40c2-a5e4-f996e576d7d1
 c
-java:S1170"!Make this final field static too.(Õœµ8Ü´À½é1J$c290d1cd-9b5a-479b-9c01-1c9ec69cb3cf
+java:S1170"!Make this final field static too.(Õœµ8Ü´À½é1J$c290d1cd-9b5a-479b-9c01-1c9ec69cb3cf
 £
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(£±¬Ìýÿÿÿÿ8ñé­Óé1
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(£±¬Ìýÿÿÿÿ8ñé­Óé1
 n
-java:S1168'"+Return an empty collection instead of null.(¥¹ï8á´À½é1J$4f02b414-5c70-4e8b-9e47-1b5c6f726651
-
-java:S1128"GRemove this unused import 'com.mycompany.clinica.ws.model.CidadeModel'.(«ßŒþÿÿÿÿ8ä´À½é1J$184fff3f-12fe-4c8c-9e20-fc1747affde8
-X
-java:S1128"6Remove this unused import 'lombok.AllArgsConstructor'.(´œ¾öùÿÿÿÿ8…ê­Óé1
-R
-java:S1128"5Remove this unused import 'lombok.NoArgsConstructor'.(¸¨›8…ê­Óé1
+java:S1168$"+Return an empty collection instead of null.(¥¹ï8á´À½é1J$4f02b414-5c70-4e8b-9e47-1b5c6f726651

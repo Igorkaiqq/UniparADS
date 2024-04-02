@@ -5,11 +5,8 @@
 package com.mycompany.clinica.ws.services;
 
 import com.mycompany.clinica.ws.interfaces.PessoaInterface;
-import com.mycompany.clinica.ws.model.EnderecoModel;
 import com.mycompany.clinica.ws.model.PessoaModel;
 import com.mycompany.clinica.ws.repository.PessoaRepository;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 

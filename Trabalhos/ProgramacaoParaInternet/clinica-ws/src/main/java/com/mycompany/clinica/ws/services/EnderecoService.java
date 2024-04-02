@@ -5,14 +5,11 @@
 package com.mycompany.clinica.ws.services;
 
 import com.mycompany.clinica.ws.interfaces.EnderecoInterface;
-import com.mycompany.clinica.ws.model.CidadeModel;
 import com.mycompany.clinica.ws.model.EnderecoModel;
 import com.mycompany.clinica.ws.repository.EnderecoRepository;
 import com.mycompany.clinica.ws.services.validation.ValidationCampoVazio;
 import com.mycompany.clinica.ws.services.validation.ValidationId;
 import com.mycompany.clinica.ws.services.validation.ValidationQuantidadeCaracteres;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 

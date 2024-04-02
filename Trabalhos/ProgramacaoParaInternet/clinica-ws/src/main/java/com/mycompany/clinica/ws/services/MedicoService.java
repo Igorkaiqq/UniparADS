@@ -5,11 +5,8 @@
 package com.mycompany.clinica.ws.services;
 
 import com.mycompany.clinica.ws.interfaces.MedicoInterface;
-import com.mycompany.clinica.ws.model.EnderecoModel;
 import com.mycompany.clinica.ws.model.MedicoModel;
 import com.mycompany.clinica.ws.repository.MedicoRepository;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 

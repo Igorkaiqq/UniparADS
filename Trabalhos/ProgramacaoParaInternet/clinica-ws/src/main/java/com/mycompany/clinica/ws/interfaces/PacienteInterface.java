@@ -4,17 +4,16 @@
  */
 package com.mycompany.clinica.ws.interfaces;
 
-import com.mycompany.clinica.ws.model.EnderecoModel;
 import com.mycompany.clinica.ws.model.PacienteModel;
-import com.mycompany.clinica.ws.model.PessoaModel;
 import jakarta.jws.WebMethod;
-import jakarta.jws.WebParam;
+import jakarta.jws.WebService;
 import java.util.ArrayList;
 
 /**
  *
  * @author igork
  */
+@WebService
 public interface PacienteInterface {
 
    @WebMethod

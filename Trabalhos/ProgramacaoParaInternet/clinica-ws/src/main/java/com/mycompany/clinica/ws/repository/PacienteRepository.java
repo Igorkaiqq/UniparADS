@@ -2,8 +2,6 @@ package com.mycompany.clinica.ws.repository;
 
 import com.mycompany.clinica.ws.Enums.StatusRegistroEnum;
 import com.mycompany.clinica.ws.infraestructure.Conexao;
-import com.mycompany.clinica.ws.interfaces.PacienteInterface;
-import com.mycompany.clinica.ws.model.EnderecoModel;
 import com.mycompany.clinica.ws.model.PacienteModel;
 
 import java.util.ArrayList;

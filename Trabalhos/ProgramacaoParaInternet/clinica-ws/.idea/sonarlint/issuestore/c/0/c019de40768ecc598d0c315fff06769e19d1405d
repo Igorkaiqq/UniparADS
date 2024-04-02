@@ -1,25 +1,21 @@
 
 –
-java:S2259T"NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(Ìâåÿÿÿÿÿ8ıåºé1J$f5c1159b-09ab-4a0a-8e66-61331ab553d8
+java:S2259R"NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(Ìâåÿÿÿÿÿ8ıåºé1J$bcb4a6c0-9cce-4bf5-a8ce-382706802bb8
 –
-java:S2259="NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(øôØúşÿÿÿÿ8ıåºé1J$7dbe00ca-0657-4a5c-9cb1-1198dcf6c0a4
-–
-java:S2259/"NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(Ìâåÿÿÿÿÿ8ıåºé1J$58c28004-dda0-4b1c-876c-38fc23df87a4
-–
-java:S2259$"NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(€ºØïüÿÿÿÿ8ıåºé1J$87a09987-02b8-48f0-9d9e-9808b89ac8ba
+java:S2259-"NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(Ìâåÿÿÿÿÿ8ıåºé1J$59693eff-e7ff-498a-a873-7688593f9e48
 ‘
-java:S2259I"NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(åÕÚ¾8üåºé1J$080f7ed3-9199-4dc0-a065-336d2c2f84b1
+java:S2259G"NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(åÕÚ¾8üåºé1J$13554f5d-3062-4302-925e-df25efba3cd0
+–
+java:S2259;"NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(øôØúşÿÿÿÿ8ıåºé1J$e0799f28-3cea-45f4-90d6-da3d7501897b
+–
+java:S2259""NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(€ºØïüÿÿÿÿ8ıåºé1J$9738a6cb-f08d-41d2-af68-86ae6942681e
+
+java:S3516*"9Refactor this method to not always return the same value.(’…Êºûÿÿÿÿ8ıåºé1J$24985d90-6692-4c47-92cf-fda8535d00b8
 {
-java:S3516E"9Refactor this method to not always return the same value.(°øÁ)8ıåºé1J$d4e46980-1aa7-4a07-9b73-8ed997c0337e
+java:S3516C"9Refactor this method to not always return the same value.(°øÁ)8ıåºé1J$4466c5a6-47f3-43a5-88cd-cb1e1e687266
 
-java:S3516,"9Refactor this method to not always return the same value.(’…Êºûÿÿÿÿ8ıåºé1J$10cec09d-c2c9-407c-8832-1fca4f81d357
-
-java:S35169"9Refactor this method to not always return the same value.(Áê‘Ïşÿÿÿÿ8ıåºé1J$0e028139-e980-4ef2-be81-435b9daa13b7
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(´¾¼‘8ã’®Óé1
+java:S35167"9Refactor this method to not always return the same value.(Áê‘Ïşÿÿÿÿ8ıåºé1J$86e6c7fb-db6f-427c-a853-ad75ecdf43b6
+Ä
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(´¾¼‘8ã’®Óé1J$fcdf8924-25e5-4388-9ae5-b4ed101bd5f2
 n
-java:S1168("+Return an empty collection instead of null.(¥¹ï8ºí¼·é1J$b53daf9d-10cc-440d-9ac9-c6defdd322eb
-X
-java:S1128"6Remove this unused import 'lombok.AllArgsConstructor'.(´œ¾öùÿÿÿÿ8ğ’®Óé1
-R
-java:S1128"5Remove this unused import 'lombok.NoArgsConstructor'.(¸¨›8ğ’®Óé1
+java:S1168&"+Return an empty collection instead of null.(¥¹ï8ºí¼·é1J$39ce0d03-315d-40e3-9412-d2a3bd4b683f

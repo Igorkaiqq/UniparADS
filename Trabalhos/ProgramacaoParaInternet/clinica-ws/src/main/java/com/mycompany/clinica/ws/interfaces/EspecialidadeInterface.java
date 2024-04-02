@@ -7,12 +7,14 @@ package com.mycompany.clinica.ws.interfaces;
 import com.mycompany.clinica.ws.model.EspecialidadeModel;
 import jakarta.jws.WebMethod;
 import jakarta.jws.WebParam;
+import jakarta.jws.WebService;
 import java.util.ArrayList;
 
 /**
  *
  * @author igork
  */
+@WebService
 public interface EspecialidadeInterface {
 
     @WebMethod

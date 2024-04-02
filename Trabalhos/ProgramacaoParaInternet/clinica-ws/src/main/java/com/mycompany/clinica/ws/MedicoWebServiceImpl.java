@@ -6,7 +6,8 @@ import com.mycompany.clinica.ws.services.MedicoService;
 import jakarta.jws.WebService;
 
 import java.util.ArrayList;
-@WebService(endpointInterface = "com.mycompany.clinica.ws.interfaces.MedicoInterface")
+
+@WebService(serviceName = "MedicoWebServiceImpl")
 public class MedicoWebServiceImpl implements MedicoInterface {
 
     MedicoService medicoService = new MedicoService();

@@ -7,8 +7,6 @@ package com.mycompany.clinica.ws.services;
 import com.mycompany.clinica.ws.interfaces.PacienteInterface;
 import com.mycompany.clinica.ws.model.PacienteModel;
 import com.mycompany.clinica.ws.repository.PacienteRepository;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 

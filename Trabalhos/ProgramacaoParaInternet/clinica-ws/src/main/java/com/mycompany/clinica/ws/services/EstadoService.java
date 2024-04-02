@@ -5,15 +5,12 @@
 package com.mycompany.clinica.ws.services;
 
 import com.mycompany.clinica.ws.exceptions.ExceptionId;
-import com.mycompany.clinica.ws.exceptions.ExceptionNumeroNegativo;
 import com.mycompany.clinica.ws.interfaces.EstadoInterface;
 import com.mycompany.clinica.ws.model.EstadoModel;
 import com.mycompany.clinica.ws.repository.EstadoRepository;
 import com.mycompany.clinica.ws.services.validation.ValidationCampoVazio;
 import com.mycompany.clinica.ws.services.validation.ValidationId;
 import com.mycompany.clinica.ws.services.validation.ValidationQuantidadeCaracteres;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 
