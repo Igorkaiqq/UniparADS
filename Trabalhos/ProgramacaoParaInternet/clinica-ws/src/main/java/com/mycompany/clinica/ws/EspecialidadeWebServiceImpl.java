@@ -7,7 +7,7 @@ import jakarta.jws.WebService;
 
 import java.util.ArrayList;
 
-@WebService(serviceName = "EspecialidadeWebServiceImpl")
+@WebService(serviceName = "EspecialidadeWebServiceImpl", endpointInterface = "com.mycompany.clinica.ws.EspecialidadeWebServiceImpl")
 public class EspecialidadeWebServiceImpl implements EspecialidadeInterface {
 
     EspecialidadeService especialidadeService = new EspecialidadeService();

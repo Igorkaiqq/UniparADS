@@ -1,21 +1,21 @@
 
 –
-java:S2259R"NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(Ìâåÿÿÿÿÿ8ıåºé1J$bcb4a6c0-9cce-4bf5-a8ce-382706802bb8
+java:S2259-"NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(Ìâåÿÿÿÿÿ8ıåºé1J$443269a8-752a-4c14-8a56-eb420b5754db
 –
-java:S2259-"NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(Ìâåÿÿÿÿÿ8ıåºé1J$59693eff-e7ff-498a-a873-7688593f9e48
+java:S2259R"NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(Ìâåÿÿÿÿÿ8ıåºé1J$8edf83f3-18fe-4efb-b07f-d2ee3b83ea68
 ‘
-java:S2259G"NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(åÕÚ¾8üåºé1J$13554f5d-3062-4302-925e-df25efba3cd0
+java:S2259G"NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(åÕÚ¾8üåºé1J$1b47c3b2-ff8a-4e1c-a487-5646279bb28d
 –
-java:S2259;"NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(øôØúşÿÿÿÿ8ıåºé1J$e0799f28-3cea-45f4-90d6-da3d7501897b
+java:S2259""NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(€ºØïüÿÿÿÿ8ıåºé1J$7de8d131-7d5c-47c2-a294-55b6face7072
 –
-java:S2259""NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(€ºØïüÿÿÿÿ8ıåºé1J$9738a6cb-f08d-41d2-af68-86ae6942681e
+java:S2259;"NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(øôØúşÿÿÿÿ8ıåºé1J$8aa0fea6-0739-4b74-b0c1-8afdfc64ec23
 
-java:S3516*"9Refactor this method to not always return the same value.(’…Êºûÿÿÿÿ8ıåºé1J$24985d90-6692-4c47-92cf-fda8535d00b8
+java:S35167"9Refactor this method to not always return the same value.(Áê‘Ïşÿÿÿÿ8ıåºé1J$be0add9d-f9c8-4b90-b6d0-4e46822b18a1
+
+java:S3516*"9Refactor this method to not always return the same value.(’…Êºûÿÿÿÿ8ıåºé1J$c60bb1a6-c9af-4f95-8375-922293994207
 {
-java:S3516C"9Refactor this method to not always return the same value.(°øÁ)8ıåºé1J$4466c5a6-47f3-43a5-88cd-cb1e1e687266
-
-java:S35167"9Refactor this method to not always return the same value.(Áê‘Ïşÿÿÿÿ8ıåºé1J$86e6c7fb-db6f-427c-a853-ad75ecdf43b6
+java:S3516C"9Refactor this method to not always return the same value.(°øÁ)8ıåºé1J$02ae866c-47bf-4bbf-9ec2-7bc584e72e1e
 Ä
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(´¾¼‘8ã’®Óé1J$fcdf8924-25e5-4388-9ae5-b4ed101bd5f2
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(´¾¼‘8ã’®Óé1J$85fbae32-bd27-42ab-a1c7-c02c9726e3df
 n
-java:S1168&"+Return an empty collection instead of null.(¥¹ï8ºí¼·é1J$39ce0d03-315d-40e3-9412-d2a3bd4b683f
+java:S1168&"+Return an empty collection instead of null.(¥¹ï8ºí¼·é1J$9557cd0b-5a58-4de0-800a-bf644bc49c21

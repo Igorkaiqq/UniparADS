@@ -7,7 +7,7 @@ import jakarta.jws.WebService;
 
 import java.util.ArrayList;
 
-@WebService(serviceName = "EnderecoWebServiceImpl")
+@WebService(serviceName = "EnderecoWebServiceImpl", endpointInterface = "com.mycompany.clinica.ws.EnderecoWebServiceImpl")
 public class EnderecoWebServiceImpl implements EnderecoInterface {
 
     EnderecoService enderecoService = new EnderecoService();

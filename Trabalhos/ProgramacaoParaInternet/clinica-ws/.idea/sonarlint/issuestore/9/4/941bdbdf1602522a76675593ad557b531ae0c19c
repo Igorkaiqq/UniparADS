@@ -1,23 +1,23 @@
 
 “
-java:S2259S"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(„ÃÌŸ8ÐÉÁ½é1J$afff1881-368a-4029-9cfa-7507f8fe1812
+java:S2259H"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(½ç€é8Û´À½é1J$20b8a4d5-434b-4a51-b6d3-3f5855748588
 “
-java:S2259H"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(½ç€é8Û´À½é1J$6383b28c-5495-4e44-b728-590b0311f058
+java:S2259S"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(„ÃÌŸ8ÐÉÁ½é1J$d33031a1-cde1-4bce-9b3f-bfad22e64afb
+“
+java:S2259<"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(ÏÜ±8Û´À½é1J$caf5e565-bf72-44b6-bfb8-23cdb95f17f4
 ˜
-java:S2259 "PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(µý¡÷øÿÿÿÿ8Û´À½é1J$87332a3c-1b17-41e8-a7cb-893b9f84a1f9
+java:S2259 "PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(µý¡÷øÿÿÿÿ8Û´À½é1J$29f9c6a9-a2f3-4335-b39c-aca618531d23
 “
-java:S2259<"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(ÏÜ±8Û´À½é1J$459899f8-6743-4463-a8d3-2a9e462e4e16
-“
-java:S2259-"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(„ÃÌŸ8Û´À½é1J$ab5803ba-81b4-4d56-b6e4-15f4adb5e24b
+java:S2259-"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(„ÃÌŸ8Û´À½é1J$a6cf47de-9fcb-4737-aab4-59451cf13b1b
+|
+java:S3516)"9Refactor this method to not always return the same value.(¿ïò´8Û´À½é1J$c8e378d2-77e9-464f-bcdf-5e45a9285165
 
-java:S35168"9Refactor this method to not always return the same value.(óØ©’üÿÿÿÿ8Ü´À½é1J$073c41f9-12a0-461e-85a6-f173dab206f3
+java:S35168"9Refactor this method to not always return the same value.(óØ©’üÿÿÿÿ8Ü´À½é1J$9480c93b-7a6c-4158-b9eb-a17b634defbe
 |
-java:S3516)"9Refactor this method to not always return the same value.(¿ïò´8Û´À½é1J$26ab7f0b-15d5-4f60-a128-9fa16cb5ac5c
-|
-java:S3516D"9Refactor this method to not always return the same value.(çŸèü8Ü´À½é1J$2cbcc666-3225-40c2-a5e4-f996e576d7d1
+java:S3516D"9Refactor this method to not always return the same value.(çŸèü8Ü´À½é1J$80eeedf8-bccf-4272-9b80-77be453a4dae
 c
-java:S1170"!Make this final field static too.(Õœµ8Ü´À½é1J$c290d1cd-9b5a-479b-9c01-1c9ec69cb3cf
-£
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(£±¬Ìýÿÿÿÿ8ñé­Óé1
+java:S1170"!Make this final field static too.(Õœµ8Ü´À½é1J$0989fb02-1a9b-4dce-9ed7-827e2ce87302
+É
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(£±¬Ìýÿÿÿÿ8ñé­Óé1J$ca074e82-7c5d-4378-9b80-9bfb9a254955
 n
-java:S1168$"+Return an empty collection instead of null.(¥¹ï8á´À½é1J$4f02b414-5c70-4e8b-9e47-1b5c6f726651
+java:S1168$"+Return an empty collection instead of null.(¥¹ï8á´À½é1J$e5c5eabe-edb4-46cb-b54d-740583b61a8f

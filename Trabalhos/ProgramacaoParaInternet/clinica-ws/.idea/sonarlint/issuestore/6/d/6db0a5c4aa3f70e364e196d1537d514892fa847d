@@ -1,8 +1,6 @@
 
 ¸
-java:S1319j"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ä©®Üüÿÿÿÿ8™…²¶é1J$97ca71a7-bce0-48cd-921f-854efd6cc8a1
-~	java:S125"<This block of commented-out lines of code should be removed.(þ§…é8·…²¶é1J$7953bf2a-be86-414e-8a2f-0a6bb2ac41e7
+java:S1319i"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ä©®Üüÿÿÿÿ8™…²¶é1J$3b5e967e-922a-41a3-afa8-a4ea564cdc2d
+~	java:S125"<This block of commented-out lines of code should be removed.(þ§…é8·…²¶é1J$e421f41d-df46-41ac-b7d0-601132e1c3c0
 n
-java:S1168y"+Return an empty collection instead of null.(¥¹ï8¼…²¶é1J$f0951127-500e-434f-88b7-804c17720587
-“
-java:S1128"PRemove this unused import 'com.mycompany.clinica.ws.interfaces.CidadeInterface'.(ýƒÿ´8É…²¶é1J$1171578f-caa9-4aea-9ae3-dbed68590ac4
+java:S1168x"+Return an empty collection instead of null.(¥¹ï8¼…²¶é1J$130f1ae2-55ee-47a5-97c6-1997951f2402

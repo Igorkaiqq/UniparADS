@@ -9,7 +9,7 @@ import jakarta.jws.WebService;
 
 import java.util.ArrayList;
 
-@WebService(serviceName = "EstadoWebServiceImpl")
+@WebService(serviceName = "EstadoWebServiceImpl", endpointInterface = "com.mycompany.clinica.ws.EstadoWebServiceImpl")
 public class EstadoWebServiceImpl implements EstadoInterface {
 
     EstadoService estadoService = new EstadoService();

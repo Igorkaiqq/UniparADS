@@ -129,8 +129,6 @@ Msrc/main/resources/db/migration/V20240327011724__V4_create_table_endereco.sql,
 Ksrc/main/resources/db/migration/V20240327011743__V5_create_table_pessoa.sql,a\2\a2701e14e2379d8b498c6f84294ac6dba3e295af
 ‚
 Rsrc/main/resources/db/migration/V20240327011843__V8_create_table_especialidade.sql,4\6\4625a4e9a62d2c176fd24ea1f320e61f40778e53
-Y
-)src/main/resources/application.properties,0\6\06f65155ec73600b9fc5c4dc2883d4bb84d8e284
 w
 Gsrc/main/java/com/mycompany/clinica/ws/repository/PessoaRepository.java,0\b\0bb531acc4841b586b1894f0cf4465b999289d22
 p
@@ -145,3 +143,13 @@ p
 @src/main/java/com/mycompany/clinica/ws/MedicoWebServiceImpl.java,b\2\b2805956479ee81037ea56ce246d67990dfc7060
 r
 Bsrc/main/java/com/mycompany/clinica/ws/PacienteWebServiceImpl.java,e\e\ee3754afac102d2c2eede478a87930944714f806
+€
+Psrc/main/java/com/mycompany/clinica/ws/services/validation/ValidationCidade.java,d\e\de6cf49c7b290ee454d64de32f56d23134ed0935
+€
+Psrc/main/java/com/mycompany/clinica/ws/services/validation/ValidationEstado.java,b\0\b0392880bad0aef994e89835283202d6196a0068
+‚
+Rsrc/main/java/com/mycompany/clinica/ws/services/validation/ValidationPaciente.java,1\e\1e64fa1c4df4c8daa8a800e0674bf71327da6318
+‡
+Wsrc/main/java/com/mycompany/clinica/ws/services/validation/ValidationEspecialidade.java,8\0\80cf473053a45632948ca058ba6277804829f5d3
+p
+@src/main/java/com/mycompany/clinica/ws/PessoaWebServiceImpl.java,a\1\a18e6eeea69d6c226e7524a5821891432ff59f74
