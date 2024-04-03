@@ -1,10 +1,7 @@
 
 
-java:S2293O"YReplace the type specification in this constructor call with the diamond operator ("<>").(³κκά8ΐ„²¶ι1J$032d436d-a8a4-4bb3-90ad-e9c92c2ffa37
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(³κκά8ί©κ1J$25538fab-40e0-4a09-8f8d-f215476d6c80
 ²
-java:S1319M"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(‰ε—L8ΐ„²¶ι1J$4d4dcaa8-f63a-4a1d-88d8-5b444b7799ba
-}	java:S125"<This block of commented-out lines of code should be removed.(αΡy8κ„²¶ι1J$5bc257a9-cd96-4711-b263-802359a7b586
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(‰ε—L8ΰ©κ1J$73d699c0-1928-41ee-af63-ce20c73a4284
 n
-java:S1168e"+Return an empty collection instead of null.(¥Ήο8π„²¶ι1J$7da84968-9d6d-42f9-8dad-b099bd1e0b7f
-“
-java:S1128"PRemove this unused import 'com.mycompany.clinica.ws.interfaces.EstadoInterface'.(νπ8ÿ„²¶ι1J$0bed89a2-e48f-4fc1-9ded-b526e2656e77
+java:S1168$"+Return an empty collection instead of null.(¥Ήο8¤ªκ1J$310545e0-0ac8-4656-85d8-c790ef233341

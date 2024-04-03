@@ -1,5 +1,8 @@
 package com.mycompany.clinica.ws.exceptions;
 
+import jakarta.xml.ws.WebFault;
+
+@WebFault
 public class ExceptionId extends Exception {
 
         public ExceptionId(int id, String entidade){

@@ -4,12 +4,13 @@
  */
 package com.mycompany.clinica.ws.interfaces;
 
-import com.mycompany.clinica.ws.exceptions.ExceptionId;
-import com.mycompany.clinica.ws.exceptions.ExceptionNumeroNegativo;
+import com.mycompany.clinica.ws.exceptions.*;
 import com.mycompany.clinica.ws.model.EstadoModel;
 import jakarta.jws.WebMethod;
 import jakarta.jws.WebParam;
 import jakarta.jws.WebService;
+
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -26,7 +27,7 @@ public interface EstadoInterface {
     EstadoModel findByIdEstado(@WebParam int id) throws ExceptionNumeroNegativo, ExceptionId;
 
     @WebMethod
-    EstadoModel inserirEstado(EstadoModel estado);
+    EstadoModel inserirEstado(EstadoModel estado) throws SQLException, ExceptionCamposVazio, ExceptionEntedidadeNaoInformada, ExceptionQuantidadeDeCaracteres;
 
     @WebMethod
     EstadoModel atualizarEstado(EstadoModel estado);

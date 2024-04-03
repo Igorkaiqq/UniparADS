@@ -1,23 +1,15 @@
 
-
-java:S22599"NA "NullPointerException" could be thrown; "estadoRepository" is nullable here.(ξ€‘-8Βÿδι1J$fab03b6d-73de-4913-803e-3891a6705350
-‘
-java:S2259 "NA "NullPointerException" could be thrown; "estadoRepository" is nullable here.(Έƒ†”8Βÿδι1J$89c5be79-8e23-473e-bfb4-35eb9cfca4e9
-–
-java:S2259+"NA "NullPointerException" could be thrown; "estadoRepository" is nullable here.(”•Θϋÿÿÿÿ8Αÿδι1J$cff8abd4-9734-42a9-a4ca-5b24762158be
-‘
-java:S2259E"NA "NullPointerException" could be thrown; "estadoRepository" is nullable here.(Ώ¤8Βÿδι1J$ad194e55-c3d8-4e2f-b85c-bf128c7b788b
-–
-java:S2259P"NA "NullPointerException" could be thrown; "estadoRepository" is nullable here.(”•Θϋÿÿÿÿ8Βÿδι1J$c1368d29-1824-4e2e-a347-14edef6de03f
-{
-java:S3516A"9Refactor this method to not always return the same value.(¥ΚΫ08Γÿδι1J$e86044bd-8d3e-41d4-9613-b348ea9c1fff
-|
-java:S3516("9Refactor this method to not always return the same value.(€²µ–8Γÿδι1J$a03e38b4-34d6-40a1-bab3-43c58eb2bcce
-|
-java:S35165"9Refactor this method to not always return the same value.(ΫÒθΡ8Γÿδι1J$a03e574c-70d9-49c1-9ff3-607823867655
-i
-java:S1170"!Make this final field static too.(…ξςύÿÿÿÿ8Εÿδι1J$17b05d5e-0e82-46cf-8ec8-10abfb8a586d
-Ι
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(οΗΑϊÿÿÿÿ8Ζÿδι1J$705f2e9f-7607-4c6a-9921-65c2e931999e
-n
-java:S1168$"+Return an empty collection instead of null.(¥Ήο8αΰθΌι1J$8b055cd4-f993-4e34-81b8-4d7db16d5a2e
+	java:S112("FDefine and throw a dedicated exception instead of using a generic one.(Κ“Εύÿÿÿÿ8‰™¨‹κ1J$2a3614e7-4732-4e96-8484-69c1664ff526
+	java:S1123"FDefine and throw a dedicated exception instead of using a generic one.(Κ“Εύÿÿÿÿ8™¨‹κ1J$e2ae1bb1-843d-4db5-895f-60fbf056ed6a
+	java:S112G"FDefine and throw a dedicated exception instead of using a generic one.(Κ“Εύÿÿÿÿ8™¨‹κ1J$75ad1c34-9256-4b25-8fc2-1b4749bd8b78
+	java:S112R"FDefine and throw a dedicated exception instead of using a generic one.(Κ“Εύÿÿÿÿ8‹™¨‹κ1J$47b24a05-c14c-42fa-9248-3b536e2517ae
+²
+java:S1319$"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(‰ε—L8™¨‹κ1J$266a50ec-d194-4fcf-be72-51b3b6481999
+“
+java:S1128"PRemove this unused import 'com.mycompany.clinica.ws.interfaces.EstadoInterface'.(νπ8βα¨‹κ1J$117398db-d0c8-41ee-ae4f-319f20b65a75
+~
+java:S1128"6Remove this unused import 'lombok.AllArgsConstructor'.(΄Ύφωÿÿÿÿ8βα¨‹κ1J$d5cbe96d-ab40-4ae5-b34a-75023a05a1a7
+x
+java:S1128"5Remove this unused import 'lombok.NoArgsConstructor'.(Έ¨›8βα¨‹κ1J$0f333faa-9f26-4258-94a0-e7f8c126839a
+u
+java:S1128"2Remove this unused import 'java.sql.SQLException'.(ΫοΖ8γα¨‹κ1J$7b50d893-d806-4d2c-a4de-3f5af5d62d7e

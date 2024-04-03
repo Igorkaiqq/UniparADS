@@ -4,39 +4,43 @@
  */
 package com.mycompany.clinica.ws.services;
 
+import com.mycompany.clinica.ws.exceptions.ExceptionCamposVazio;
+import com.mycompany.clinica.ws.exceptions.ExceptionEntedidadeNaoInformada;
 import com.mycompany.clinica.ws.exceptions.ExceptionId;
+import com.mycompany.clinica.ws.exceptions.ExceptionQuantidadeDeCaracteres;
 import com.mycompany.clinica.ws.interfaces.EstadoInterface;
 import com.mycompany.clinica.ws.model.EstadoModel;
 import com.mycompany.clinica.ws.repository.EstadoRepository;
 import com.mycompany.clinica.ws.services.validation.ValidationCampoVazio;
 import com.mycompany.clinica.ws.services.validation.ValidationId;
 import com.mycompany.clinica.ws.services.validation.ValidationQuantidadeCaracteres;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
  *
  * @author igork
  */
-public class EstadoService implements EstadoInterface {
+public class EstadoService {
 
-    private final EstadoRepository estadoRepository = null;
+    private final EstadoRepository estadoRepository;
     
-    public EstadoService(){
-        
+    public EstadoService(EstadoRepository estadoRepository){
+
+        this.estadoRepository = estadoRepository;
     }
-    
-    @Override
+
     public ArrayList<EstadoModel> listAllEstado() {
         try {
             return estadoRepository.listAllEstado();
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         }
-        return null;
     }
 
-    @Override
     public EstadoModel findByIdEstado(int id) throws ExceptionId {
         try {
             ValidationId.validaId(id);
@@ -44,36 +48,30 @@ public class EstadoService implements EstadoInterface {
             ValidationId.validaExiste(estado, id);
             return estado;
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         }
-        return null;
     }
 
-    @Override
-    public EstadoModel inserirEstado(EstadoModel estado) {
-        try {
+    public EstadoModel inserirEstado(EstadoModel estado) throws ExceptionCamposVazio,
+            ExceptionEntedidadeNaoInformada,
+            ExceptionQuantidadeDeCaracteres {
+
             ValidationCampoVazio.validaCamposVazio(estado);
             ValidationQuantidadeCaracteres.validaTamanhoCampo(estado);
             return estadoRepository.inserirEstado(estado);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
+
     }
 
-    @Override
     public EstadoModel atualizarEstado(EstadoModel estado) {
         try {
             ValidationCampoVazio.validaCamposVazio(estado);
             ValidationQuantidadeCaracteres.validaTamanhoCampo(estado);
             return estadoRepository.atualizarEstado(estado);
         } catch (Exception e) {
-            e.printStackTrace();
-            return null;
+            throw new RuntimeException(e.getMessage());
         }
     }
 
-    @Override
     public void deletarEstado(int id) {
         try {
             ValidationId.validaId(id);
@@ -81,7 +79,7 @@ public class EstadoService implements EstadoInterface {
             ValidationId.validaExiste(estado, id);
             estadoRepository.deletarEstado(id);
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         }
     }
 
