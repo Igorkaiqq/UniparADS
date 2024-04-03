@@ -28,8 +28,7 @@ public class EstadoWebServiceImpl implements EstadoInterface {
 
     @Override
     public EstadoModel findByIdEstado(int id) throws ExceptionNumeroNegativo, ExceptionId {
-        //return estadoService.findByIdEstado(id);
-        return null;
+        return estadoService.findByIdEstado(id);
     }
 
     @Override
