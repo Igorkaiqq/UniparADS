@@ -33,9 +33,8 @@ public class CidadeService implements CidadeInterface {
         try {
             return cidadeRepository.listAllCidade();
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         }
-        return null;
     }
 
     @Override
@@ -46,9 +45,8 @@ public class CidadeService implements CidadeInterface {
             ValidationId.validaExiste(cidade, id);
             return cidade;
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         }
-        return null;
     }
 
     @Override
@@ -58,8 +56,7 @@ public class CidadeService implements CidadeInterface {
             ValidationQuantidadeCaracteres.validaTamanhoCampo(cidade);
             return cidadeRepository.inserirCidade(cidade);
         } catch (Exception e) {
-            e.printStackTrace();
-            return null;
+            throw new RuntimeException(e.getMessage());
         }
     }
 
@@ -70,9 +67,8 @@ public class CidadeService implements CidadeInterface {
                 ValidationQuantidadeCaracteres.validaTamanhoCampo(cidade);
                 return cidadeRepository.atualizarCidade(cidade);
             } catch (Exception e) {
-                e.printStackTrace();
+                throw new RuntimeException(e.getMessage());
             }
-            return null;
         }
 
         @Override
@@ -83,7 +79,7 @@ public class CidadeService implements CidadeInterface {
                 ValidationId.validaExiste(cidade, id);
                 cidadeRepository.deletarCidade(id);
             } catch (Exception e) {
-                e.printStackTrace();
+                throw new RuntimeException(e.getMessage());
             }
         }
     }

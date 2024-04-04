@@ -153,3 +153,9 @@ Rsrc/main/java/com/mycompany/clinica/ws/services/validation/ValidationPaciente.j
 Wsrc/main/java/com/mycompany/clinica/ws/services/validation/ValidationEspecialidade.java,8\0\80cf473053a45632948ca058ba6277804829f5d3
 p
 @src/main/java/com/mycompany/clinica/ws/PessoaWebServiceImpl.java,a\1\a18e6eeea69d6c226e7524a5821891432ff59f74
+‚
+Rsrc/main/java/com/mycompany/clinica/ws/services/validation/ValidationEndereco.java,a\4\a48fd21d7c859cf0598a80054821bee63048b0cd
+€
+Psrc/main/java/com/mycompany/clinica/ws/services/validation/ValidationPessoa.java,5\6\5632640411e06a7125d38f3dd33bc88f35668c08
+€
+Psrc/main/java/com/mycompany/clinica/ws/services/validation/ValidationMedico.java,1\7\1720a1a40b28e5b6a3238abec5e330861985f8dc

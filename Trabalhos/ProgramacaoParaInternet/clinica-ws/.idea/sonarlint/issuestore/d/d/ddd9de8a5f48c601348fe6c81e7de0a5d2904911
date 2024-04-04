@@ -1,20 +1,25 @@
 
-„
-java:S1192"HDefine a constant instead of duplicating this literal "MÃ©dico" 4 times.(ÃÉĞ§J$37236c32-9535-4514-9049-8d33c4ace9ef
+‹
+java:S11921"HDefine a constant instead of duplicating this literal "MÃ©dico" 4 times.(ÃÉĞ§8ÆÜ±ê1J$8b620254-acf6-4778-bc4e-f364f81ee8e5
+˜
+java:S2259C"PA "NullPointerException" could be thrown; "pacienteRepository" is nullable here.(õøµ¦øÿÿÿÿ8òÕİ±ê1J$b60a55ac-b47b-4975-8916-7dc2369cf961
+
+java:S2259"NA "NullPointerException" could be thrown; "pessoaRepository" is nullable here.(æˆµG8òÕİ±ê1J$1d18d617-eaab-4df5-96ed-74651ac69bcd
 ‘
-java:S2259/"PA "NullPointerException" could be thrown; "pacienteRepository" is nullable here.(õøµ¦øÿÿÿÿJ$7284eb37-81e6-4747-8b78-44ddd38beca0
-Š
-java:S2259"NA "NullPointerException" could be thrown; "medicoRepository" is nullable here.(Šî€ÑJ$12a5b7b2-89b6-403b-993d-9c883eb3327b
-v
-java:S1118
-":Add a private constructor to hide the implicit public one.(˜ò¸J$05b70ee4-06c1-46fc-9002-3d8b9640992d
-
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(Îğº,J$403cdd55-2778-4cdc-89b8-7729a146ef9f
-‡
-java:S6201"KReplace this instanceof check and cast with 'instanceof MedicoModel medico'(‘îã¦J$de39e44d-ccdb-44e6-9f19-46e5991e4f03
-j
-java:S1905".Remove this unnecessary cast to "MedicoModel".(Šî€ÑJ$ac6f58ea-7222-42d8-848c-59aea0589a12
-Š
-java:S6201-"OReplace this instanceof check and cast with 'instanceof PacienteModel paciente'(”¾ËoJ$e68d0fc5-15ee-4899-8348-f0ef5005030e
+java:S2259*"NA "NullPointerException" could be thrown; "medicoRepository" is nullable here.(Šî€Ñ8òÕİ±ê1J$8ac75514-d939-401c-9fd8-f9cb0efb4e82
+}
+java:S1118":Add a private constructor to hide the implicit public one.(˜ò¸8ÖÜ±ê1J$682f0a64-a331-40a8-9d91-b0b2dc6ad6c1
+”
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(Îğº,8ÙÜ±ê1J$7faa6a03-5fe8-4e9f-9569-e51038d393bf
+
+java:S6201"KReplace this instanceof check and cast with 'instanceof PessoaModel pessoa'(ùÊª¯8â²Ü±ê1J$28d323e3-af85-46be-9e66-7b99935d7367
+p
+java:S1905".Remove this unnecessary cast to "PessoaModel".(æˆµG8şÕİ±ê1J$3aa8b5af-1818-4860-a325-a5d32c099638
+
+java:S6201("KReplace this instanceof check and cast with 'instanceof MedicoModel medico'(‘îã¦8ÜÜ±ê1J$acab029f-9014-485c-a706-47808d11c83a
 q
-java:S1905/"0Remove this unnecessary cast to "PacienteModel".(õøµ¦øÿÿÿÿJ$4072e3ef-d441-41c4-aadb-5785b22e14a0
+java:S1905*".Remove this unnecessary cast to "MedicoModel".(Šî€Ñ8ŞÜ±ê1J$1e076c1e-d935-457f-b26c-31a4f835f774
+‘
+java:S6201A"OReplace this instanceof check and cast with 'instanceof PacienteModel paciente'(”¾Ëo8ãÜ±ê1J$5bcc7376-5305-4dfa-ad6d-25868a3b4dbf
+x
+java:S1905C"0Remove this unnecessary cast to "PacienteModel".(õøµ¦øÿÿÿÿ8ãÜ±ê1J$93db0d8b-a756-419c-9619-ff990b288a36

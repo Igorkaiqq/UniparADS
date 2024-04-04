@@ -1,23 +1,20 @@
 
+	java:S112""FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8Ï´Ê±ê1J$1e44ff21-b8d0-43d7-b9d5-f99ed01b2003
+	java:S112/"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8®ÇÊ±ê1J$dfc37782-08b5-4400-b3f4-bb767bc1e85c
+	java:S112:"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8¬íË±ê1J$5dfe167a-bd51-4997-b2e7-c4c95aeb4ce9
+	java:S112E"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8Ù”Ì±ê1J$e76e02b7-b946-466c-8430-0ac892003835
+g	java:S112Q"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ÉªÌ±ê1
 “
-java:S2259H"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(½ç€é8Û´À½é1J$20b8a4d5-434b-4a51-b6d3-3f5855748588
-“
-java:S2259S"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(„ÃÌŸ8ĞÉÁ½é1J$d33031a1-cde1-4bce-9b3f-bfad22e64afb
-“
-java:S2259<"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(ÏÜ±8Û´À½é1J$caf5e565-bf72-44b6-bfb8-23cdb95f17f4
+java:S2259C"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(½ç€é8Û´À½é1J$2e3c4cec-5f20-4b72-9d61-90a5cd227664
 ˜
-java:S2259 "PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(µı¡÷øÿÿÿÿ8Û´À½é1J$29f9c6a9-a2f3-4335-b39c-aca618531d23
+java:S2259 "PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(µı¡÷øÿÿÿÿ8Û´À½é1J$cf505bb7-aa5e-43ca-8ea3-3473a1315cfa
 “
-java:S2259-"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(„ÃÌŸ8Û´À½é1J$a6cf47de-9fcb-4737-aab4-59451cf13b1b
-|
-java:S3516)"9Refactor this method to not always return the same value.(¿ïò´8Û´À½é1J$c8e378d2-77e9-464f-bcdf-5e45a9285165
-
-java:S35168"9Refactor this method to not always return the same value.(óØ©’üÿÿÿÿ8Ü´À½é1J$9480c93b-7a6c-4158-b9eb-a17b634defbe
-|
-java:S3516D"9Refactor this method to not always return the same value.(çŸèü8Ü´À½é1J$80eeedf8-bccf-4272-9b80-77be453a4dae
+java:S2259M"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(„ÃÌŸ8ĞÉÁ½é1J$7c6cc5ec-7cb7-4919-b08d-b9d0233dd96a
+“
+java:S22598"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(ÏÜ±8Û´À½é1J$42af3e64-167e-43c5-8a44-8312c6ac7a75
+“
+java:S2259+"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(„ÃÌŸ8Û´À½é1J$b065e5c6-4c73-4f17-ad59-4f83169020ef
 c
-java:S1170"!Make this final field static too.(Õœµ8Ü´À½é1J$0989fb02-1a9b-4dce-9ed7-827e2ce87302
+java:S1170"!Make this final field static too.(Õœµ8Ü´À½é1J$2c7f15d1-0e52-497d-97cd-bdec58256b25
 É
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(£±¬Ìıÿÿÿÿ8ñé­Óé1J$ca074e82-7c5d-4378-9b80-9bfb9a254955
-n
-java:S1168$"+Return an empty collection instead of null.(¥¹ï8á´À½é1J$e5c5eabe-edb4-46cb-b54d-740583b61a8f
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(£±¬Ìıÿÿÿÿ8ñé­Óé1J$bddee352-c941-4892-aa1b-b8d56f7acbe4

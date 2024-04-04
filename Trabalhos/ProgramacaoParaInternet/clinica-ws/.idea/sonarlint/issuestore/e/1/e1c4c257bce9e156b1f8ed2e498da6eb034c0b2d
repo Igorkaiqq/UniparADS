@@ -1,15 +1,15 @@
 
-	java:S112("FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8‰™¨‹ê1J$2a3614e7-4732-4e96-8484-69c1664ff526
-	java:S1123"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8Š™¨‹ê1J$e2ae1bb1-843d-4db5-895f-60fbf056ed6a
-	java:S112G"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8Š™¨‹ê1J$75ad1c34-9256-4b25-8fc2-1b4749bd8b78
-	java:S112R"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8‹™¨‹ê1J$47b24a05-c14c-42fa-9248-3b536e2517ae
+	java:S112("FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8‰™¨‹ê1J$7de31c22-2daa-4e50-8dcc-a427f725c3c0
+	java:S1123"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8Š™¨‹ê1J$1d4f55fd-b017-4a60-82e9-33007e0a54ab
+	java:S112G"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8Š™¨‹ê1J$3b4d32fa-ca5c-445f-b6f3-3fc065ee16a3
+	java:S112R"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8‹™¨‹ê1J$391bdb28-22b8-4075-9ec1-be3a326fecee
 ²
-java:S1319$"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(‰å—L8Œ™¨‹ê1J$266a50ec-d194-4fcf-be72-51b3b6481999
+java:S1319$"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(‰å—L8Œ™¨‹ê1J$0c8a7ea9-e664-4df4-a5cc-45cdfafc736c
 “
-java:S1128"PRemove this unused import 'com.mycompany.clinica.ws.interfaces.EstadoInterface'.(íğŒ8âá¨‹ê1J$117398db-d0c8-41ee-ae4f-319f20b65a75
+java:S1128"PRemove this unused import 'com.mycompany.clinica.ws.interfaces.EstadoInterface'.(íğŒ8âá¨‹ê1J$18d6bb7b-b065-4b25-93a7-c6c26aaae986
 ~
-java:S1128"6Remove this unused import 'lombok.AllArgsConstructor'.(´œ¾öùÿÿÿÿ8âá¨‹ê1J$d5cbe96d-ab40-4ae5-b34a-75023a05a1a7
+java:S1128"6Remove this unused import 'lombok.AllArgsConstructor'.(´œ¾öùÿÿÿÿ8âá¨‹ê1J$51dccf54-bd89-4463-8a8b-b7c1c9fa75bf
 x
-java:S1128"5Remove this unused import 'lombok.NoArgsConstructor'.(¸¨›8âá¨‹ê1J$0f333faa-9f26-4258-94a0-e7f8c126839a
+java:S1128"5Remove this unused import 'lombok.NoArgsConstructor'.(¸¨›8âá¨‹ê1J$beeb871a-1885-40ce-8d6f-ca635303a157
 u
-java:S1128"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8ãá¨‹ê1J$7b50d893-d806-4d2c-a4de-3f5af5d62d7e
+java:S1128"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8ãá¨‹ê1J$23471b56-b4a1-4a3f-8428-46236589b5dc

@@ -31,9 +31,7 @@ public class EnderecoService implements EnderecoInterface {
         try {
             return enderecoRepository.listAllEndereco();
         } catch (Exception e) {
-            e.printStackTrace();
-
-            return null;
+            throw new RuntimeException(e.getMessage());
         }
     }
 
@@ -46,10 +44,8 @@ public class EnderecoService implements EnderecoInterface {
             ValidationId.validaExiste(endereco, id);
             return endereco;
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         }
-
-        return null;
     }
 
     @Override
@@ -59,9 +55,8 @@ public class EnderecoService implements EnderecoInterface {
             ValidationQuantidadeCaracteres.validaTamanhoCampo(endereco);
             return enderecoRepository.inserirEndereco(endereco);
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         }
-        return null;
     }
 
     @Override
@@ -71,9 +66,8 @@ public class EnderecoService implements EnderecoInterface {
             ValidationQuantidadeCaracteres.validaTamanhoCampo(endereco);
             return enderecoRepository.atualizarEndereco(endereco);
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         }
-        return null;
     }
 
     @Override
@@ -84,7 +78,7 @@ public class EnderecoService implements EnderecoInterface {
             ValidationId.validaExiste(endereco, id);
             enderecoRepository.deletarEndereco(id);
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         }
     }
 }

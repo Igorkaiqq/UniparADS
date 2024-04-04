@@ -1,7 +1,20 @@
 
-É
-java:S1186-"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‹£ú€ÿÿÿÿÿ8ƒ“ »é1J$48d34a4f-d4a0-4ac4-b8eb-6c5c418d432c
-n
-java:S1168"+Return an empty collection instead of null.(¥¹ï8„“ »é1J$7a0e9959-0c74-4c61-b6e2-849d41f399af
-d
-java:S1116-"Remove this empty statement.(‹£ú€ÿÿÿÿÿ8†“ »é1J$e1eb5e9f-eb38-427e-a9c1-354380ba8b15
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8“®×±ê1J$cbf7918c-7385-4abc-87cd-82775edae35d
+	java:S112+"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8”®×±ê1J$01c474da-35e1-4974-b413-fb5c9db70218
+	java:S1127"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8”®×±ê1J$eae5842c-e26f-4b02-8571-7235f7723541
+	java:S112C"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ÁËÙ±ê1J$3a309a95-2616-4316-b690-11e3f3ad3c89
+g	java:S112O"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8Şà±ê1
+‘
+java:S2259A"NA "NullPointerException" could be thrown; "pessoaRepository" is nullable here.(‡ä§è8ÏËÙ±ê1J$5162ba6e-4165-441b-b3fe-dffd905a3731
+p
+java:S2259K"NA "NullPointerException" could be thrown; "pessoaRepository" is nullable here.(ùâ÷²şÿÿÿÿ8ğà±ê1
+–
+java:S2259'"NA "NullPointerException" could be thrown; "pessoaRepository" is nullable here.(ùâ÷²şÿÿÿÿ8¡®×±ê1J$51d2d9fa-5272-4960-98d2-daeba912ad39
+–
+java:S22595"NA "NullPointerException" could be thrown; "pessoaRepository" is nullable here.(ß‹š¶ıÿÿÿÿ8¡®×±ê1J$c20e82b2-216c-41fa-9020-ac56e394ce36
+‘
+java:S2259"NA "NullPointerException" could be thrown; "pessoaRepository" is nullable here.(ÌˆÁñ8¡®×±ê1J$144a651e-acbd-47fa-9b8f-92d94e3c7a7f
+i
+java:S1170"!Make this final field static too.(ü¤û½üÿÿÿÿ8£®×±ê1J$fd3c284a-77aa-49bc-bc1a-6f19f880fa16
+Ã
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‘å³N8¥®×±ê1J$074f1536-00c0-401a-b06d-10b8b2008b80

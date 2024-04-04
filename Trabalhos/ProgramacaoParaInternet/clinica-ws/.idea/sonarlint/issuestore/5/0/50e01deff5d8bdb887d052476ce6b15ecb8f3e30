@@ -1,5 +1,9 @@
 
+=
+java:S1170"!Make this final field static too.(ý’¬<8Ä©¹±ê1
 É
-java:S1186-"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¢–Ï¤ùÿÿÿÿ8ýÈ¡áè1J$4cbc4dc3-a09c-4b0a-983c-a2b4015aadd7
+java:S1186/"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¢–Ï¤ùÿÿÿÿ8ýÈ¡áè1J$4cbc4dc3-a09c-4b0a-983c-a2b4015aadd7
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÖíÕY8Å©¹±ê1
 n
-java:S1168"+Return an empty collection instead of null.(¥¹ï8ƒî¼·é1J$f3e285c1-5dad-40c3-8686-3865767e7922
+java:S1168"+Return an empty collection instead of null.(¥¹ï8ƒî¼·é1J$f3e285c1-5dad-40c3-8686-3865767e7922

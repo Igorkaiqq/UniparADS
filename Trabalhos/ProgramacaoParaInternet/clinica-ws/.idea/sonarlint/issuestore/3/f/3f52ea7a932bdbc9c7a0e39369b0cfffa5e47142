@@ -1,11 +1,7 @@
 
 ³
-java:S1319 "pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ÑñÂ¼8÷œ«¶é1J$1c71ba84-87fb-4ab9-88f6-3f1cdb81c02e
-~	java:S125"<This block of commented-out lines of code should be removed.(…ÍÚ8Þ´Ñ€é1J$53ce8cd6-4bdf-4cbe-b3c0-b3f9fb2442d5
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ÑñÂ¼8÷œ«¶é1J$1c71ba84-87fb-4ab9-88f6-3f1cdb81c02e
+~	java:S125"<This block of commented-out lines of code should be removed.(…ÍÚ8Þ´Ñ€é1J$53ce8cd6-4bdf-4cbe-b3c0-b3f9fb2442d5
 n
-java:S11689"+Return an empty collection instead of null.(¥¹ï8â´Ñ€é1J$5e62c46d-f311-4370-a243-ef060f717a48
-~	java:S125="<This block of commented-out lines of code should be removed.( îû¬8ã´Ñ€é1J$390dbf9f-dc54-485b-aa58-153c60be64d4
-˜
-java:S1128"PRemove this unused import 'com.mycompany.clinica.ws.interfaces.MedicoInterface'.(¤Û‡ÿÿÿÿÿ8Óò¼·é1J$15c18e78-2d2f-4a89-b1ae-8558627092e0
-‘
-java:S1128"IRemove this unused import 'com.mycompany.clinica.ws.model.EnderecoModel'.(­õé®ýÿÿÿÿ8Óò¼·é1J$42dc7fc5-cc17-47cf-a80a-156254019091
+java:S11687"+Return an empty collection instead of null.(¥¹ï8â´Ñ€é1J$5e62c46d-f311-4370-a243-ef060f717a48
+~	java:S125;"<This block of commented-out lines of code should be removed.( îû¬8ã´Ñ€é1J$390dbf9f-dc54-485b-aa58-153c60be64d4

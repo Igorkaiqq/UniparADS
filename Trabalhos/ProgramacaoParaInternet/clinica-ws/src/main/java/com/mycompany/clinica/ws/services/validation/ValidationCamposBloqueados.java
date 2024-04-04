@@ -4,17 +4,37 @@ import com.mycompany.clinica.ws.exceptions.ExceptionCampoBloqueadoUpdate;
 import com.mycompany.clinica.ws.exceptions.ExceptionEntedidadeNaoInformada;
 import com.mycompany.clinica.ws.model.MedicoModel;
 import com.mycompany.clinica.ws.model.PacienteModel;
+import com.mycompany.clinica.ws.model.PessoaModel;
 import com.mycompany.clinica.ws.repository.MedicoRepository;
 import com.mycompany.clinica.ws.repository.PacienteRepository;
+import com.mycompany.clinica.ws.repository.PessoaRepository;
 
 public class ValidationCamposBloqueados {
     private static final MedicoRepository medicoRepository = null;
     private static final PacienteRepository pacienteRepository = null;
+    private static final PessoaRepository pessoaRepository = null;
 
         public static <T> boolean validaCamposBloqueados(T objeto) throws ExceptionEntedidadeNaoInformada, ExceptionCampoBloqueadoUpdate {
 
             if (objeto == null){
                 throw new ExceptionEntedidadeNaoInformada();
+            }
+
+            if (objeto instanceof PessoaModel){
+                PessoaModel pessoa = (PessoaModel) objeto;
+                PessoaModel pessoaAtual = (PessoaModel) pessoaRepository.findByIdPessoa(pessoa.getId());
+
+                if (pessoaAtual == null) {
+                    throw new IllegalArgumentException("Pessoa não encontrada");
+                }
+
+                if (pessoaAtual.getEmail().equals(pessoa.getEmail())) {
+                    throw new ExceptionCampoBloqueadoUpdate("Pessoa", "Nome");
+                }
+
+                if (pessoaAtual.getCpf().equals(pessoa.getCpf())) {
+                    throw new ExceptionCampoBloqueadoUpdate("Pessoa", "CPF");
+                }
             }
 
             if (objeto instanceof MedicoModel){

@@ -1,19 +1,19 @@
 
 {
-java:S1118":Add a private constructor to hide the implicit public one.(¸íå“üÿÿÿÿJ$3cf61af6-3012-45a1-b723-a9e45da52cf3
+java:S1118":Add a private constructor to hide the implicit public one.(¸íå“üÿÿÿÿJ$05c9695c-fb15-47a3-ab62-431e1123648e
 Ž
-java:S3776	"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(€÷®ŸJ$8eda2e18-99d0-4516-8f42-1d3fa442ef21
+java:S3776	"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(€÷®ŸJ$6b19bab6-09ae-4dca-ad50-3f0d3c44f634
 ‡
-java:S6201"KReplace this instanceof check and cast with 'instanceof EstadoModel estado'(›ˆíòJ$b82fa836-45ec-4530-ba98-ad6fc2a4fbc6
+java:S6201"KReplace this instanceof check and cast with 'instanceof EstadoModel estado'(›ˆíòJ$822e18fa-9eda-46fe-8dc3-b6464da85b9d
 †
-java:S6201"KReplace this instanceof check and cast with 'instanceof CidadeModel cidade'(¦ÿÙJ$b1f0365e-0bad-423d-aadd-5231ef541350
+java:S6201"KReplace this instanceof check and cast with 'instanceof CidadeModel cidade'(¦ÿÙJ$ce1d506a-a6ea-4100-bab3-ddcd35458c83
 Š
-java:S6201"OReplace this instanceof check and cast with 'instanceof EnderecoModel endereco'(…êßwJ$2ca503a4-361e-469f-8a72-8745e32349c9
+java:S6201"OReplace this instanceof check and cast with 'instanceof EnderecoModel endereco'(…êßwJ$276cc04f-4fa7-4780-9616-1c730a0da0e3
 •
-java:S6201$"YReplace this instanceof check and cast with 'instanceof EspecialidadeModel especialidade'(—–›ýJ$b294d0f3-4505-4e0b-be6d-affd5b1c290f
+java:S6201$"YReplace this instanceof check and cast with 'instanceof EspecialidadeModel especialidade'(—–›ýJ$40bfe631-90ff-42f2-b6dc-41846b22c7da
 ‡
-java:S6201+"KReplace this instanceof check and cast with 'instanceof PessoaModel pessoa'(ùÊª¯J$e6169d60-2c9b-4d56-bd83-cbdfa69cf0ae
+java:S6201+"KReplace this instanceof check and cast with 'instanceof PessoaModel pessoa'(ùÊª¯J$f595f25c-d408-4f4f-82b5-455735be3a60
 ‡
-java:S62012"KReplace this instanceof check and cast with 'instanceof MedicoModel medico'(‘îã¦J$9f0b4ebb-4eb5-4f68-ac0c-87074b360b78
+java:S62012"KReplace this instanceof check and cast with 'instanceof MedicoModel medico'(‘îã¦J$95c4dcb6-eccd-415b-aa5c-cd5b0c40681f
 Š
-java:S62019"OReplace this instanceof check and cast with 'instanceof PacienteModel paciente'(”¾ËoJ$38071bdc-3a78-47b4-b429-1b4fa21aa590
+java:S62019"OReplace this instanceof check and cast with 'instanceof PacienteModel paciente'(”¾ËoJ$4d94dfd7-f955-4bf4-93c3-000645417c41
