@@ -1,18 +1,14 @@
 
-	java:S112$"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ßÉÆ±ê1J$1e58e0d0-64de-46f1-b7b4-237a543a2a75
-	java:S1120"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8¢“Ç±ê1J$752c3d03-46ed-4584-9725-7dfbe8d4f9ad
-	java:S112;"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8áÙÇ±ê1J$6c716e8f-c37f-44e9-9ca9-be10749d2d99
-	java:S112F"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ëïÇ±ê1J$01cb9b6d-6184-4c42-b488-463740523201
-g	java:S112R"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ÜŸÈ±ê1
-–
-java:S22599"NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(øôØúşÿÿÿÿ8ùÉÆ±ê1J$6413c2ea-f12a-424f-8bde-a688b69e8635
-–
-java:S2259""NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(€ºØïüÿÿÿÿ8ùÉÆ±ê1J$6a42e823-e8c0-4353-926a-5a3774cc1659
-–
-java:S2259N"NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(Ìâåÿÿÿÿÿ8ùÉÆ±ê1J$73761758-3926-43f4-b7e4-8cfe12648fed
-‘
-java:S2259D"NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(åÕÚ¾8øÉÆ±ê1J$1a11f82a-d3ef-4e0f-96d0-9fed9521436b
-–
-java:S2259,"NA "NullPointerException" could be thrown; "cidadeRepository" is nullable here.(Ìâåÿÿÿÿÿ8ùÉÆ±ê1J$11c0e989-1e34-49fd-94a1-49b3de4683d0
-Ä
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(´¾¼‘8ÿÉÆ±ê1J$61350e3b-7015-4132-a2c7-01b7a8e24b59
+	java:S112""FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8çºê ë1J$587a96f5-a698-4b8a-a269-a0116ef9425b
+	java:S112+"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8éºê ë1J$e9aae254-fd01-43ab-b8db-cc2cbad61ed3
+	java:S1125"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8éºê ë1J$eb546da5-69ae-4634-a218-bc35fbac5298
+	java:S112?"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8éºê ë1J$f3f3539d-1fe3-41ea-a739-ef54336105c0
+	java:S112I"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8éºê ë1J$d4931884-71a6-425c-8a3c-cb5376e01adf
+¸
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ä©®Üüÿÿÿÿ8êºê ë1J$3a1b4890-23df-453d-8809-6a6c3c1f8976
+¦
+java:S1488("^Immediately return this expression instead of assigning it to the temporary variable "cidade".(„±Ø½øÿÿÿÿ8„¹ô ë1J$074b8b74-792c-4d28-848a-fc72f627f48e
+z
+java:S1172"7Remove this unused method parameter "cidadeRepository".(ÌØ¨ı8ôºê ë1J$dbd2584d-7e93-49fa-8a77-0c8d18fbdc0d
+
+java:S1128	"GRemove this unused import 'com.mycompany.clinica.ws.model.EstadoModel'.(ñ‡Šøûÿÿÿÿ8Ş«€¡ë1J$628ac50d-c81a-4bf7-8567-0a2b60855202

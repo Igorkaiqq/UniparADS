@@ -1,7 +1,13 @@
 
+	java:S112&"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8Öû¹Ëë1J$cea6116d-c86b-44d8-beb5-3169e585d86c
+	java:S112F"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8×û¹Ëë1J$5c9961ae-36c4-4047-95d1-9f68d38816d7
+	java:S112["FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8Ùû¹Ëë1J$8b448caa-456d-405a-8e19-add605b4d816
+	java:S112t"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8Ûû¹Ëë1J$0b0d7ddc-ab28-4fbc-b67f-63a9fa5e740e
+	java:S112‚"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8Ûû¹Ëë1J$740f4257-924d-45cb-8332-3ba5cd3be21b
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8Ûû¹Ëë1J$83e7a82c-b24c-49df-956d-88d3ef45f982
 ³
-java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ÑñÂ¼8÷œ«¶é1J$1c71ba84-87fb-4ab9-88f6-3f1cdb81c02e
-~	java:S125"<This block of commented-out lines of code should be removed.(…ÍÚ8Ş´Ñ€é1J$53ce8cd6-4bdf-4cbe-b3c0-b3f9fb2442d5
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ÑñÂ¼8Ûû¹Ëë1J$5fe8fe71-2dfd-40e0-bb29-730675e91e3c
+}
+java:S1854<":Remove this useless assignment to local variable "pessoa".(÷ ¦Ç8ıû¹Ëë1J$e7a4619f-0394-485e-b046-f45b077e4655
 n
-java:S11687"+Return an empty collection instead of null.(¥¹ï8â´Ñ€é1J$5e62c46d-f311-4370-a243-ef060f717a48
-~	java:S125;"<This block of commented-out lines of code should be removed.( îû¬8ã´Ñ€é1J$390dbf9f-dc54-485b-aa58-153c60be64d4
+java:S1481<"+Remove this unused "pessoa" local variable.(÷ ¦Ç8ÿû¹Ëë1J$9a7b0095-f3c7-46bd-b915-154801488547

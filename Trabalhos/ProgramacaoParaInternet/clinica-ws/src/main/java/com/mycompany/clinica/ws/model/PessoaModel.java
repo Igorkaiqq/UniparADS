@@ -4,7 +4,6 @@
  */
 package com.mycompany.clinica.ws.model;
 
-import com.mycompany.clinica.ws.Enums.SexoEnum;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,7 +25,7 @@ public class PessoaModel {
     private String email;
     private String telefone;
     private String cpf;
-    private SexoEnum sexo;
+    private String sexo;
     private EnderecoModel endereco;
 
 }

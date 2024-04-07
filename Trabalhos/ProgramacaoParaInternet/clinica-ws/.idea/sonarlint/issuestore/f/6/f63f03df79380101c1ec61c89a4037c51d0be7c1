@@ -1,0 +1,9 @@
+
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8Š÷¯Ìë1J$eec02134-f6e3-422b-8ea2-a27bfd1e2e6a
+	java:S112$"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8Œ÷¯Ìë1J$231c7440-74da-40f6-bfba-7b0622cb2c1a
+	java:S112,"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8÷¯Ìë1J$426de063-65d2-4b37-90d9-a51daf26924f
+	java:S1129"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8÷¯Ìë1J$e8f343a5-3c8c-4bef-b206-c14168a2802a
+³
+java:S1319 "pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Á›ùĞ8÷¯Ìë1J$60ff5a20-96f7-4ab6-b1dc-cdee3a83c04b
+
+java:S1172"9Remove this unused method parameter "consultaRepository".(”åÚÑşÿÿÿÿ8•÷¯Ìë1J$f5d10625-f082-46eb-baa1-86b4db147f9b

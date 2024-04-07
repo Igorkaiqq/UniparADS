@@ -32,10 +32,4 @@ public interface EspecialidadeInterface {
     @WebMethod
     void deletarEspecialidade(int id);
 
-//    @WebMethod
-//    ArrayList<EspecialidadeModel> findByEspecialidade(@WebParam String especialidade);
-//
-//    @WebMethod
-//    ArrayList<EspecialidadeModel> findByLikeEspecialidade(@WebParam String especialidade);
-
 }

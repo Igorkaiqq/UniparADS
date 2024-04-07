@@ -1,0 +1,18 @@
+
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8øÄÏËë1J$69a857e0-d661-4167-bd61-67528076e8fa
+	java:S1124"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ùÄÏËë1J$d42ca914-2706-4520-aa27-1d94f9c227db
+	java:S112S"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ŞëËë1J$ff4221cc-4ee2-4f94-8b2e-b66978b41b50
+	java:S112v"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ª‘ÏÒë1J$93d878e0-eb24-4dc5-b6be-8744e5000df1
+h	java:S112…"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8‰ÁöÒë1
+‘
+java:S1192/"IDefine a constant instead of duplicating this literal "DataHora" 3 times.(î™èšûÿÿÿÿ8ŞëËë1J$ae52cc54-1a33-4b70-8ba8-992588525ed9
+’
+java:S11920"ODefine a constant instead of duplicating this literal "StatusRegistro" 3 times.(«˜Ïò8ŸŞëËë1J$686b6bdb-7109-4498-a9a6-fd45840a6311
+“
+java:S1192*"KDefine a constant instead of duplicating this literal "PacienteId" 3 times.(Â“²öüÿÿÿÿ8ö¼ğËë1J$effb02c2-0349-444b-936c-498845812e5f
+‘
+java:S1192-"IDefine a constant instead of duplicating this literal "MedicoId" 3 times.(™ä‰şÿÿÿÿ8ö¼ğËë1J$a4fc148d-a429-4309-adbb-dd44af317d57
+³
+java:S1319 "pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Á›ùĞ8şÄÏËë1J$d045e727-7d19-40a8-9b82-60a5ca702745
+³
+java:S1319^"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(òÑš²8Ñ€ìËë1J$237b084a-ccf7-4bfa-baa8-f96be3ecf1ad

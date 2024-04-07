@@ -1,20 +1,14 @@
 
-	java:S112""FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8Ï´Ê±ê1J$1e44ff21-b8d0-43d7-b9d5-f99ed01b2003
-	java:S112/"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8®ÇÊ±ê1J$dfc37782-08b5-4400-b3f4-bb767bc1e85c
-	java:S112:"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8¬íË±ê1J$5dfe167a-bd51-4997-b2e7-c4c95aeb4ce9
-	java:S112E"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8Ù”Ì±ê1J$e76e02b7-b946-466c-8430-0ac892003835
-g	java:S112Q"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ÉªÌ±ê1
-“
-java:S2259C"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(½ç€é8Û´À½é1J$2e3c4cec-5f20-4b72-9d61-90a5cd227664
-˜
-java:S2259 "PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(µı¡÷øÿÿÿÿ8Û´À½é1J$cf505bb7-aa5e-43ca-8ea3-3473a1315cfa
-“
-java:S2259M"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(„ÃÌŸ8ĞÉÁ½é1J$7c6cc5ec-7cb7-4919-b08d-b9d0233dd96a
-“
-java:S22598"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(ÏÜ±8Û´À½é1J$42af3e64-167e-43c5-8a44-8312c6ac7a75
-“
-java:S2259+"PA "NullPointerException" could be thrown; "enderecoRepository" is nullable here.(„ÃÌŸ8Û´À½é1J$b065e5c6-4c73-4f17-ad59-4f83169020ef
-c
-java:S1170"!Make this final field static too.(Õœµ8Ü´À½é1J$2c7f15d1-0e52-497d-97cd-bdec58256b25
-É
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(£±¬Ìıÿÿÿÿ8ñé­Óé1J$bddee352-c941-4892-aa1b-b8d56f7acbe4
+	java:S112$"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8¿Ø€¤ë1J$e5c0ae8d-1010-4fc1-a18c-54fca04091e2
+	java:S112."FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ÂØ€¤ë1J$fd560fef-9c9e-4659-8155-47ef4c0102b9
+	java:S1127"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ÂØ€¤ë1J$31a18a21-2f1e-4fcd-80bf-9d6bd887badb
+	java:S112@"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ÂØ€¤ë1J$f6d38251-909b-40f6-9b27-fe80edfda11e
+	java:S112I"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ÂØ€¤ë1J$064b4f88-9ea1-4f22-b1f6-d285cc37e386
+¸
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¢Ş¹Ôÿÿÿÿÿ8ÃØ€¤ë1J$d9566fef-5a66-4454-804b-d44db6cb0c45
+¨
+java:S1488+"`Immediately return this expression instead of assigning it to the temporary variable "endereco".(ş€í®üÿÿÿÿ8›–‚¤ë1J$b047d016-a28b-4fe6-8970-78729642ba4a
+š
+java:S1128"RRemove this unused import 'com.mycompany.clinica.ws.interfaces.EnderecoInterface'.(•è×Íıÿÿÿÿ8Ï³¤ë1J$81c9d2d8-aa9e-4804-a276-6d243503e915
+
+java:S1128	"GRemove this unused import 'com.mycompany.clinica.ws.model.CidadeModel'.(«ßŒşÿÿÿÿ8Ğ³¤ë1J$7ba2c0d8-056c-457c-8f31-2a9da92da2d5

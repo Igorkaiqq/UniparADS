@@ -1,20 +1,12 @@
 
-	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8“®×±ê1J$cbf7918c-7385-4abc-87cd-82775edae35d
-	java:S112+"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8”®×±ê1J$01c474da-35e1-4974-b413-fb5c9db70218
-	java:S1127"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8”®×±ê1J$eae5842c-e26f-4b02-8571-7235f7723541
-	java:S112C"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ÁËÙ±ê1J$3a309a95-2616-4316-b690-11e3f3ad3c89
-g	java:S112O"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8Şà±ê1
-‘
-java:S2259A"NA "NullPointerException" could be thrown; "pessoaRepository" is nullable here.(‡ä§è8ÏËÙ±ê1J$5162ba6e-4165-441b-b3fe-dffd905a3731
-p
-java:S2259K"NA "NullPointerException" could be thrown; "pessoaRepository" is nullable here.(ùâ÷²şÿÿÿÿ8ğà±ê1
-–
-java:S2259'"NA "NullPointerException" could be thrown; "pessoaRepository" is nullable here.(ùâ÷²şÿÿÿÿ8¡®×±ê1J$51d2d9fa-5272-4960-98d2-daeba912ad39
-–
-java:S22595"NA "NullPointerException" could be thrown; "pessoaRepository" is nullable here.(ß‹š¶ıÿÿÿÿ8¡®×±ê1J$c20e82b2-216c-41fa-9020-ac56e394ce36
-‘
-java:S2259"NA "NullPointerException" could be thrown; "pessoaRepository" is nullable here.(ÌˆÁñ8¡®×±ê1J$144a651e-acbd-47fa-9b8f-92d94e3c7a7f
-i
-java:S1170"!Make this final field static too.(ü¤û½üÿÿÿÿ8£®×±ê1J$fd3c284a-77aa-49bc-bc1a-6f19f880fa16
-Ã
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‘å³N8¥®×±ê1J$074f1536-00c0-401a-b06d-10b8b2008b80
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8’…¯Êë1J$2f93a0c9-4412-4f0d-b46f-ffb66fe8cd3b
+	java:S112'"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8“…¯Êë1J$bc405dc3-160d-4584-9ef7-8d1cdb71506e
+	java:S1123"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8“…¯Êë1J$0a24ca86-18a5-412d-b87a-758697f03de8
+	java:S112>"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8“…¯Êë1J$f1bbaee0-8484-405e-925d-e5af3445c898
+	java:S112G"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8“…¯Êë1J$41e0a231-af61-4875-b3e5-6aa4edc869e9
+¸
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Ùø‰¥ıÿÿÿÿ8”…¯Êë1J$4be84f67-641d-49ab-84f3-2dfca0a2f2e6
+¡
+java:S1488$"^Immediately return this expression instead of assigning it to the temporary variable "pessoa".(—šûÂ8”…¯Êë1J$c10f698e-cbee-491d-b072-57c1fe3cb200
+“
+java:S1128"PRemove this unused import 'com.mycompany.clinica.ws.interfaces.PessoaInterface'.(àûú÷8¢…¯Êë1J$111700be-dd44-48c0-b830-bd75680a7260

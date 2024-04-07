@@ -32,16 +32,5 @@ public interface CidadeInterface {
     @WebMethod
     void deletarCidade(int id);
 
-//    @WebMethod
-//    CidadeModel findByCidadeNomeCidade(@WebParam String nome);
-//
-//    @WebMethod
-//    ArrayList<CidadeModel> findByLikeCidadeNomeCidade(@WebParam String nome);
-//
-//    @WebMethod
-//    ArrayList<CidadeModel> findByEstadoNomeCidade(@WebParam String nome);
-//
-//    @WebMethod
-//    ArrayList<CidadeModel> findByEstadoSiglaCidade(@WebParam String sigla);
     
 }

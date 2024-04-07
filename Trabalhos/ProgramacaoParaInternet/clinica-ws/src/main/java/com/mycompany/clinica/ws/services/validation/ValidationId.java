@@ -1,6 +1,7 @@
 package com.mycompany.clinica.ws.services.validation;
 
 import com.mycompany.clinica.ws.exceptions.ExceptionEntedidadeNaoInformada;
+import com.mycompany.clinica.ws.exceptions.ExceptionExiste;
 import com.mycompany.clinica.ws.exceptions.ExceptionId;
 import com.mycompany.clinica.ws.exceptions.ExceptionNumeroNegativo;
 import com.mycompany.clinica.ws.model.*;

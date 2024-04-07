@@ -8,17 +8,12 @@ import java.util.ArrayList;
 
 public class EstadoRepository extends Conexao {
 
-
     public ArrayList<EstadoModel> listAllEstado() {
-
         ArrayList<EstadoModel> listaEstado = new ArrayList<EstadoModel>();
-
         try {
             this.conectar();
-            setPstm(getCon().prepareStatement(
-                    "SELECT * FROM estado"
-            ));
-            getPstm().executeQuery();
+            setPstm(getCon().prepareStatement("SELECT * FROM estado"));
+            setRs(getPstm().executeQuery());
             while(getRs().next()){
                 EstadoModel estado = new EstadoModel();
                 estado.setId(getRs().getInt("Id"));
@@ -28,12 +23,11 @@ public class EstadoRepository extends Conexao {
             }
             return listaEstado;
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
 
         }finally {
             this.fecharConexao();
         }
-        return null;
     }
 
     public EstadoModel findByIdEstado(int id) {
@@ -53,7 +47,7 @@ public class EstadoRepository extends Conexao {
             }
 
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         } finally {
             this.fecharConexao();
         }
@@ -73,11 +67,10 @@ public class EstadoRepository extends Conexao {
             estado.setId(getRs().getInt(1));
             return estado;
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         } finally {
             this.fecharConexao();
         }
-        return null;
     }
 
     public EstadoModel atualizarEstado(EstadoModel estado) {
@@ -92,11 +85,10 @@ public class EstadoRepository extends Conexao {
             getPstm().executeUpdate();
             return estado;
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         } finally {
             this.fecharConexao();
         }
-        return null;
     }
 
     public boolean deletarEstado(int id) {
@@ -107,10 +99,9 @@ public class EstadoRepository extends Conexao {
             getPstm().executeUpdate();
             return true;
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         } finally {
             this.fecharConexao();
         }
-        return false;
     }
 }

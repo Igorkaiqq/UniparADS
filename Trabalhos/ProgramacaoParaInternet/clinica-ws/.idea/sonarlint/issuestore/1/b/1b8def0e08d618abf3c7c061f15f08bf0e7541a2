@@ -1,7 +1,11 @@
 
-¸
-java:S1319:"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¢Ş¹Ôÿÿÿÿÿ8Ãñª¶é1J$cb24ab91-d7c9-4d39-a9f6-9969d39fc03c
-ƒ	java:S125
-"<This block of commented-out lines of code should be removed.(Õ½§—şÿÿÿÿ8¢ÄóÛè1J$8a7e434a-1129-4d2c-b1a4-6730a3bfaf9e
-n
-java:S1168Q"+Return an empty collection instead of null.(¥¹ï8¦ÄóÛè1J$946e53b0-4a29-4733-be91-5a21ec362544
+g	java:S112;"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8»šŞ¨ë1
+g	java:S112R"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8¼šŞ¨ë1
+g	java:S112k"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8¼šŞ¨ë1
+g	java:S112x"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8¼šŞ¨ë1
+v
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¹õÏè8¼šŞ¨ë1
+’
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¢Ş¹Ôÿÿÿÿÿ8½šŞ¨ë1
+H
+java:S1168$"+Return an empty collection instead of null.(¥¹ï8İšŞ¨ë1

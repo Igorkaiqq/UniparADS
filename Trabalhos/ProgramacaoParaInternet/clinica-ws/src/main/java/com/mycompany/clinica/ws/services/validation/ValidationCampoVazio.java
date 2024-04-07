@@ -28,7 +28,7 @@ public class ValidationCampoVazio {
 
         if (objeto instanceof EnderecoModel){
             EnderecoModel endereco = (EnderecoModel) objeto;
-            if (endereco.getLogradouro().isBlank() || endereco.getCep().isBlank() || endereco.getCidade().getId() == 0){
+            if (endereco.getLogradouro().isBlank() || endereco.getLogradouro().isEmpty() || endereco.getCep().isBlank() || endereco.getCidade().getId() == 0){
                 throw new ExceptionCamposVazio("Endereço");
             }
         }
@@ -49,14 +49,14 @@ public class ValidationCampoVazio {
 
         if (objeto instanceof MedicoModel){
             MedicoModel medico = (MedicoModel) objeto;
-            if (medico.getEspecialidade().getId() == 0 || medico.getPessoa().getId() == 0 || medico.getCrm().isBlank() || medico.getStatusRegistro() == null){
+            if (medico.getEspecialidade().getId() == 0 || medico.getPessoa().getId() == 0 || medico.getCrm().isBlank()){
                 throw new ExceptionCamposVazio("Médico");
             }
         }
 
         if (objeto instanceof PacienteModel){
             PacienteModel paciente = (PacienteModel) objeto;
-            if (paciente.getPessoa().getId() == 0 || paciente.getStatusRegistro() == null){
+            if (paciente.getPessoa().getId() == 0){
                 throw new ExceptionCamposVazio("Paciente");
             }
         }

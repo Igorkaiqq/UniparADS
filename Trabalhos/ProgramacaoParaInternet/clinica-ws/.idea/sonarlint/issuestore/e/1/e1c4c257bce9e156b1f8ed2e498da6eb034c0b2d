@@ -1,15 +1,10 @@
 
-	java:S112("FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8‰™¨‹ê1J$7de31c22-2daa-4e50-8dcc-a427f725c3c0
-	java:S1123"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8Š™¨‹ê1J$1d4f55fd-b017-4a60-82e9-33007e0a54ab
-	java:S112G"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8Š™¨‹ê1J$3b4d32fa-ca5c-445f-b6f3-3fc065ee16a3
-	java:S112R"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8‹™¨‹ê1J$391bdb28-22b8-4075-9ec1-be3a326fecee
+	java:S112!"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8‹Íğ ë1J$1f1a92ce-09f2-4353-b446-818282d14916
+	java:S112*"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ŒÍğ ë1J$95593a44-d041-4948-8077-442dba68bd05
+	java:S1125"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ŒÍğ ë1J$cd62e800-f1f3-45f5-9939-52d0a66665e1
+	java:S112>"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ŒÍğ ë1J$2d068747-29aa-41e0-b246-d50b3737eb8b
+	java:S112G"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ŒÍğ ë1J$ea399b41-317b-43e8-9742-8730aa237f70
 ²
-java:S1319$"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(‰å—L8Œ™¨‹ê1J$0c8a7ea9-e664-4df4-a5cc-45cdfafc736c
-“
-java:S1128"PRemove this unused import 'com.mycompany.clinica.ws.interfaces.EstadoInterface'.(íğŒ8âá¨‹ê1J$18d6bb7b-b065-4b25-93a7-c6c26aaae986
-~
-java:S1128"6Remove this unused import 'lombok.AllArgsConstructor'.(´œ¾öùÿÿÿÿ8âá¨‹ê1J$51dccf54-bd89-4463-8a8b-b7c1c9fa75bf
-x
-java:S1128"5Remove this unused import 'lombok.NoArgsConstructor'.(¸¨›8âá¨‹ê1J$beeb871a-1885-40ce-8d6f-ca635303a157
-u
-java:S1128"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8ãá¨‹ê1J$23471b56-b4a1-4a3f-8428-46236589b5dc
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(‰å—L8Íğ ë1J$63e5921e-c6d9-4b1a-adfe-8a4bbd8ace07
+¦
+java:S1488'"^Immediately return this expression instead of assigning it to the temporary variable "estado".(Ñâ‚ëúÿÿÿÿ8Íğ ë1J$ce13ccb0-44cb-4ec4-9cac-a1dd4f81030f

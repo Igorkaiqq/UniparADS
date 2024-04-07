@@ -1,19 +1,19 @@
 
-{
-java:S1118":Add a private constructor to hide the implicit public one.(¸íå“üÿÿÿÿJ$05c9695c-fb15-47a3-ab62-431e1123648e
-
-java:S3776	"RRefactor this method to reduce its Cognitive Complexity from 28 to the 15 allowed.(€÷®ŸJ$6b19bab6-09ae-4dca-ad50-3f0d3c44f634
-‡
-java:S6201"KReplace this instanceof check and cast with 'instanceof EstadoModel estado'(›ˆíòJ$822e18fa-9eda-46fe-8dc3-b6464da85b9d
-†
-java:S6201"KReplace this instanceof check and cast with 'instanceof CidadeModel cidade'(¦ÿÙJ$ce1d506a-a6ea-4100-bab3-ddcd35458c83
-Š
-java:S6201"OReplace this instanceof check and cast with 'instanceof EnderecoModel endereco'(…êßwJ$276cc04f-4fa7-4780-9616-1c730a0da0e3
+‚
+java:S1118":Add a private constructor to hide the implicit public one.(¸íå“üÿÿÿÿ8°ôÚ¦ë1J$69da9cc3-ac9d-408b-b64e-2165f9c19620
 •
-java:S6201$"YReplace this instanceof check and cast with 'instanceof EspecialidadeModel especialidade'(—–›ıJ$40bfe631-90ff-42f2-b6dc-41846b22c7da
-‡
-java:S6201+"KReplace this instanceof check and cast with 'instanceof PessoaModel pessoa'(ùÊª¯J$f595f25c-d408-4f4f-82b5-455735be3a60
-‡
-java:S62012"KReplace this instanceof check and cast with 'instanceof MedicoModel medico'(‘îã¦J$95c4dcb6-eccd-415b-aa5c-cd5b0c40681f
-Š
-java:S62019"OReplace this instanceof check and cast with 'instanceof PacienteModel paciente'(”¾ËoJ$4d94dfd7-f955-4bf4-93c3-000645417c41
+java:S3776	"RRefactor this method to reduce its Cognitive Complexity from 27 to the 15 allowed.(€÷®Ÿ8±ôÚ¦ë1J$d0675dee-3dad-40d2-937f-bf34ecee5e37
+
+java:S6201"KReplace this instanceof check and cast with 'instanceof EstadoModel estado'(›ˆíò8³ôÚ¦ë1J$182bfb19-3f0b-4404-af6b-0d92f827d32d
+
+java:S6201"KReplace this instanceof check and cast with 'instanceof CidadeModel cidade'(¦ÿÙ8³ôÚ¦ë1J$23187cdd-7e08-4d8b-8c3d-38c42e7c226e
+‘
+java:S6201"OReplace this instanceof check and cast with 'instanceof EnderecoModel endereco'(…êßw8´ôÚ¦ë1J$8f23d921-b0e2-4f39-bfee-63d764cbaf59
+œ
+java:S6201$"YReplace this instanceof check and cast with 'instanceof EspecialidadeModel especialidade'(—–›ı8´ôÚ¦ë1J$7b244b4f-b0be-4a71-a478-4f25ebe7d423
+
+java:S6201+"KReplace this instanceof check and cast with 'instanceof PessoaModel pessoa'(ùÊª¯8µôÚ¦ë1J$e3e20a06-dd35-498b-ac75-24b9c2a9e242
+
+java:S62012"KReplace this instanceof check and cast with 'instanceof MedicoModel medico'(‘îã¦8µôÚ¦ë1J$e41b52b1-2b01-4f0a-a007-c7c3c0333ec1
+‘
+java:S62019"OReplace this instanceof check and cast with 'instanceof PacienteModel paciente'(”¾Ëo8é§ñ«ë1J$54c3c7e8-92ee-44ea-b89e-d1f992e34192

@@ -33,16 +33,4 @@ public interface PacienteInterface {
   @WebMethod
     void ativarPaciente(int id);
 
-//    @WebMethod
-//    ArrayList<PacienteModel> findByStatusPaciente(@WebParam String nome);
-
-//   @WebMethod
-//   PacienteModel findByIdPaciente(@WebParam int id);
-
-//   @WebMethod
-//    ArrayList<PacienteModel> findByNomePaciente(@WebParam String nome);
-//
-//    @WebMethod
-//    ArrayList<PacienteModel> findByLikeNomePaciente(@WebParam String nome);
-    
 }

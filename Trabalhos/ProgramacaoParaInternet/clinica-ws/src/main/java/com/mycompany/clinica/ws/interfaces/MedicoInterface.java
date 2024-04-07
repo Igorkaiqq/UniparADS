@@ -35,19 +35,5 @@ public interface MedicoInterface {
     @WebMethod
     void ativarMedico(int id);
 
-//    @WebMethod
-//    ArrayList<MedicoModel> findByStatusMedico(@WebParam String nome);
-
-//    @WebMethod
-//    ArrayList<MedicoModel> findByNomeMedico(@WebParam String nome);
-//
-//    @WebMethod
-//    ArrayList<MedicoModel> findByLikeNomeMedico(@WebParam String nome);
-//
-//    @WebMethod
-//    MedicoModel findByCRMMedico(@WebParam String crm);
-//
-//    @WebMethod
-//    ArrayList<MedicoModel> findByEspecialidadeMedico(@WebParam String nome);
     
 }

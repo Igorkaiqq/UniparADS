@@ -4,9 +4,15 @@
  */
 package com.mycompany.clinica.ws.services;
 
+import com.mycompany.clinica.ws.exceptions.*;
 import com.mycompany.clinica.ws.interfaces.EspecialidadeInterface;
+import com.mycompany.clinica.ws.model.EnderecoModel;
 import com.mycompany.clinica.ws.model.EspecialidadeModel;
 import com.mycompany.clinica.ws.repository.EspecialidadeRepository;
+import com.mycompany.clinica.ws.services.validation.ValidationCampoVazio;
+import com.mycompany.clinica.ws.services.validation.ValidationExisteBanco;
+import com.mycompany.clinica.ws.services.validation.ValidationId;
+import com.mycompany.clinica.ws.services.validation.ValidationQuantidadeCaracteres;
 
 import java.util.ArrayList;
 
@@ -15,36 +21,83 @@ import java.util.ArrayList;
  * @author igork
  */
 
-public class EspecialidadeService implements EspecialidadeInterface {
+public class EspecialidadeService {
 
-    public final EspecialidadeRepository especialidadeRepositoy = null;
+    private final EspecialidadeRepository especialidadeRepositoy;
     
     public EspecialidadeService(){
-        
+        this.especialidadeRepositoy = new EspecialidadeRepository();
     }
-    
-    @Override
+
     public ArrayList<EspecialidadeModel> listAllEspecialidade() {
-        return null;
+        try {
+            return especialidadeRepositoy.listAllEspecialidade();
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
     }
 
-    @Override
     public EspecialidadeModel findByIdEspecialidade(int id) {
-        return null;
+        try {
+            EspecialidadeModel especialidade = validaFindById(id);
+            return especialidade;
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
     }
 
-    @Override
     public EspecialidadeModel inserirEspecialidade(EspecialidadeModel especialidade) {
-        return null;
+        try {
+            validaInsert(especialidade);
+            return especialidadeRepositoy.inserirEspecialidade(especialidade);
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
     }
 
-    @Override
     public EspecialidadeModel atualizarEspecialidade(EspecialidadeModel especialidade) {
-        return null;
+
+        try {
+            validaUpdate(especialidade);
+            return especialidadeRepositoy.atualizarEspecialidade(especialidade);
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
     }
 
-    @Override
     public void deletarEspecialidade(int id) {
-
+        try {
+            validaDelete(id);
+            especialidadeRepositoy.deletarEspecialidade(id);
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
     }
+
+    private void validaInsert(EspecialidadeModel especialidade) throws ExceptionCamposVazio, ExceptionEntedidadeNaoInformada, ExceptionQuantidadeDeCaracteres {
+        ValidationCampoVazio.validaCamposVazio(especialidade);
+        ValidationQuantidadeCaracteres.validaTamanhoCampo(especialidade);
+    }
+
+    private EspecialidadeModel validaFindById(int id) throws ExceptionEntedidadeNaoInformada, ExceptionNumeroNegativo, ExceptionId {
+        ValidationId.validaId(id);
+        EspecialidadeModel especialidade = especialidadeRepositoy.findByIdEspecialidade(id);
+        ValidationId.validaExiste(especialidade, id);
+        return especialidade;
+    }
+
+    private EspecialidadeModel validaUpdate(EspecialidadeModel especialidade) throws ExceptionNumeroNegativo, ExceptionEntedidadeNaoInformada, ExceptionCamposVazio, ExceptionQuantidadeDeCaracteres, ExceptionId {
+        ValidationId.validaId(especialidade.getId());
+        ValidationExisteBanco.validaNoBanco(especialidade, especialidade.getId());
+        ValidationCampoVazio.validaCamposVazio(especialidade);
+        ValidationQuantidadeCaracteres.validaTamanhoCampo(especialidade);
+        return especialidade;
+    }
+
+    private void validaDelete(int id) throws ExceptionNumeroNegativo, ExceptionId, ExceptionEntedidadeNaoInformada {
+        ValidationId.validaId(id);
+        EspecialidadeModel especialidade = especialidadeRepositoy.findByIdEspecialidade(id);
+        ValidationExisteBanco.validaNoBanco(especialidade, id);
+    }
+
 }

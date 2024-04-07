@@ -31,20 +31,5 @@ public interface EnderecoInterface {
 
     @WebMethod
     void deletarEndereco(int id);
-
-//    @WebMethod
-//    ArrayList<EnderecoModel> findByBairroEndereco(@WebParam String bairro);
-//
-//    @WebMethod
-//    ArrayList<EnderecoModel> findByLikeLogradouroEndereco(@WebParam String logradouro);
-//
-//    @WebMethod
-//    ArrayList<EnderecoModel> findByCidadeNomeEndereco(@WebParam String nome);
-//
-//    @WebMethod
-//    ArrayList<EnderecoModel> findByLikeCidadeNomeEndereco(@WebParam String nome);
-//
-//    @WebMethod
-//    ArrayList<EnderecoModel> findByCEPEndereco(@WebParam String cep);
     
 }

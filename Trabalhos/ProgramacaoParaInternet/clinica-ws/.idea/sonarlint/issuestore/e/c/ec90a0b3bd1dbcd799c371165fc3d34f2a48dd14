@@ -1,9 +1,9 @@
 
+	java:S112#"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8òËìÊë1J$02a62645-3fa9-4402-9237-1c92f0ce3d4e
+	java:S112>"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8óËìÊë1J$3d61d8c0-529b-4dd7-aecd-cbaa1e51cc37
+	java:S112Q"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8õËìÊë1J$fc5d8d2c-bcb0-41ed-809f-25db4425afa6
+	java:S112a"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8öËìÊë1J$35bce894-b087-41e8-9851-e69564f12a83
+	java:S112o"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8øËìÊë1J$d73531bc-b778-42e1-ae32-49cfa000cdcd
+	java:S112|"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8øËìÊë1J$7231db28-d734-4649-8a20-54c4e5eacf77
 ¸
-java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(óÆš’øÿÿÿÿ8æò¼·é1J$140247ac-d92c-491a-b7a8-6e04deae3aff
-~	java:S125"<This block of commented-out lines of code should be removed.(èğ„8­©»€é1J$80d0f4dd-e322-4865-aa1c-e714b02f9660
-n
-java:S1168+"+Return an empty collection instead of null.(¥¹ï8°©»€é1J$48a0fbc8-4cb0-46d9-8304-3545424ac191
-k
-java:S11724")Remove this unused method parameter "id".(™‡öB8¥ó¼·é1J$315ff1c4-e8f5-44fe-934b-293c3e9cbbe9
-~	java:S125/"<This block of commented-out lines of code should be removed.(øŸÖæ8°©»€é1J$2a52d648-4b82-45fb-b648-9b5c5d9d60f8
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(óÆš’øÿÿÿÿ8øËìÊë1J$8a2a0b07-4410-4c49-9d3e-93410f70971a

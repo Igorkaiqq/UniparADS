@@ -4,7 +4,6 @@
  */
 package com.mycompany.clinica.ws.model;
 
-import com.mycompany.clinica.ws.Enums.StatusRegistroEnum;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,6 +21,6 @@ public class PacienteModel {
     
     private int id;
     private PessoaModel pessoa;
-    private StatusRegistroEnum statusRegistro;
+    private int statusRegistro;
     
 }

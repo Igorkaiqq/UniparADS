@@ -1,148 +1,133 @@
 package com.mycompany.clinica.ws.repository;
 
-import com.mycompany.clinica.ws.Enums.StatusRegistroEnum;
+
 import com.mycompany.clinica.ws.infraestructure.Conexao;
+import com.mycompany.clinica.ws.model.EspecialidadeModel;
 import com.mycompany.clinica.ws.model.MedicoModel;
+import com.mycompany.clinica.ws.model.PessoaModel;
 
 import java.util.ArrayList;
 
 public class MedicoRepository extends Conexao {
-//    @Override
-//    public ArrayList<MedicoModel> findByNomeMedico(String nome) {
-//        return null;
-//    }
-//
-//    @Override
-//    public ArrayList<MedicoModel> findByLikeNomeMedico(String nome) {
-//        return null;
-//    }
-//
-//    @Override
-//    public MedicoModel findByCRMMedico(String crm) {
-//        return null;
-//    }
-//
-//    @Override
-//    public ArrayList<MedicoModel> findByEspecialidadeMedico(String nome) {
-//        return null;
-//    }
 
     public ArrayList<MedicoModel> listAllMedico() {
         ArrayList<MedicoModel> listaMedico = new ArrayList<>();
         try {
             this.conectar();
-            setPstm(getCon().prepareStatement("SELECT pes.Nome, pes.Email, med.CRM, esp.Nome FROM medico med " +
+            setPstm(getCon().prepareStatement("SELECT med.Id as id,pes.Nome AS nome, pes.Email AS email, " +
+                    "med.CRM AS crm, esp.Nome AS especialidade, med.StatusRegistro AS statusregistro " +
+                    "FROM medico med " +
                     "INNER JOIN pessoa pes ON (med.PessoaId = pes.Id) " +
                     "INNER JOIN especialidade esp ON (med.EspecialidadeId = esp.Id) " +
                     "ORDER BY pes.Nome ASC"));
-            getPstm().executeQuery();
+            setRs(getPstm().executeQuery());
             while(getRs().next()){
                 MedicoModel medico = new MedicoModel();
-                medico.setId(getRs().getInt("Id"));
-                medico.getPessoa().setId(getRs().getInt("PessoaId"));
-                medico.getEspecialidade().setId(getRs().getInt("EspecialidadeId"));
-                medico.setStatusRegistro(getRs().getInt("StatusRegistro") == 1 ? StatusRegistroEnum.ATIVO
-                        : StatusRegistroEnum.INATIVO);
-                medico.setCrm(getRs().getString("CRM"));
+                medico.setId(getRs().getInt("id"));
+                medico.setPessoa(new PessoaModel());
+                medico.getPessoa().setNome(getRs().getString("nome"));
+                medico.getPessoa().setEmail(getRs().getString("email"));
+                medico.setCrm(getRs().getString("crm"));
+                medico.setEspecialidade(new EspecialidadeModel());
+                medico.getEspecialidade().setNome(getRs().getString("especialidade"));
+                medico.setStatusRegistro(getRs().getInt("statusregistro"));
                 listaMedico.add(medico);
             }
             return listaMedico;
         } catch (Exception e){
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         } finally {
             this.fecharConexao();
         }
-        return null;
     }
 
-//    @Override
-//    public ArrayList<MedicoModel> findByStatusMedico(String nome) {
-//        return null;
-//    }
+
 
     public MedicoModel findByIdMedico(int id) {
-        ArrayList<MedicoModel> listaMedico = new ArrayList<>();
         try {
-            setPstm(getCon().prepareStatement("SELECT pes.Nome, pes.Email, med.CRM, esp.Nome FROM medico med " +
+            this.conectar();
+            setPstm(getCon().prepareStatement("SELECT med.Id as id,pes.Nome AS nome, pes.Email AS email, " +
+                    "med.CRM AS crm, esp.Nome AS especialidade, med.StatusRegistro AS statusregistro " +
+                    "FROM medico med " +
                     "INNER JOIN pessoa pes ON (med.PessoaId = pes.Id) " +
                     "INNER JOIN especialidade esp ON (med.EspecialidadeId = esp.Id) " +
-                    "WHERE med.Id = ? " +
-                    "ORDER BY pes.Nome ASC"));
+                    "WHERE med.Id = ?"));
             getPstm().setInt(1, id);
-            getPstm().executeQuery();
-            if (getRs().first()){
+            setRs(getPstm().executeQuery());
+            if (getRs().next()){
                 MedicoModel medico = new MedicoModel();
-                medico.setId(getRs().getInt("Id"));
-                medico.getPessoa().setId(getRs().getInt("PessoaId"));
-                medico.getEspecialidade().setId(getRs().getInt("EspecialidadeId"));
-                medico.setStatusRegistro(getRs().getInt("StatusRegistro") == 1 ? StatusRegistroEnum.ATIVO
-                        : StatusRegistroEnum.INATIVO);
-                medico.setCrm(getRs().getString("CRM"));
-                listaMedico.add(medico);
+                medico.setId(getRs().getInt("id"));
+                PessoaModel pessoa = new PessoaModel();
+                medico.getPessoa().setNome(getRs().getString("nome"));
+                medico.getPessoa().setEmail(getRs().getString("email"));
+                medico.setCrm(getRs().getString("crm"));
+                medico.setEspecialidade(new EspecialidadeModel());
+                medico.getEspecialidade().setNome(getRs().getString("especialidade"));
+                medico.setStatusRegistro(getRs().getInt("statusregistro"));
                 return medico;
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         } finally {
             this.fecharConexao();
         }
-
         return null;
     }
 
 
     public MedicoModel inserirMedico(MedicoModel medico) {
         try {
+            this.conectar();
             setPstm(getCon().prepareStatement("INSERT INTO medico (PessoaId, EspecialidadeId, StatusRegistro, CRM)" +
                     " VALUES " +
                     "(?,?,?,?)"));
             getPstm().setInt(1, medico.getPessoa().getId());
             getPstm().setInt(2, medico.getEspecialidade().getId());
-            getPstm().setInt(2, medico.getStatusRegistro().equals(StatusRegistroEnum.ATIVO) ? 1 : 0);
+            getPstm().setInt(3, medico.getStatusRegistro());
             getPstm().setString(4, medico.getCrm());
             getPstm().executeUpdate();
             return medico;
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         } finally {
             this.fecharConexao();
         }
 
-        return null;
     }
 
 
     public MedicoModel atualizarMedico(MedicoModel medico) {
         try {
+            this.conectar();
             setPstm(getCon().prepareStatement("UPDATE medico " +
                     "SET PessoaId = ?, " +
-                    "SET EspecialidadeId = ?, " +
-                    "SET StatusRegistro = ?," +
-                    "SET CRM = ? " +
+                    "EspecialidadeId = ?, " +
+                    "StatusRegistro = ?, " +
+                    "CRM = ? " +
                     "WHERE Id = ?"));
-            getPstm().setInt(1, medico.getId());
-            getPstm().setInt(2, medico.getPessoa().getId());
-            getPstm().setInt(3, medico.getEspecialidade().getId());
-            getPstm().setInt(2, medico.getStatusRegistro().equals(StatusRegistroEnum.ATIVO) ? 1 : 0);
-            getPstm().setString(5, medico.getCrm());
+            getPstm().setInt(1, medico.getPessoa().getId());
+            getPstm().setInt(2, medico.getEspecialidade().getId());
+            getPstm().setInt(3, medico.getStatusRegistro());
+            getPstm().setString(4, medico.getCrm());
+            getPstm().setInt(5, medico.getId());
             getPstm().executeUpdate();
             return medico;
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         } finally {
             this.fecharConexao();
         }
-        return null;
     }
 
 
     public void deletarMedico(int id) {
         try {
+            this.conectar();
             setPstm(getCon().prepareStatement("UPDATE medico SET StatusRegistro = 0 WHERE Id = ? "));
             getPstm().setInt(1, id);
             getPstm().executeUpdate();
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         } finally {
             this.fecharConexao();
         }
@@ -150,11 +135,12 @@ public class MedicoRepository extends Conexao {
 
     public void ativarMedico(int id) {
         try {
+            this.conectar();
             setPstm(getCon().prepareStatement("UPDATE medico SET StatusRegistro = 1 WHERE Id = ? "));
             getPstm().setInt(1, id);
             getPstm().executeUpdate();
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException(e.getMessage());
         } finally {
             this.fecharConexao();
         }

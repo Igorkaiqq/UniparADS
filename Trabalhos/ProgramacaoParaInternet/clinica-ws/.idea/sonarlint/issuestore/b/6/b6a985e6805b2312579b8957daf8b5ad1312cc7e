@@ -1,11 +1,16 @@
 
-=
-java:S1170"!Make this final field static too.(îàÆ8ú©¹±ê1
-É
-java:S1186/"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(íçÙäøÿÿÿÿ8áß½»é1J$4693cba3-6470-4a59-a8f3-c80226afd075
-Ä
-java:S11864"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¥©ã8ãß½»é1J$f95e7f12-a111-4be6-841b-dfcca25cc6c6
-£
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¶˜†éøÿÿÿÿ8ü©¹±ê1
-n
-java:S1168"+Return an empty collection instead of null.(¥¹ï8Úî¼·é1J$983d25be-6429-475f-af3f-52ea70104b08
+	java:S112$"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8’´°­ë1J$a2e84852-9a28-4e89-9118-37918e9823a5
+	java:S112-"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8¥±­ë1J$37c8d3ae-01d3-49bf-a21d-83c75600e718
+	java:S1127"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ïû²­ë1J$5ae85065-99fe-4c71-b735-8301722dd760
+	java:S112@"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8´‡´­ë1J$f34a9b67-655a-4ae0-b1f4-de9dfe5c1260
+	java:S112I"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8¹«´­ë1J$1edbc4bc-1064-4bdf-a911-9e49838e4c6b
+	java:S112R"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8†ä´­ë1J$d607df9f-0610-4cf8-826a-17c9bd08e999
+¸
+java:S1319 "pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(óÆš’øÿÿÿÿ8àúøƒë1J$50522640-4ad9-49e2-a590-3d6afe112ba9
+¨
+java:S1488*"`Immediately return this expression instead of assigning it to the temporary variable "paciente".(òÓô·øÿÿÿÿ8§±­ë1J$0e656c7e-37d7-4a2d-895d-f983db6d2267
+•
+java:S1128"RRemove this unused import 'com.mycompany.clinica.ws.interfaces.PacienteInterface'.(Úÿ¾€8¹­¯­ë1J$ef35b04f-3f05-4336-b5b4-5bd045beaf6f
+
+java:S1128
+"GRemove this unused import 'com.mycompany.clinica.ws.model.PessoaModel'.(ÎœÄÚıÿÿÿÿ8¹­¯­ë1J$a3832d52-620d-4e33-98b1-8d51e6299326

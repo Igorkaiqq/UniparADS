@@ -31,14 +31,5 @@ public interface PessoaInterface {
 
     @WebMethod
     void deletarPessoa(int id);
-
-//    @WebMethod
-//    ArrayList<PessoaModel> findByNomePessoa(@WebParam String nome);
-//
-//    @WebMethod
-//    ArrayList<PessoaModel> findByLikeNomePessoa(@WebParam String nome);
-//
-//    @WebMethod
-//    PessoaModel findByCPFPessoa(@WebParam String cpf);
     
 }

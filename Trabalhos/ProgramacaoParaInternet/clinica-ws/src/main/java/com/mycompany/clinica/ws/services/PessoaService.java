@@ -4,26 +4,25 @@
  */
 package com.mycompany.clinica.ws.services;
 
+import com.mycompany.clinica.ws.exceptions.*;
 import com.mycompany.clinica.ws.interfaces.PessoaInterface;
 import com.mycompany.clinica.ws.model.PessoaModel;
 import com.mycompany.clinica.ws.repository.PessoaRepository;
-import com.mycompany.clinica.ws.services.validation.ValidationCampoVazio;
-import com.mycompany.clinica.ws.services.validation.ValidationCamposBloqueados;
-import com.mycompany.clinica.ws.services.validation.ValidationId;
-import com.mycompany.clinica.ws.services.validation.ValidationQuantidadeCaracteres;
+import com.mycompany.clinica.ws.services.validation.*;
+import com.mycompany.clinica.ws.utils.UtilCPF;
+import com.mycompany.clinica.ws.utils.UtilTelefone;
 
 import java.util.ArrayList;
 
 
-public class PessoaService implements PessoaInterface {
+public class PessoaService {
 
-    public final PessoaRepository pessoaRepository = null;
+    private final PessoaRepository pessoaRepository;
     
     public PessoaService(){
-        
+        this.pessoaRepository = new PessoaRepository();
     }
-    
-    @Override
+
     public ArrayList<PessoaModel> listAllPessoa() {
         try {
             return pessoaRepository.listAllPessoa();
@@ -32,12 +31,9 @@ public class PessoaService implements PessoaInterface {
         }
     }
 
-    @Override
     public PessoaModel findByIdPessoa(int id) {
         try {
-            ValidationId.validaId(id);
-            PessoaModel pessoa = pessoaRepository.findByIdPessoa(id);
-            ValidationId.validaExiste(pessoa, id);
+            PessoaModel pessoa = validaFindById(id);
             return pessoa;
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
@@ -45,38 +41,61 @@ public class PessoaService implements PessoaInterface {
 
     }
 
-    @Override
     public PessoaModel inserirPessoa(PessoaModel pessoa) {
         try {
-            ValidationCampoVazio.validaCamposVazio(pessoa);
-            ValidationQuantidadeCaracteres.validaTamanhoCampo(pessoa);
+            validaInsert(pessoa);
+            pessoa.setCpf(UtilCPF.formatarCPF(pessoa.getCpf()));
+            pessoa.setTelefone(UtilTelefone.formatarTelefone(pessoa.getTelefone()));
             return pessoaRepository.inserirPessoa(pessoa);
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }
     }
 
-    @Override
     public PessoaModel atualizarPessoa(PessoaModel pessoa) {
         try {
-            ValidationCamposBloqueados.validaCamposBloqueados(pessoa);
-            ValidationCampoVazio.validaCamposVazio(pessoa);
-            ValidationQuantidadeCaracteres.validaTamanhoCampo(pessoa);
+            validaUpdate(pessoa);
+            pessoa.setCpf(UtilCPF.formatarCPF(pessoa.getCpf()));
+            pessoa.setTelefone(UtilTelefone.formatarTelefone(pessoa.getTelefone()));
             return pessoaRepository.atualizarPessoa(pessoa);
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }
     }
 
-    @Override
     public void deletarPessoa(int id) {
         try {
-            ValidationId.validaId(id);
-            PessoaModel pessoa = pessoaRepository.findByIdPessoa(id);
-            ValidationId.validaExiste(pessoa, id);
+            validaDelete(id);
             pessoaRepository.deletarPessoa(id);
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }
     }
+
+    private void validaInsert(PessoaModel pessoa) throws ExceptionCamposVazio, ExceptionEntedidadeNaoInformada, ExceptionQuantidadeDeCaracteres {
+        ValidationCampoVazio.validaCamposVazio(pessoa);
+        ValidationQuantidadeCaracteres.validaTamanhoCampo(pessoa);
+    }
+
+    private PessoaModel validaFindById(int id) throws ExceptionNumeroNegativo, ExceptionId, ExceptionEntedidadeNaoInformada {
+        ValidationId.validaId(id);
+        PessoaModel endereco = pessoaRepository.findByIdPessoa(id);
+        ValidationId.validaExiste(endereco, id);
+        return endereco;
+    }
+
+    private PessoaModel validaUpdate(PessoaModel pessoa) throws ExceptionNumeroNegativo, ExceptionId, ExceptionEntedidadeNaoInformada, ExceptionCamposVazio, ExceptionQuantidadeDeCaracteres {
+        ValidationId.validaId(pessoa.getId());
+        ValidationExisteBanco.validaNoBanco(pessoa, pessoa.getId());
+        ValidationCampoVazio.validaCamposVazio(pessoa);
+        ValidationQuantidadeCaracteres.validaTamanhoCampo(pessoa);
+        return pessoa;
+    }
+
+    private void validaDelete(int id) throws ExceptionNumeroNegativo, ExceptionId, ExceptionEntedidadeNaoInformada {
+        ValidationId.validaId(id);
+        PessoaModel pessoa = pessoaRepository.findByIdPessoa(id);
+        ValidationExisteBanco.validaNoBanco(pessoa, id);
+    }
+
 }

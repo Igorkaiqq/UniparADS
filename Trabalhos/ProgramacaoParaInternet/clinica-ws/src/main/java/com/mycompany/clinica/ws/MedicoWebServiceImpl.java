@@ -18,13 +18,14 @@ public class MedicoWebServiceImpl implements MedicoInterface {
     }
 
     @Override
+
     public MedicoModel findByIdMedico(int id) {
         return medicoService.findByIdMedico(id);
     }
 
     @Override
     public MedicoModel inserirMedico(MedicoModel medico) {
-            return medicoService.inserirMedico(medico);
+        return medicoService.inserirMedico(medico);
     }
 
     @Override

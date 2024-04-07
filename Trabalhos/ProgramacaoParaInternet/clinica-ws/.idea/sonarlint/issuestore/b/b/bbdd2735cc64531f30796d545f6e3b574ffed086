@@ -1,25 +1,25 @@
 
-g
-java:S1192&"JDefine a constant instead of duplicating this literal "EndereÃ§o" 4 times.(¬«Š8èÀË‹ê1
-d
-java:S1192C"GDefine a constant instead of duplicating this literal "Pessoa" 4 times.(´•‚µ8èÀË‹ê1
-K
-java:S1066-"/Merge this if statement with the enclosing one.(ı‡¤n8éÀË‹ê1
-W
-java:S1118":Add a private constructor to hide the implicit public one.(óÑ»€8ÁË‹ê1
-t
-java:S3776	"RRefactor this method to reduce its Cognitive Complexity from 36 to the 15 allowed.(ïèÜ¶ùÿÿÿÿ8ŸÁË‹ê1
-h
-java:S6201"KReplace this instanceof check and cast with 'instanceof EstadoModel estado'(›ˆíò8¢ÁË‹ê1
-g
-java:S6201"KReplace this instanceof check and cast with 'instanceof CidadeModel cidade'(¦ÿÙ8£ÁË‹ê1
-k
-java:S6201""OReplace this instanceof check and cast with 'instanceof EnderecoModel endereco'(…êßw8¤ÁË‹ê1
-v
-java:S62017"YReplace this instanceof check and cast with 'instanceof EspecialidadeModel especialidade'(—–›ı8¦ÁË‹ê1
-h
-java:S6201?"KReplace this instanceof check and cast with 'instanceof PessoaModel pessoa'(ùÊª¯8§ÁË‹ê1
-h
-java:S6201P"KReplace this instanceof check and cast with 'instanceof MedicoModel medico'(‘îã¦8©ÁË‹ê1
-ç
-java:S6541	"ÄA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 65 to 64, Complexity from 22 to 14, Nesting Level from 3 to 2, Number of Variables from 7 to 6.(ïèÜ¶ùÿÿÿÿ8ªÁË‹ê1
+
+java:S1192&"JDefine a constant instead of duplicating this literal "EndereÃ§o" 4 times.(¬«Š8èÀË‹ê1J$545dd7e6-e7c3-4dbe-aefa-9bf7e89961a4
+Š
+java:S1192C"GDefine a constant instead of duplicating this literal "Pessoa" 4 times.(´•‚µ8èÀË‹ê1J$97702b99-9956-4454-9191-f3e5ea2174f6
+q
+java:S1066-"/Merge this if statement with the enclosing one.(ı‡¤n8éÀË‹ê1J$7a7d1c2b-8967-4f6e-9b95-8328a5086e07
+}
+java:S1118":Add a private constructor to hide the implicit public one.(óÑ»€8ÁË‹ê1J$33894765-d5cb-4751-94b7-16968a4f4c64
+š
+java:S3776	"RRefactor this method to reduce its Cognitive Complexity from 36 to the 15 allowed.(ïèÜ¶ùÿÿÿÿ8ŸÁË‹ê1J$0cb2c999-fbb7-4a25-a898-935fc15a83a4
+
+java:S6201"KReplace this instanceof check and cast with 'instanceof EstadoModel estado'(›ˆíò8¢ÁË‹ê1J$80fc1da7-b957-4fd5-baf9-36cfe520dd83
+
+java:S6201"KReplace this instanceof check and cast with 'instanceof CidadeModel cidade'(¦ÿÙ8£ÁË‹ê1J$36dc42e7-b55d-42e6-b382-13fbd8576f07
+‘
+java:S6201""OReplace this instanceof check and cast with 'instanceof EnderecoModel endereco'(…êßw8¤ÁË‹ê1J$eb908abd-0f0c-45cd-91e6-c2b0b32789c5
+œ
+java:S62017"YReplace this instanceof check and cast with 'instanceof EspecialidadeModel especialidade'(—–›ı8¦ÁË‹ê1J$a4e06df0-f47f-4742-9b1e-c306b3ede05c
+
+java:S6201?"KReplace this instanceof check and cast with 'instanceof PessoaModel pessoa'(ùÊª¯8§ÁË‹ê1J$4c1d208d-5529-4b17-bacc-c7fc4a97ee3c
+
+java:S6201P"KReplace this instanceof check and cast with 'instanceof MedicoModel medico'(‘îã¦8©ÁË‹ê1J$7ba4d13d-b859-45d4-be79-f755670dee77
+
+java:S6541	"ÄA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 65 to 64, Complexity from 22 to 14, Nesting Level from 3 to 2, Number of Variables from 7 to 6.(ïèÜ¶ùÿÿÿÿ8ªÁË‹ê1J$9a904990-b939-4cff-8fa0-4c403d6b4af2

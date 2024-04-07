@@ -33,13 +33,5 @@ public interface EstadoInterface {
     @WebMethod
     void deletarEstado(int id);
 
-//    @WebMethod
-//    EstadoModel findByNomeEstado(@WebParam String nome);
-//
-//    @WebMethod
-//    ArrayList<EstadoModel> findByLikeNomeEstado(@WebParam String nome);
-//
-//    @WebMethod
-//    EstadoModel findBySiglaEstado(@WebParam String nome);
     
 }

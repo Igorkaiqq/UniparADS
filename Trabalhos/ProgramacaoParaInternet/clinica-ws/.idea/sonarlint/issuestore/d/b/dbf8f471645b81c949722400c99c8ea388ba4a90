@@ -1,5 +1,8 @@
 
-U
-java:S1118	":Add a private constructor to hide the implicit public one.(£êÚåÿÿÿÿÿ
-m
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(£ãÿƒýÿÿÿÿ
+{
+java:S1118
+":Add a private constructor to hide the implicit public one.(£êÚåÿÿÿÿÿJ$967d4719-9396-4aa1-bae8-2924a017e59d
+“
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(£ãÿƒýÿÿÿÿJ$2bcd17a6-ef7c-48e5-9f7b-1dcd540d1225
+“
+java:S1128"PRemove this unused import 'com.mycompany.clinica.ws.exceptions.ExceptionExiste'.(Ü¯°À8Š†–¼ê1J$ddcfe1fa-c919-48c4-a97b-d2408986a323

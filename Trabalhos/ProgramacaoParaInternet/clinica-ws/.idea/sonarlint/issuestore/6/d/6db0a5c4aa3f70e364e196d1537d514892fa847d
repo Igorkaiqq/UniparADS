@@ -1,6 +1,10 @@
 
+	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8±¯¹…ë1J$37634614-51d4-4bb7-bf19-a5c1028d633a
+	java:S1122"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8‰ªÆ…ë1J$3863087c-2ef5-41ad-84f8-8ef3ef22ac16
+	java:S112B"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8”ÀÆ…ë1J$3bdedd54-26db-46d7-b75a-4379917e0bbb
+	java:S112R"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8•ÓÈ…ë1J$bab2116a-20c8-487d-b66c-6343568f5ef6
+	java:S112`"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8‚æÈ…ë1J$e1a1e70c-0e16-4fe0-85bc-da95c6879a67
+œ
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ç®ïş8³¯¹…ë1J$b6bc4d05-bd9f-453c-a048-6bdcde0d9270
 ¸
-java:S1319i"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ä©®Üüÿÿÿÿ8™…²¶é1J$e95e2390-f6c1-4b29-befb-62f64967a20f
-~	java:S125"<This block of commented-out lines of code should be removed.(ş§…é8·…²¶é1J$7c303b28-3ae1-423d-b782-c29c0b5f8637
-n
-java:S1168x"+Return an empty collection instead of null.(¥¹ï8¼…²¶é1J$e50e44d2-a535-44cc-8832-49f7e774792d
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ä©®Üüÿÿÿÿ8´¯¹…ë1J$c898c643-c990-4b24-b6bd-8f99f7a78e24

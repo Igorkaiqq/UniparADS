@@ -4,10 +4,13 @@
  */
 package com.mycompany.clinica.ws.services;
 
+import com.mycompany.clinica.ws.exceptions.*;
 import com.mycompany.clinica.ws.interfaces.EnderecoInterface;
+import com.mycompany.clinica.ws.model.CidadeModel;
 import com.mycompany.clinica.ws.model.EnderecoModel;
 import com.mycompany.clinica.ws.repository.EnderecoRepository;
 import com.mycompany.clinica.ws.services.validation.ValidationCampoVazio;
+import com.mycompany.clinica.ws.services.validation.ValidationExisteBanco;
 import com.mycompany.clinica.ws.services.validation.ValidationId;
 import com.mycompany.clinica.ws.services.validation.ValidationQuantidadeCaracteres;
 
@@ -17,15 +20,14 @@ import java.util.ArrayList;
  *
  * @author igork
  */
-public class EnderecoService implements EnderecoInterface {
+public class EnderecoService {
 
-    public final EnderecoRepository enderecoRepository = null;
+    private final EnderecoRepository enderecoRepository;
 
     public EnderecoService(){
-        
+        this.enderecoRepository = new EnderecoRepository();
     }
-    
-    @Override
+
     public ArrayList<EnderecoModel> listAllEndereco() {
 
         try {
@@ -35,52 +37,69 @@ public class EnderecoService implements EnderecoInterface {
         }
     }
 
-    @Override
     public EnderecoModel findByIdEndereco(int id) {
 
         try {
-            ValidationId.validaId(id);
-            EnderecoModel endereco = enderecoRepository.findByIdEndereco(id);
-            ValidationId.validaExiste(endereco, id);
+            EnderecoModel endereco = validaFindById(id);
             return endereco;
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }
     }
 
-    @Override
     public EnderecoModel inserirEndereco(EnderecoModel endereco) {
         try {
-            ValidationCampoVazio.validaCamposVazio(endereco);
-            ValidationQuantidadeCaracteres.validaTamanhoCampo(endereco);
+            validaInsert(endereco);
             return enderecoRepository.inserirEndereco(endereco);
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }
     }
 
-    @Override
     public EnderecoModel atualizarEndereco(EnderecoModel endereco) {
         try {
-            ValidationCampoVazio.validaCamposVazio(endereco);
-            ValidationQuantidadeCaracteres.validaTamanhoCampo(endereco);
+            validaUpdate(endereco);
             return enderecoRepository.atualizarEndereco(endereco);
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }
     }
 
-    @Override
     public void deletarEndereco(int id) {
         try {
-            ValidationId.validaId(id);
-            EnderecoModel endereco = enderecoRepository.findByIdEndereco(id);
-            ValidationId.validaExiste(endereco, id);
+            validaDelete(id);
             enderecoRepository.deletarEndereco(id);
         } catch (Exception e) {
             throw new RuntimeException(e.getMessage());
         }
     }
+
+    private void validaInsert(EnderecoModel endereco) throws ExceptionCamposVazio, ExceptionEntedidadeNaoInformada, ExceptionQuantidadeDeCaracteres {
+        ValidationCampoVazio.validaCamposVazio(endereco);
+        ValidationQuantidadeCaracteres.validaTamanhoCampo(endereco);
+    }
+
+    private EnderecoModel validaFindById(int id) throws ExceptionEntedidadeNaoInformada, ExceptionNumeroNegativo, ExceptionId {
+        ValidationId.validaId(id);
+        EnderecoModel endereco = enderecoRepository.findByIdEndereco(id);
+        ValidationId.validaExiste(endereco, id);
+        return endereco;
+    }
+
+    private EnderecoModel validaUpdate(EnderecoModel endereco) throws ExceptionNumeroNegativo, ExceptionEntedidadeNaoInformada, ExceptionCamposVazio, ExceptionQuantidadeDeCaracteres, ExceptionId {
+        ValidationId.validaId(endereco.getId());
+        ValidationExisteBanco.validaNoBanco(endereco, endereco.getId());
+        ValidationCampoVazio.validaCamposVazio(endereco);
+        ValidationQuantidadeCaracteres.validaTamanhoCampo(endereco);
+        return endereco;
+    }
+
+    private void validaDelete(int id) throws ExceptionNumeroNegativo, ExceptionId, ExceptionEntedidadeNaoInformada {
+        ValidationId.validaId(id);
+        EnderecoModel endereco = enderecoRepository.findByIdEndereco(id);
+        ValidationExisteBanco.validaNoBanco(endereco, id);
+    }
+
 }
 
 

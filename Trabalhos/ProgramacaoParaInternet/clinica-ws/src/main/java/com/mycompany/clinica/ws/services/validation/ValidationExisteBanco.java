@@ -22,49 +22,49 @@ public class ValidationExisteBanco {
 
         if (objeto instanceof EstadoModel){
             EstadoModel estadoEncontrado = estadoRepository.findByIdEstado(id);
-            if (estadoEncontrado != null){
+            if (estadoEncontrado == null){
                 throw new ExceptionId(id, "Estado");
             }
         }
 
         if (objeto instanceof CidadeModel){
             CidadeModel cidadeEncontrada = cidadeRepository.findByIdCidade(id);
-            if (cidadeEncontrada != null){
+            if (cidadeEncontrada == null){
                 throw new ExceptionId(id, "Cidade");
             }
         }
 
         if (objeto instanceof EnderecoModel){
             EnderecoModel enderecoEncontrado = enderecoRepository.findByIdEndereco(id);
-            if (enderecoEncontrado != null){
+            if (enderecoEncontrado == null){
                 throw new ExceptionId(id, "Endereco");
             }
         }
 
         if (objeto instanceof EspecialidadeModel){
             EspecialidadeModel especialidadeEncontrada = especialidadeRepository.findByIdEspecialidade(id);
-            if (especialidadeEncontrada != null){
+            if (especialidadeEncontrada == null){
                 throw new ExceptionId(id, "Especialidade");
             }
         }
 
         if (objeto instanceof PessoaModel){
             PessoaModel pessoaEncontrada = pessoaRepository.findByIdPessoa(id);
-            if (pessoaEncontrada != null){
+            if (pessoaEncontrada == null){
                 throw new ExceptionId(id, "Pessoa");
             }
         }
 
         if (objeto instanceof MedicoModel){
             MedicoModel medicoEncontrado = medicoRepository.findByIdMedico(id);
-            if (medicoEncontrado != null){
+            if (medicoEncontrado == null){
                 throw new ExceptionId(id, "Medico");
             }
         }
 
         if (objeto instanceof PacienteModel){
             PacienteModel pacienteEncontrado = pacienteRepository.findByIdPaciente(id);
-            if (pacienteEncontrado != null){
+            if (pacienteEncontrado == null){
                 throw new ExceptionId(id, "Paciente");
             }
         }

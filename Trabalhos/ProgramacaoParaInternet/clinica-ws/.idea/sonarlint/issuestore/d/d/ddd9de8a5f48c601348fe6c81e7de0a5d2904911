@@ -3,10 +3,10 @@
 java:S11921"HDefine a constant instead of duplicating this literal "M√©dico" 4 times.(√…–ß8∆é‹±Í1J$8b620254-acf6-4778-bc4e-f364f81ee8e5
 ò
 java:S2259C"PA "NullPointerException" could be thrown; "pacienteRepository" is nullable here.(ı¯µ¶¯ˇˇˇˇ8Ú’›±Í1J$b60a55ac-b47b-4975-8916-7dc2369cf961
-ê
-java:S2259"NA "NullPointerException" could be thrown; "pessoaRepository" is nullable here.(ÊàµG8Ú’›±Í1J$1d18d617-eaab-4df5-96ed-74651ac69bcd
 ë
 java:S2259*"NA "NullPointerException" could be thrown; "medicoRepository" is nullable here.(äÓÄ—8Ú’›±Í1J$8ac75514-d939-401c-9fd8-f9cb0efb4e82
+ê
+java:S2259"NA "NullPointerException" could be thrown; "pessoaRepository" is nullable here.(ÊàµG8Ú’›±Í1J$1d18d617-eaab-4df5-96ed-74651ac69bcd
 }
 java:S1118":Add a private constructor to hide the implicit public one.(òêÚ∏8÷é‹±Í1J$682f0a64-a331-40a8-9d91-b0b2dc6ad6c1
 î

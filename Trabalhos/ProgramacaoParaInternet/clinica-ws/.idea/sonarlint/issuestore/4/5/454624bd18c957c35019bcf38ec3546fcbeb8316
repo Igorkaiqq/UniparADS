@@ -1,11 +1,13 @@
 
-C
-java:S1170"!Make this final field static too.(ñŸï²şÿÿÿÿ8ËÊ¹±ê1
-É
-java:S1186+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Øó‡‘şÿÿÿÿ8¦µµ»é1J$7fac1f96-3778-4358-8d95-93131ed01ef2
-Ã
-java:S11860"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹§ÇY8ô×£áè1J$6ae139bc-b394-4ad6-be44-1414c55f3db1
-
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¢Àˆ‘8ËÊ¹±ê1
-n
-java:S1168"+Return an empty collection instead of null.(¥¹ï8 ë¼·é1J$67290c38-5fb9-4677-9118-aad2b7a19e68
+	java:S112 "FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ï³·Êë1J$a9468978-512a-4694-b440-2e214b738f6b
+	java:S112*"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ò³·Êë1J$29aaabc9-3d0f-431d-b233-23b1c972f87d
+	java:S1124"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ô³·Êë1J$9831e919-db3d-47be-b2ec-ed35754bf00b
+	java:S112>"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ö³·Êë1J$ef97b880-bd36-421b-8717-29a6d5a81e58
+	java:S112G"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8÷³·Êë1J$bf3b2910-cbcf-40ff-8e8a-93def9a428f8
+	java:S112P"FDefine and throw a dedicated exception instead of using a generic one.(Ê“Åıÿÿÿÿ8ù³·Êë1J$2c37765c-5546-44a6-9cd2-aedbe06ca8bc
+³
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(ÑñÂ¼8ü³·Êë1J$49bdf1b5-fd0a-4b0d-a7a6-06439ede891a
+¡
+java:S1488'"^Immediately return this expression instead of assigning it to the temporary variable "medico".(—ÄÚ¸8ü³·Êë1J$f80d19b1-8bdd-4106-8774-e2c719f3db46
+˜
+java:S1128"PRemove this unused import 'com.mycompany.clinica.ws.interfaces.MedicoInterface'.(¤Û‡ÿÿÿÿÿ8‹´·Êë1J$a3a7b585-5136-4c42-beb1-279fbf5fd491

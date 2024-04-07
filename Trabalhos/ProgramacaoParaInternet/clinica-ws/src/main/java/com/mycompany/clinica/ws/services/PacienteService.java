@@ -4,9 +4,15 @@
  */
 package com.mycompany.clinica.ws.services;
 
+import com.mycompany.clinica.ws.exceptions.*;
 import com.mycompany.clinica.ws.interfaces.PacienteInterface;
 import com.mycompany.clinica.ws.model.PacienteModel;
+import com.mycompany.clinica.ws.model.PessoaModel;
 import com.mycompany.clinica.ws.repository.PacienteRepository;
+import com.mycompany.clinica.ws.services.validation.ValidationCampoVazio;
+import com.mycompany.clinica.ws.services.validation.ValidationExisteBanco;
+import com.mycompany.clinica.ws.services.validation.ValidationId;
+import com.mycompany.clinica.ws.services.validation.ValidationQuantidadeCaracteres;
 
 import java.util.ArrayList;
 
@@ -15,41 +21,92 @@ import java.util.ArrayList;
  * @author igork
  */
 
-public class PacienteService implements PacienteInterface {
+public class PacienteService {
 
-    public final PacienteRepository pacienteRepository = null;
+    private final PacienteRepository pacienteRepository;
     
     public PacienteService(){
-        
+        this.pacienteRepository = new PacienteRepository();
     }
-    
-    @Override
+
     public ArrayList<PacienteModel> listAllPaciente() {
-        return null;
+        try {
+            return pacienteRepository.listAllPaciente();
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
     }
 
-    @Override
     public PacienteModel findByIdPaciente(int id) {
-        return null;
+        try {
+            PacienteModel paciente = validaFindById(id);
+            return paciente;
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
     }
 
-    @Override
     public PacienteModel inserirPaciente(PacienteModel paciente) {
-        return null;
+
+        try {
+            validaInsert(paciente);
+            return pacienteRepository.inserirPaciente(paciente);
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
     }
 
-    @Override
     public PacienteModel atualizarPaciente(PacienteModel paciente) {
-        return null;
+        try {
+            validaUpdate(paciente);
+            return pacienteRepository.atualizarPaciente(paciente);
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
     }
 
-    @Override
     public void deletarPaciente(int id) {
-
+        try {
+            validaDelete(id);
+            pacienteRepository.deletarPaciente(id);
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
     }
 
-    @Override
     public void ativarPaciente(int id) {
-
+        try {
+            ValidationId.validaId(id);
+            pacienteRepository.ativarPaciente(id);
+        } catch (Exception e) {
+            throw new RuntimeException(e.getMessage());
+        }
     }
+
+    private void validaInsert(PacienteModel paciente) throws ExceptionCamposVazio, ExceptionEntedidadeNaoInformada, ExceptionQuantidadeDeCaracteres {
+        ValidationCampoVazio.validaCamposVazio(paciente);
+        ValidationQuantidadeCaracteres.validaTamanhoCampo(paciente);
+    }
+
+    private PacienteModel validaFindById(int id) throws ExceptionNumeroNegativo, ExceptionId, ExceptionEntedidadeNaoInformada {
+        ValidationId.validaId(id);
+        PacienteModel paciente = pacienteRepository.findByIdPaciente(id);
+        ValidationId.validaExiste(paciente, id);
+        return paciente;
+    }
+
+    private PacienteModel validaUpdate(PacienteModel paciente) throws ExceptionNumeroNegativo, ExceptionId, ExceptionEntedidadeNaoInformada, ExceptionCamposVazio, ExceptionQuantidadeDeCaracteres {
+        ValidationId.validaId(paciente.getId());
+        ValidationExisteBanco.validaNoBanco(paciente, paciente.getId());
+        ValidationCampoVazio.validaCamposVazio(paciente);
+        ValidationQuantidadeCaracteres.validaTamanhoCampo(paciente);
+        return paciente;
+    }
+
+    private void validaDelete(int id) throws ExceptionNumeroNegativo, ExceptionId, ExceptionEntedidadeNaoInformada {
+        ValidationId.validaId(id);
+        PacienteModel paciente = pacienteRepository.findByIdPaciente(id);
+        ValidationExisteBanco.validaNoBanco(paciente, id);
+    }
+
 }
