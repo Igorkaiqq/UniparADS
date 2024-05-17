@@ -1,0 +1,11 @@
+
+–	java:S116"TRename this field "PanelMenu" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜úå8ç˜¿ºø1J$47daaef2-4693-465b-b6fd-c134a2ff4c6f
+£
+java:S1186
+"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¨â¥èüÿÿÿÿ8¤¡Ğºø1
+‘
+java:S3252"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(¢ù†ºúÿÿÿÿ8ğ˜¿ºø1J$7abbcd84-757a-44b8-aab3-0c97f8b36327
+q
+java:S1068".Remove this unused "btExportar" private field.(ªËï³8ğ˜¿ºø1J$6571c528-38e2-4eb7-a3c0-88ad743b602c
+q
+java:S1068".Remove this unused "btImportar" private field.(¸Ö€8ñ˜¿ºø1J$bd6d3cb4-c381-476f-b3e1-1a7a98dff7ee

@@ -1,0 +1,14 @@
+
+n
+java:S3008"RRename this field "USUARIO" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(İİÊd8˜±‰¥ø1
+r
+java:S3008"PRename this field "SENHA" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ãäôùÿÿÿÿ8˜±‰¥ø1
+\
+java:S1118
+":Add a private constructor to hide the implicit public one.(°Ê´¡úÿÿÿÿ8š±‰¥ø1
+L	java:S106"+Replace this use of System.out by a logger.(¤âë¯ÿÿÿÿÿ8±‰¥ø1
+L
+java:S1905"0Remove this unnecessary cast to "EntityManager".(Š­¹~8±‰¥ø1
+G	java:S106"+Replace this use of System.out by a logger.(Ÿ©ÖĞ8±‰¥ø1
+L	java:S106%"+Replace this use of System.out by a logger.(¤õ‰–ùÿÿÿÿ8Ÿ±‰¥ø1
+G	java:S1063"+Replace this use of System.out by a logger.(¯§ş¦8 ±‰¥ø1

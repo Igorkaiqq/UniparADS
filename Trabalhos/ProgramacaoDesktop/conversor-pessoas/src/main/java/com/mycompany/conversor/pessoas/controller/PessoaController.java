@@ -7,6 +7,7 @@ package com.mycompany.conversor.pessoas.controller;
 import com.mycompany.conversor.pessoas.dao.PessoaDAO;
 import com.mycompany.conversor.pessoas.model.PessoaModel;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -20,7 +21,7 @@ public class PessoaController {
         return this.pessoaDAO.salvarPessoas(pessoa);
     }
     
-    public ArrayList<PessoaModel> getAllPessoaController(){
+    public List<PessoaModel> getAllPessoaController(){
         return this.pessoaDAO.getAllPessoas();
     }
     
