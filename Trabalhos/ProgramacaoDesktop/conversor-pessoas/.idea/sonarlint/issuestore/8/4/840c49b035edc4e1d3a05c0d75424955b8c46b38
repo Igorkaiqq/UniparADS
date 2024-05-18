@@ -1,4 +1,10 @@
 
+<<<<<<< HEAD
+•	java:S116("TRename this field "data_nasc" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ƒ‚@8·¹ˆÈø1J$7740b5fd-e47b-4e0c-af6c-aecf6b76d461
+Ÿ	java:S116L"XRename this field "telefone_fixo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°÷ÁÁÿÿÿÿÿ8¸¹ˆÈø1J$6f442655-85db-4d2c-a711-099e134f2b94
+ 	java:S116X"YRename this field "tipo_sanguineo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ”Ç×ÿÿÿÿÿ8º¹ˆÈø1J$03f46dbb-d585-4d12-b56a-443eef38f2ea
+=======
 •	java:S116)"TRename this field "data_nasc" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—ƒ‚@8µê¤ø1J$ae2adaaf-fd79-4ea1-9ac5-4e4a2735b42b
 Ÿ	java:S116M"XRename this field "telefone_fixo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°÷ÁÁÿÿÿÿÿ8µê¤ø1J$0ad5a53a-3de3-4ceb-8283-35ecb3f644fd
  	java:S116Y"YRename this field "tipo_sanguineo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ƒ”Ç×ÿÿÿÿÿ8µê¤ø1J$8aea12b7-2b26-4ce8-a971-f2e72b59cf2d
+>>>>>>> d772ed9c5f7e64b03fa61d21e2469180235e3b9c

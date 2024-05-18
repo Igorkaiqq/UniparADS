@@ -1,4 +1,60 @@
 
+<<<<<<< HEAD
+h	java:S112™"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8šü®Ìø1
+
+java:S1319„"lThe type of "listaPessoas" should be an interface such as "List" rather than the implementation "ArrayList".(Õ¿â·ûÿÿÿÿ8Ÿü®Ìø1
+“
+java:S1319‹"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(‚ôÊ‹ÿÿÿÿÿ8Ÿü®Ìø1
+F
+java:S1604”"(Make this anonymous inner class a lambda(Ê¿¦à8 ü®Ìø1
+E
+java:S1604Ÿ"(Make this anonymous inner class a lambda(­šÅ8 ü®Ìø1
+K
+java:S1604ü"(Make this anonymous inner class a lambda(¨í¡§úÿÿÿÿ8 ü®Ìø1
+y
+java:S1450„"VRemove the "jPanel1" field and declare it as a local variable in the relevant methods.(´œ½ÿÿÿÿÿ8Üü®Ìø1
+~
+java:S1450…"[Remove the "jScrollPane1" field and declare it as a local variable in the relevant methods.(¤á×ÿÿÿÿÿ8Üü®Ìø1
+u
+java:S1450†"WRemove the "jbExport" field and declare it as a local variable in the relevant methods.(Ù®ºÏ8Üü®Ìø1
+z
+java:S1450‡"WRemove the "jbImport" field and declare it as a local variable in the relevant methods.(ßâš…øÿÿÿÿ8Üü®Ìø1
+’
+java:S1130G"vRemove the declaration of thrown exception 'java.io.FileNotFoundException', as it cannot be thrown from method's body.(®Óök8äü®Ìø1
+[
+java:S4719]"9Replace charset name argument with StandardCharsets.UTF_8(ã’Îıÿÿÿÿ8çü®Ìø1
+N
+java:S3011u",This accessibility update should be removed.(—³èİıÿÿÿÿ8ëü®Ìø1
+I
+java:S3011x",This accessibility bypass should be removed.(Ç”Ç8ëü®Ìø1
+N
+java:S3011z",This accessibility bypass should be removed.(‚úàøÿÿÿÿ8ìü®Ìø1
+I
+java:S3011|",This accessibility bypass should be removed.(º¤à•8ìü®Ìø1
+]
+java:S1161":Add the "@Override" annotation above this method signature(ÍŸÏ†ùÿÿÿÿ8ûü®Ìø1
+H
+java:S1172Ö"*Remove this unused method parameter "evt".(˜ê¢É8†ı®Ìø1
+M
+java:S1172Ú"*Remove this unused method parameter "evt".(©šû¤ÿÿÿÿÿ8†ı®Ìø1
+U
+java:S1135Û"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8‡ı®Ìø1
+M
+java:S1197â"*Move the array designators [] to the type.(¡şÏÖøÿÿÿÿ8ˆı®Ìø1
+c
+java:S2147ñ"ECombine this catch with the one at line 367, which has the same body.(¨¦Š½8‰ı®Ìø1
+c
+java:S2147ó"ECombine this catch with the one at line 369, which has the same body.(ã€ 8‰ı®Ìø1
+b
+java:S2147õ"ECombine this catch with the one at line 371, which has the same body.(ñÎ¯%8‰ı®Ìø1
+O
+java:S1128	"2Remove this unused import 'com.opencsv.CSVReader'.(‚á•Æ8Œı®Ìø1
+b
+java:S1128
+"@Remove this unused import 'com.opencsv.exceptions.CsvException'.(¶œãúúÿÿÿÿ8Œı®Ìø1
+B
+java:S1128"%Remove this unused import 'java.awt'.(ï´µ©8Œı®Ìø1
+=======
 –	java:S116"TRename this field "PanelMenu" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜úå8ç˜¿ºø1J$47daaef2-4693-465b-b6fd-c134a2ff4c6f
 £
 java:S1186
@@ -9,3 +65,4 @@ q
 java:S1068".Remove this unused "btExportar" private field.(ªËï³8ğ˜¿ºø1J$6571c528-38e2-4eb7-a3c0-88ad743b602c
 q
 java:S1068".Remove this unused "btImportar" private field.(¸Ö€8ñ˜¿ºø1J$bd6d3cb4-c381-476f-b3e1-1a7a98dff7ee
+>>>>>>> d772ed9c5f7e64b03fa61d21e2469180235e3b9c

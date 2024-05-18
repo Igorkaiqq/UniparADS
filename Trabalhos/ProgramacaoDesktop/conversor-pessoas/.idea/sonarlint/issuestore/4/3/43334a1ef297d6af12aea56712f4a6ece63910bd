@@ -1,0 +1,13 @@
+
+—
+java:S1192"uDefine a constant instead of duplicating this literal "ConexÃ£o com o banco de dados realizada com sucesso!" 3 times.(ÚÊìşûÿÿÿÿ8ËİêÉø1
+^
+java:S22593"AA "NullPointerException" could be thrown; "emf" is nullable here.(°äå½8ÕİêÉø1
+W
+java:S1118
+":Add a private constructor to hide the implicit public one.(¼ÚŠ8ØİêÉø1
+L	java:S106"+Replace this use of System.out by a logger.(ÚÊìşûÿÿÿÿ8ÛİêÉø1
+L	java:S106"+Replace this use of System.out by a logger.(ÚÊìşûÿÿÿÿ8ÜİêÉø1
+L	java:S106'"+Replace this use of System.out by a logger.(ÚÊìşûÿÿÿÿ8İİêÉø1
+L	java:S106-"+Replace this use of System.out by a logger.(äØê›øÿÿÿÿ8İİêÉø1
+L	java:S1065"+Replace this use of System.out by a logger.(Œü¨ˆÿÿÿÿÿ8ŞİêÉø1

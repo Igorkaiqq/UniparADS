@@ -1,4 +1,22 @@
 
+<<<<<<< HEAD
+p
+@src/main/java/com/mycompany/conversor/pessoas/view/ViewMenu.java,1\7\173316f333517183a4b89247b3dd4ee7abcfc096
+7
+pom.xml,4\4\442292b8a7efeabbe4cc176709b833b1792140ec
+~
+Nsrc/main/java/com/mycompany/conversor/pessoas/controller/PessoaController.java,0\e\0ed8e9233a9db2d051faee4a9880020b022be43f
+p
+@src/main/java/com/mycompany/conversor/pessoas/dao/PessoaDAO.java,e\d\eddee08b8b1f8cdb575861f57bf6db64297b937b
+t
+Dsrc/main/java/com/mycompany/conversor/pessoas/model/PessoaModel.java,8\4\840c49b035edc4e1d3a05c0d75424955b8c46b38
+s
+Csrc/main/java/com/mycompany/conversor/pessoas/ConversorPessoas.java,d\1\d157a8fb846e6264f4dc07c1057d19caed8ade18
+ƒ
+Ssrc/main/java/com/mycompany/conversor/pessoas/infraestrutura/ConnectionFactory.java,4\3\43334a1ef297d6af12aea56712f4a6ece63910bd
+p
+@src/main/java/com/mycompany/conversor/pessoas/view/ViewMenu.form,b\a\baea363d6683a89c0c8afa90ec621e1dbfac2824
+=======
 t
 Dsrc/main/java/com/mycompany/conversor/pessoas/model/PessoaModel.java,8\4\840c49b035edc4e1d3a05c0d75424955b8c46b38
 p
@@ -29,3 +47,4 @@ r
 Bsrc/main/java/com/mycompany/conversor/pessoas/view/ViewExport.java,a\9\a9b8d77af5c13109acdc3ac01e2c39cc612b8d1b
 r
 Bsrc/main/java/com/mycompany/conversor/pessoas/view/ViewExport.form,b\2\b291c69fcc18218f7f9d9fd2be11987d7af9fb13
+>>>>>>> d772ed9c5f7e64b03fa61d21e2469180235e3b9c

@@ -4,10 +4,14 @@
  */
 package com.mycompany.conversor.pessoas.model;
 
+<<<<<<< HEAD
+import jakarta.persistence.*;
+=======
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+>>>>>>> d772ed9c5f7e64b03fa61d21e2469180235e3b9c
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,12 +26,23 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+<<<<<<< HEAD
+@Table(name="pessoa")
+public class PessoaModel {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
+    private int id;
+
+=======
 @Table(name = "pessoa")
 public class PessoaModel {
 
     @Id
     @Column(name="id")
     private int id;
+>>>>>>> d772ed9c5f7e64b03fa61d21e2469180235e3b9c
     @Column(name="nome")
     private String nome;
 
@@ -90,4 +105,5 @@ public class PessoaModel {
 
     @Column(name="cor")
     private String cor;
+
 }

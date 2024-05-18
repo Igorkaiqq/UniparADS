@@ -4,6 +4,8 @@
 
 package com.mycompany.conversor.pessoas;
 
+import com.mycompany.conversor.pessoas.view.ViewMenu;
+
 /**
  *
  * @author igork
@@ -11,6 +13,7 @@ package com.mycompany.conversor.pessoas;
 public class ConversorPessoas {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        new ViewMenu().setVisible(true);
+        
     }
 }

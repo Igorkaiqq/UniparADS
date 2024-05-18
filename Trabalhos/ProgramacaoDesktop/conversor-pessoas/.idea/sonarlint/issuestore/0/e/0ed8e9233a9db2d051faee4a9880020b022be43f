@@ -1,3 +1,8 @@
 
+<<<<<<< HEAD
+
+java:S1319"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(˜ÃŸ8ôãüÉø1
+=======
 M
 java:S1128	"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8Üİ’¥ø1
+>>>>>>> d772ed9c5f7e64b03fa61d21e2469180235e3b9c

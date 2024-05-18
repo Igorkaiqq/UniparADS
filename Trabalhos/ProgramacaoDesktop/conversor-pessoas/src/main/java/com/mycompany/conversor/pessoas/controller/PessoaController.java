@@ -5,7 +5,10 @@
 package com.mycompany.conversor.pessoas.controller;
 
 import com.mycompany.conversor.pessoas.dao.PessoaDAO;
+import com.mycompany.conversor.pessoas.infraestrutura.ConnectionFactory;
 import com.mycompany.conversor.pessoas.model.PessoaModel;
+import jakarta.persistence.EntityManager;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,8 +18,12 @@ import java.util.List;
  */
 public class PessoaController {
     
-    private PessoaDAO pessoaDAO = new PessoaDAO();
-    
+    private final PessoaDAO pessoaDAO;
+
+    public PessoaController(){
+        this.pessoaDAO = new PessoaDAO(ConnectionFactory.getEntityManager());
+    }
+
     public int salvarPessoaController(PessoaModel pessoa){
         return this.pessoaDAO.salvarPessoas(pessoa);
     }
