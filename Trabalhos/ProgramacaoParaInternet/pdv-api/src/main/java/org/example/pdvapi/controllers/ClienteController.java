@@ -18,7 +18,7 @@ public class ClienteController {
     @Autowired
     private ClienteService clienteService;
 
-    @Operation(summary = "Cria um novo cliente")
+    @Operation(summary = "Cria um novo cliente", tags = "Post")
     @PostMapping
     public ResponseEntity<ClienteEntity> insert(@RequestBody ClienteEntity cliente, UriComponentsBuilder uriBuilder) {
         clienteService.insert(cliente);
