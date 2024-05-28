@@ -286,6 +286,7 @@ public class ProdutoView extends javax.swing.JFrame {
             public void run() {
                 new ProdutoView().setVisible(true);
             }
+            s
         });
     }
 
