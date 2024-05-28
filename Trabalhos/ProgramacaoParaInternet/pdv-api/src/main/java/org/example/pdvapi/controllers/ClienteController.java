@@ -1,6 +1,7 @@
 package org.example.pdvapi.controllers;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.example.pdvapi.entity.ClienteEntity;
 import org.example.pdvapi.services.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
+@Tag(name = "Cliente", description = "API de Clientes")
 @RestController
 @RequestMapping("/clientes")
 public class ClienteController {
@@ -18,7 +20,7 @@ public class ClienteController {
     @Autowired
     private ClienteService clienteService;
 
-    @Operation(summary = "Cria um novo cliente", tags = "Post")
+    @Operation(summary = "Cria um novo cliente")
     @PostMapping
     public ResponseEntity<ClienteEntity> insert(@RequestBody ClienteEntity cliente, UriComponentsBuilder uriBuilder) {
         clienteService.insert(cliente);
@@ -49,6 +51,12 @@ public class ClienteController {
     @GetMapping("/all")
     public ResponseEntity<List<ClienteEntity>> findAll() {
         return ResponseEntity.ok(clienteService.findAll());
+    }
+
+    @Operation(summary = "Busca os clientes pelo nome")
+    @GetMapping("/{nome}")
+    public ResponseEntity<List<ClienteEntity>> findByNomeContaining(@RequestParam String nome) {
+        return ResponseEntity.ok(clienteService.findByNomeContaining(nome));
     }
 
 }

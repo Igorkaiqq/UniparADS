@@ -35,4 +35,8 @@ public class ClienteService {
         return clienteRepository.findAll();
     }
 
+    public List<ClienteEntity> findByNomeContaining(String nome) {
+        return clienteRepository.findByNomeContaining(nome);
+    }
+
 }

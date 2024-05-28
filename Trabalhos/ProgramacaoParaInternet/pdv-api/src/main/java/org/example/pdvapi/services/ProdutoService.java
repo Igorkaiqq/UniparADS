@@ -36,4 +36,8 @@ public class ProdutoService
         return produtoRepository.findAll();
     }
 
+    public List<ProdutoEntity> findByDescricaoContaining(String descricao) {
+        return produtoRepository.findByDescricaoContaining(descricao);
+    }
+
 }

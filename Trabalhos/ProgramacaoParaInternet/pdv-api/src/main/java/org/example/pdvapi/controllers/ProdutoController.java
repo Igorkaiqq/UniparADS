@@ -1,6 +1,7 @@
 package org.example.pdvapi.controllers;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.example.pdvapi.entity.ProdutoEntity;
 import org.example.pdvapi.services.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
+@Tag(name = "Produto", description = "API de Produtos")
 @RestController
 @RequestMapping("/produtos")
 public class ProdutoController {
@@ -49,6 +51,12 @@ public class ProdutoController {
     @GetMapping("/all")
     public ResponseEntity<List<ProdutoEntity>> findAll() {
         return ResponseEntity.ok(produtoService.findAll());
+    }
+
+    @Operation(summary = "Busca os produtos pela descrição")
+    @GetMapping("/{descricao}")
+    public ResponseEntity<List<ProdutoEntity>> findByDescricaoContaining(@RequestParam String descricao) {
+        return ResponseEntity.ok(produtoService.findByDescricaoContaining(descricao));
     }
 
 }

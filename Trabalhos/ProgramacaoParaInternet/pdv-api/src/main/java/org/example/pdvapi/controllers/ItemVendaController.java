@@ -1,6 +1,7 @@
 package org.example.pdvapi.controllers;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.example.pdvapi.entity.ItemVendaEntity;
 import org.example.pdvapi.services.ItemVendaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
+@Tag(name = "Item de Venda", description = "API de Itens de Venda")
 @RestController
 @RequestMapping("/itens-venda")
 public class ItemVendaController {

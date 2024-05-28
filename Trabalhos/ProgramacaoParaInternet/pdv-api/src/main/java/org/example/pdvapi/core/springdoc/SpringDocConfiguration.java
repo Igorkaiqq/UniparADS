@@ -10,7 +10,10 @@ public class SpringDocConfiguration {
 
     @Bean
     public OpenAPI customOpenAPI() {
-        return new OpenAPI().info(new Info().title("PDV API").version("1.0").description("API de um sistema de PDV"));
+        return new OpenAPI().info(new Info()
+                .title("PDV API")
+                .version("1.0")
+                .description("API de um sistema de PDV"));
     }
 
 }
