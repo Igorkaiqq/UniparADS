@@ -1,8 +1,7 @@
 package org.example.pdvapi.controllers;
 
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import org.example.pdvapi.entity.VendaEntity;
+import org.example.pdvapi.interfaces.IVendaController;
 import org.example.pdvapi.services.VendaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,43 +11,36 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
-@Tag(name = "Venda", description = "API de Vendas")
 @RestController
-@RequestMapping("/vendas")
-public class VendaController {
+public class VendaController implements IVendaController {
 
     @Autowired
     private VendaService vendaService;
 
-    @Operation(summary = "Cria uma nova venda")
-    @PostMapping
+    @Override
     public ResponseEntity<VendaEntity> insert(@RequestBody VendaEntity venda, UriComponentsBuilder uriBuilder) {
         vendaService.insert(venda);
         URI uri = uriBuilder.path("/vendas/{id}").buildAndExpand(venda.getId()).toUri();
         return ResponseEntity.created(uri).body(venda);
     }
 
-    @Operation(summary = "Atualiza uma venda")
-    @PutMapping("/{id}")
+    @Override
     public ResponseEntity<VendaEntity> update(@PathVariable Long id, @RequestBody VendaEntity venda) {
         return ResponseEntity.ok(vendaService.update(venda));
     }
 
-    @Operation(summary = "Deleta uma venda")
-    @DeleteMapping("/{id}")
+    @Override
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         vendaService.delete(id);
         return ResponseEntity.noContent().build();
     }
 
-    @Operation(summary = "Busca uma venda pelo ID")
-    @GetMapping("/{id}")
+    @Override
     public ResponseEntity<VendaEntity> findById(@PathVariable Long id) {
         return ResponseEntity.ok(vendaService.findById(id));
     }
 
-    @Operation(summary = "Busca todas as vendas")
-    @GetMapping("/all")
+    @Override
     public ResponseEntity<List<VendaEntity>> findAll() {
         return ResponseEntity.ok(vendaService.findAll());
     }

@@ -7,6 +7,6 @@ public class SomenteLetrasValidator implements ConstraintValidator<SomenteLetras
 
         @Override
         public boolean isValid(String value, ConstraintValidatorContext context) {
-            return value != null && value.matches("[a-zA-Z]*");
+            return value != null && value.matches("^[\\p{L} ]+$");
         }
 }

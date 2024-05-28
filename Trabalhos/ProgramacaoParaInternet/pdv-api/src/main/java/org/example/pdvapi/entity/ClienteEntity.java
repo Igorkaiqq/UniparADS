@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import jakarta.persistence.*;
 import org.example.pdvapi.validation.SomenteLetras;
+import org.hibernate.validator.constraints.br.CPF;
 
 @Getter
 @Setter
@@ -31,13 +32,14 @@ public class ClienteEntity {
     @NotNull
     @NotEmpty
     @SomenteLetras
-    @Column(name = "Nome")
     @Size(min = 1, max = 120, message = "O nome deve ter entre 1 e 120 caracteres")
+    @Column(name = "Nome")
     @Schema(description = "Nome do cliente", example = "João da Silva")
     private String nome;
 
     @NotNull
     @NotEmpty
+    @CPF
     @Column(name = "Cpf")
     @Schema(description = "CPF do cliente", example = "123.456.789-00")
     private String cpf;
