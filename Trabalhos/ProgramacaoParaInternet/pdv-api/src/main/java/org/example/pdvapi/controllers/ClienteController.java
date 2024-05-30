@@ -26,27 +26,26 @@ public class ClienteController implements IClienteController {
 
     @Override
     public ResponseEntity<ClienteEntity> update(@PathVariable Long id, @RequestBody ClienteEntity cliente) {
-        return ResponseEntity.ok(clienteService.update(cliente));
+        return clienteService.update(id, cliente);
     }
 
     @Override
     public ResponseEntity<Void> delete(@PathVariable Long id) {
-        clienteService.delete(id);
-        return ResponseEntity.noContent().build();
+        return clienteService.delete(id);
     }
 
     @Override
     public ResponseEntity<ClienteEntity> findById(@PathVariable Long id) {
-        return ResponseEntity.ok(clienteService.findById(id));
+        return clienteService.findById(id);
     }
 
     @Override
     public ResponseEntity<List<ClienteEntity>> findAll() {
-        return ResponseEntity.ok(clienteService.findAll());
+        return clienteService.findAll();
     }
     @Override
     public ResponseEntity<List<ClienteEntity>> findByNome(@RequestParam String nome) {
-        return ResponseEntity.ok(clienteService.findByNomeContaining(nome));
+        return clienteService.findByNomeContaining(nome);
     }
 
 }

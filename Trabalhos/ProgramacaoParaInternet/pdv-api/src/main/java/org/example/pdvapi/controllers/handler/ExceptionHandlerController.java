@@ -1,4 +1,4 @@
-package org.example.pdvapi.controllers;
+package org.example.pdvapi.controllers.handler;
 
 import io.swagger.annotations.Api;
 import org.example.pdvapi.exceptions.ApiException;
