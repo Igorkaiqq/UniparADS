@@ -4,6 +4,8 @@
  */
 package com.unipar.projetointegrado.view;
 
+import models.Cliente;
+
 /**
  *
  * @author Dzkyy
@@ -13,6 +15,8 @@ public class VendaView extends javax.swing.JFrame {
     /**
      * Creates new form VendaView
      */
+    SelecionaClienteView scv = new SelecionaClienteView();
+
     public VendaView() {
         initComponents();
     }
@@ -42,19 +46,24 @@ public class VendaView extends javax.swing.JFrame {
         txtQtd = new javax.swing.JTextField();
         btAddProduto = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        btRemoveProd = new javax.swing.JButton();
-        btProduto = new javax.swing.JButton();
+        btRemoverProduto = new javax.swing.JButton();
+        btSelecionaProduto = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jPanel1 = new javax.swing.JPanel();
-        btSelecionaCliente1 = new javax.swing.JButton();
-        btSelecionaCliente2 = new javax.swing.JButton();
+        btCadastrarProduto = new javax.swing.JButton();
+        btCadastrarCliente = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         btSelecionaCliente = new javax.swing.JButton();
         txtNomeCliente = new javax.swing.JTextField();
         txtCodCliente = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                formFocusGained(evt);
+            }
+        });
 
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
         jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -239,25 +248,25 @@ public class VendaView extends javax.swing.JFrame {
         jLabel3.setText("Quantidade:");
         jLabel3.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
-        btRemoveProd.setBackground(new java.awt.Color(255, 51, 51));
-        btRemoveProd.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btRemoveProd.setForeground(new java.awt.Color(255, 255, 255));
-        btRemoveProd.setText("Remover");
-        btRemoveProd.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btRemoveProd.addActionListener(new java.awt.event.ActionListener() {
+        btRemoverProduto.setBackground(new java.awt.Color(255, 51, 51));
+        btRemoverProduto.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btRemoverProduto.setForeground(new java.awt.Color(255, 255, 255));
+        btRemoverProduto.setText("Remover");
+        btRemoverProduto.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btRemoverProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btRemoveProdActionPerformed(evt);
+                btRemoverProdutoActionPerformed(evt);
             }
         });
 
-        btProduto.setBackground(new java.awt.Color(0, 0, 102));
-        btProduto.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btProduto.setForeground(new java.awt.Color(255, 255, 255));
-        btProduto.setText("Produtos");
-        btProduto.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btProduto.addActionListener(new java.awt.event.ActionListener() {
+        btSelecionaProduto.setBackground(new java.awt.Color(0, 0, 102));
+        btSelecionaProduto.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btSelecionaProduto.setForeground(new java.awt.Color(255, 255, 255));
+        btSelecionaProduto.setText("Produtos");
+        btSelecionaProduto.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btSelecionaProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btProdutoActionPerformed(evt);
+                btSelecionaProdutoActionPerformed(evt);
             }
         });
 
@@ -306,9 +315,9 @@ public class VendaView extends javax.swing.JFrame {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(btAddProduto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btRemoveProd, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btRemoverProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(btProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btSelecionaProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -316,7 +325,7 @@ public class VendaView extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btSelecionaProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCod, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -328,7 +337,7 @@ public class VendaView extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btAddProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btRemoveProd, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btRemoverProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -351,25 +360,25 @@ public class VendaView extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(102, 102, 102));
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        btSelecionaCliente1.setBackground(new java.awt.Color(204, 204, 204));
-        btSelecionaCliente1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btSelecionaCliente1.setForeground(new java.awt.Color(0, 0, 0));
-        btSelecionaCliente1.setText("Cadastrar Produto");
-        btSelecionaCliente1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btSelecionaCliente1.addActionListener(new java.awt.event.ActionListener() {
+        btCadastrarProduto.setBackground(new java.awt.Color(204, 204, 204));
+        btCadastrarProduto.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btCadastrarProduto.setForeground(new java.awt.Color(0, 0, 0));
+        btCadastrarProduto.setText("Cadastrar Produto");
+        btCadastrarProduto.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btCadastrarProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btSelecionaCliente1ActionPerformed(evt);
+                btCadastrarProdutoActionPerformed(evt);
             }
         });
 
-        btSelecionaCliente2.setBackground(new java.awt.Color(204, 204, 204));
-        btSelecionaCliente2.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btSelecionaCliente2.setForeground(new java.awt.Color(0, 0, 0));
-        btSelecionaCliente2.setText("Cadastrar Cliente");
-        btSelecionaCliente2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btSelecionaCliente2.addActionListener(new java.awt.event.ActionListener() {
+        btCadastrarCliente.setBackground(new java.awt.Color(204, 204, 204));
+        btCadastrarCliente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btCadastrarCliente.setForeground(new java.awt.Color(0, 0, 0));
+        btCadastrarCliente.setText("Cadastrar Cliente");
+        btCadastrarCliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btCadastrarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btSelecionaCliente2ActionPerformed(evt);
+                btCadastrarClienteActionPerformed(evt);
             }
         });
 
@@ -379,9 +388,9 @@ public class VendaView extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btSelecionaCliente2, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btCadastrarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btSelecionaCliente1, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)
+                .addComponent(btCadastrarProduto, javax.swing.GroupLayout.DEFAULT_SIZE, 212, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -389,8 +398,8 @@ public class VendaView extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btSelecionaCliente2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btSelecionaCliente1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btCadastrarCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btCadastrarProduto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -402,6 +411,11 @@ public class VendaView extends javax.swing.JFrame {
         btSelecionaCliente.setForeground(new java.awt.Color(255, 255, 255));
         btSelecionaCliente.setText("Selecionar Cliente");
         btSelecionaCliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btSelecionaCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btSelecionaClienteActionPerformed(evt);
+            }
+        });
 
         txtNomeCliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         txtNomeCliente.setEnabled(false);
@@ -482,9 +496,9 @@ public class VendaView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtDescontoVendaActionPerformed
 
-    private void btProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btProdutoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btProdutoActionPerformed
+    private void btSelecionaProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSelecionaProdutoActionPerformed
+        new SelecionaProdutoView().setVisible(true);
+    }//GEN-LAST:event_btSelecionaProdutoActionPerformed
 
     private void btAddProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAddProdutoActionPerformed
         // TODO add your handling code here:
@@ -494,25 +508,35 @@ public class VendaView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCodActionPerformed
 
-    private void btRemoveProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRemoveProdActionPerformed
+    private void btRemoverProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRemoverProdutoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btRemoveProdActionPerformed
+    }//GEN-LAST:event_btRemoverProdutoActionPerformed
 
     private void txtTotalVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTotalVendaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTotalVendaActionPerformed
 
-    private void btSelecionaCliente2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSelecionaCliente2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btSelecionaCliente2ActionPerformed
+    private void btCadastrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarClienteActionPerformed
 
-    private void btSelecionaCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSelecionaCliente1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btSelecionaCliente1ActionPerformed
+    }//GEN-LAST:event_btCadastrarClienteActionPerformed
+
+    private void btCadastrarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCadastrarProdutoActionPerformed
+
+    }//GEN-LAST:event_btCadastrarProdutoActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void formFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_formFocusGained
+
+        txtCodCliente.setText(scv.getClienteSelecionado().getId().toString());
+        txtNomeCliente.setText(scv.getClienteSelecionado().getNome());
+    }//GEN-LAST:event_formFocusGained
+
+    private void btSelecionaClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSelecionaClienteActionPerformed
+        new SelecionaClienteView().setVisible(true);
+    }//GEN-LAST:event_btSelecionaClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -551,13 +575,13 @@ public class VendaView extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btAddProduto;
+    private javax.swing.JButton btCadastrarCliente;
+    private javax.swing.JButton btCadastrarProduto;
     private javax.swing.JButton btFinalizaVenda;
     private javax.swing.JButton btLimpaVenda;
-    private javax.swing.JButton btProduto;
-    private javax.swing.JButton btRemoveProd;
+    private javax.swing.JButton btRemoverProduto;
     private javax.swing.JButton btSelecionaCliente;
-    private javax.swing.JButton btSelecionaCliente1;
-    private javax.swing.JButton btSelecionaCliente2;
+    private javax.swing.JButton btSelecionaProduto;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

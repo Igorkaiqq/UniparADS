@@ -4,6 +4,18 @@
  */
 package com.unipar.projetointegrado.view;
 
+import com.unipar.projetointegrado.apiinterfaces.ProdutoAPI;
+import java.util.List;
+import javax.swing.SwingUtilities;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import models.Produto;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 /**
  *
  * @author Dzkyy
@@ -15,6 +27,37 @@ public class SelecionaProdutoView extends javax.swing.JFrame {
      */
     public SelecionaProdutoView() {
         initComponents();
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://localhost:8080")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        ProdutoAPI produtoAPI = retrofit.create(ProdutoAPI.class);
+
+        produtoAPI.findAll().enqueue(new Callback<List<Produto>>() {
+            @Override
+            public void onResponse(Call<List<Produto>> call, Response<List<Produto>> response) {
+                if (response.isSuccessful()) {
+
+                    DefaultTableModel tableModel = new DefaultTableModel(new Object[]{"Id", "Descrição", "Preço", "Categoria"}, 0);
+                    List<Produto> produtos = response.body();
+                    SwingUtilities.invokeLater(() -> {
+                        for (Produto produto : produtos) {
+                            tableModel.addRow(new Object[]{produto.getId(), produto.getDescricao(),"R$ " + produto.getPreco(), produto.getCategoria()});
+                        }
+                        jTable1.setModel(tableModel);
+                    });
+                } else {
+                    System.err.println("Erro na resposta: " + response.errorBody());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Produto>> call, Throwable t) {
+                t.printStackTrace();
+            }
+        });
+
     }
 
     /**
@@ -34,8 +77,8 @@ public class SelecionaProdutoView extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
-        btFinalizaVenda1 = new javax.swing.JButton();
-        btFinalizaVenda = new javax.swing.JButton();
+        btSelecionarProduto = new javax.swing.JButton();
+        btCancelar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -64,6 +107,12 @@ public class SelecionaProdutoView extends javax.swing.JFrame {
                 return null;
             }
         }.getIcon());
+        jButton1.setLabel("Procurar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
@@ -73,9 +122,9 @@ public class SelecionaProdutoView extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField3)
+                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel9Layout.setVerticalGroup(
@@ -115,25 +164,25 @@ public class SelecionaProdutoView extends javax.swing.JFrame {
         jPanel10.setBackground(new java.awt.Color(102, 102, 102));
         jPanel10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        btFinalizaVenda1.setBackground(new java.awt.Color(0, 102, 0));
-        btFinalizaVenda1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btFinalizaVenda1.setForeground(new java.awt.Color(255, 255, 255));
-        btFinalizaVenda1.setText("Selecionar");
-        btFinalizaVenda1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btFinalizaVenda1.addActionListener(new java.awt.event.ActionListener() {
+        btSelecionarProduto.setBackground(new java.awt.Color(0, 102, 0));
+        btSelecionarProduto.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btSelecionarProduto.setForeground(new java.awt.Color(255, 255, 255));
+        btSelecionarProduto.setText("Selecionar");
+        btSelecionarProduto.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btSelecionarProduto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btFinalizaVenda1ActionPerformed(evt);
+                btSelecionarProdutoActionPerformed(evt);
             }
         });
 
-        btFinalizaVenda.setBackground(new java.awt.Color(255, 91, 91));
-        btFinalizaVenda.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btFinalizaVenda.setForeground(new java.awt.Color(255, 255, 255));
-        btFinalizaVenda.setText("Cancelar");
-        btFinalizaVenda.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btFinalizaVenda.addActionListener(new java.awt.event.ActionListener() {
+        btCancelar.setBackground(new java.awt.Color(255, 91, 91));
+        btCancelar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btCancelar.setForeground(new java.awt.Color(255, 255, 255));
+        btCancelar.setText("Cancelar");
+        btCancelar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btFinalizaVendaActionPerformed(evt);
+                btCancelarActionPerformed(evt);
             }
         });
 
@@ -143,9 +192,9 @@ public class SelecionaProdutoView extends javax.swing.JFrame {
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btFinalizaVenda1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btSelecionarProduto, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btFinalizaVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel10Layout.setVerticalGroup(
@@ -153,20 +202,17 @@ public class SelecionaProdutoView extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btFinalizaVenda, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
-                    .addComponent(btFinalizaVenda1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btCancelar, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+                    .addComponent(btSelecionarProduto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "ID", "Descrição", "Valor", "Estoque"
+
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -238,13 +284,18 @@ public class SelecionaProdutoView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btFinalizaVenda1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFinalizaVenda1ActionPerformed
+    private void btSelecionarProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSelecionarProdutoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btFinalizaVenda1ActionPerformed
+    }//GEN-LAST:event_btSelecionarProdutoActionPerformed
 
-    private void btFinalizaVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFinalizaVendaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btFinalizaVendaActionPerformed
+    private void btCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCancelarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btCancelarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -282,8 +333,8 @@ public class SelecionaProdutoView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btFinalizaVenda;
-    private javax.swing.JButton btFinalizaVenda1;
+    private javax.swing.JButton btCancelar;
+    private javax.swing.JButton btSelecionarProduto;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel6;

@@ -11,6 +11,6 @@ package com.unipar.projetointegrado;
 public class ProjetoIntegrado {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
     }
 }
