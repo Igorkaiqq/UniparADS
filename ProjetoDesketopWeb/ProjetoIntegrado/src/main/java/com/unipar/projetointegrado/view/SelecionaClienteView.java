@@ -4,6 +4,19 @@
  */
 package com.unipar.projetointegrado.view;
 
+import com.unipar.projetointegrado.apiinterfaces.ClienteAPI;
+import com.unipar.projetointegrado.apiinterfaces.ProdutoAPI;
+import models.Cliente;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import java.util.List;
+
 /**
  *
  * @author Dzkyy
@@ -13,8 +26,41 @@ public class SelecionaClienteView extends javax.swing.JFrame {
     /**
      * Creates new form SelecionaClienteView
      */
+
+    Cliente clienteSelecionado = new Cliente();
+
     public SelecionaClienteView() {
         initComponents();
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://localhost:8080")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+        ClienteAPI clienteAPI = retrofit.create(ClienteAPI.class);
+
+        clienteAPI.findAll().enqueue(new Callback<List<Cliente>>() {
+            @Override
+            public void onResponse(Call<List<Cliente>> call, Response<List<Cliente>> response) {
+                if (response.isSuccessful()) {
+
+                    DefaultTableModel tableModel = new DefaultTableModel(new Object[]{"Id", "Nome", "Email", "Cpf"}, 0);
+                    List<Cliente> clientes = response.body();
+                    SwingUtilities.invokeLater(() -> {
+                        for (Cliente cliente : clientes) {
+                            tableModel.addRow(new Object[]{cliente.getId(), cliente.getNome(), cliente.getEmail(), cliente.getCpf()});
+                        }
+                        tbClientes.setModel(tableModel);
+                    });
+                } else {
+                    System.err.println("Erro na resposta: " + response.errorBody());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Cliente>> call, Throwable t) {
+                t.printStackTrace();
+            }
+        });
     }
 
     /**
@@ -34,11 +80,11 @@ public class SelecionaClienteView extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
-        btFinalizaVenda1 = new javax.swing.JButton();
-        btFinalizaVenda = new javax.swing.JButton();
+        btSelecionarCliente = new javax.swing.JButton();
+        btCancelar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tbClientes = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -117,25 +163,26 @@ public class SelecionaClienteView extends javax.swing.JFrame {
         jPanel10.setBackground(new java.awt.Color(102, 102, 102));
         jPanel10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        btFinalizaVenda1.setBackground(new java.awt.Color(0, 102, 0));
-        btFinalizaVenda1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btFinalizaVenda1.setForeground(new java.awt.Color(255, 255, 255));
-        btFinalizaVenda1.setText("Selecionar");
-        btFinalizaVenda1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btFinalizaVenda1.addActionListener(new java.awt.event.ActionListener() {
+        btSelecionarCliente.setBackground(new java.awt.Color(0, 102, 0));
+        btSelecionarCliente.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btSelecionarCliente.setForeground(new java.awt.Color(255, 255, 255));
+        btSelecionarCliente.setText("Selecionar");
+        btSelecionarCliente.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btSelecionarCliente.setName("btSelecionar"); // NOI18N
+        btSelecionarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btFinalizaVenda1ActionPerformed(evt);
+                btSelecionarClienteActionPerformed(evt);
             }
         });
 
-        btFinalizaVenda.setBackground(new java.awt.Color(255, 91, 91));
-        btFinalizaVenda.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btFinalizaVenda.setForeground(new java.awt.Color(255, 255, 255));
-        btFinalizaVenda.setText("Cancelar");
-        btFinalizaVenda.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btFinalizaVenda.addActionListener(new java.awt.event.ActionListener() {
+        btCancelar.setBackground(new java.awt.Color(255, 91, 91));
+        btCancelar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btCancelar.setForeground(new java.awt.Color(255, 255, 255));
+        btCancelar.setText("Cancelar");
+        btCancelar.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btFinalizaVendaActionPerformed(evt);
+                btCancelarActionPerformed(evt);
             }
         });
 
@@ -145,9 +192,9 @@ public class SelecionaClienteView extends javax.swing.JFrame {
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btFinalizaVenda1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btSelecionarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btFinalizaVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel10Layout.setVerticalGroup(
@@ -155,23 +202,20 @@ public class SelecionaClienteView extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btFinalizaVenda1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btFinalizaVenda, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btSelecionarCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tbClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "ID", "Descrição", "Valor", "Estoque"
+
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tbClientes);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -227,13 +271,39 @@ public class SelecionaClienteView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btFinalizaVenda1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFinalizaVenda1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btFinalizaVenda1ActionPerformed
+    private void btSelecionarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSelecionarClienteActionPerformed
+        int linha = tbClientes.getSelectedRow();
 
-    private void btFinalizaVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFinalizaVendaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btFinalizaVendaActionPerformed
+        if (!tbClientes.getSelectionModel().isSelectionEmpty()) {
+            for (int i = 0; i < tbClientes.getColumnCount(); i++) {
+                if (i == 0) {
+                    clienteSelecionado.setId(Long.parseLong(tbClientes.getValueAt(linha, i).toString()));
+                }
+                if (i == 1) {
+                    clienteSelecionado.setNome(tbClientes.getValueAt(linha, i).toString());
+                }
+                if (i == 2) {
+                    clienteSelecionado.setEmail(tbClientes.getValueAt(linha, i).toString());
+                }
+                if (i == 3) {
+                    clienteSelecionado.setCpf(tbClientes.getValueAt(linha, i).toString());
+                }
+            }
+        }
+
+        System.out.println(clienteSelecionado.toString());
+
+    }//GEN-LAST:event_btSelecionarClienteActionPerformed
+
+    private void btCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCancelarActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btCancelarActionPerformed
+
+
+    public Cliente getClienteSelecionado() {
+        return clienteSelecionado;
+    }
+
 
     /**
      * @param args the command line arguments
@@ -271,8 +341,8 @@ public class SelecionaClienteView extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btFinalizaVenda;
-    private javax.swing.JButton btFinalizaVenda1;
+    private javax.swing.JButton btCancelar;
+    private javax.swing.JButton btSelecionarCliente;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel6;
@@ -282,7 +352,7 @@ public class SelecionaClienteView extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField3;
+    private javax.swing.JTable tbClientes;
     // End of variables declaration//GEN-END:variables
 }
