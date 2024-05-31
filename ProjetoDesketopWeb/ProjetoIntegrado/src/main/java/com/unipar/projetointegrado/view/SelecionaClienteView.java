@@ -6,6 +6,7 @@ package com.unipar.projetointegrado.view;
 
 import com.unipar.projetointegrado.apiinterfaces.ClienteAPI;
 import com.unipar.projetointegrado.apiinterfaces.ProdutoAPI;
+import java.util.ArrayList;
 import models.Cliente;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -26,8 +27,9 @@ public class SelecionaClienteView extends javax.swing.JFrame {
     /**
      * Creates new form SelecionaClienteView
      */
-
     Cliente clienteSelecionado = new Cliente();
+    
+    
 
     public SelecionaClienteView() {
         initComponents();
@@ -61,7 +63,14 @@ public class SelecionaClienteView extends javax.swing.JFrame {
                 t.printStackTrace();
             }
         });
+        
+        //fim Retrofit
+        
+        this.clienteSelecionado = clienteSelecionado;
+        
     }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -276,6 +285,7 @@ public class SelecionaClienteView extends javax.swing.JFrame {
 
         if (!tbClientes.getSelectionModel().isSelectionEmpty()) {
             for (int i = 0; i < tbClientes.getColumnCount(); i++) {
+
                 if (i == 0) {
                     clienteSelecionado.setId(Long.parseLong(tbClientes.getValueAt(linha, i).toString()));
                 }
@@ -292,6 +302,9 @@ public class SelecionaClienteView extends javax.swing.JFrame {
         }
 
         System.out.println(clienteSelecionado.toString());
+        
+        
+        this.dispose();
 
     }//GEN-LAST:event_btSelecionarClienteActionPerformed
 
@@ -299,11 +312,11 @@ public class SelecionaClienteView extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_btCancelarActionPerformed
 
-
     public Cliente getClienteSelecionado() {
         return clienteSelecionado;
     }
-
+    
+   
 
     /**
      * @param args the command line arguments

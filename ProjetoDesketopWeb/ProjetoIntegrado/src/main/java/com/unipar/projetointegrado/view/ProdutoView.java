@@ -264,7 +264,7 @@ public class ProdutoView extends javax.swing.JFrame {
     }//GEN-LAST:event_btFinalizaVenda1ActionPerformed
 
     private void btFinalizaVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFinalizaVendaActionPerformed
-        // TODO add your handling code here:
+        this.dispose();        
     }//GEN-LAST:event_btFinalizaVendaActionPerformed
 
     /**
