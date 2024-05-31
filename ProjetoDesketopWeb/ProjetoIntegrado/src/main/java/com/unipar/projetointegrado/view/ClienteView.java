@@ -301,7 +301,7 @@ public class ClienteView extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField3ActionPerformed
 
     private void btFinalizaVendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFinalizaVendaActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_btFinalizaVendaActionPerformed
 
     private void btFinalizaVenda1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFinalizaVenda1ActionPerformed

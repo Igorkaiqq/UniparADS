@@ -4,6 +4,9 @@
 
 package com.unipar.projetointegrado;
 
+import com.unipar.projetointegrado.view.SelecionaClienteView;
+import com.unipar.projetointegrado.view.VendaView;
+
 /**
  *
  * @author Dzkyy
