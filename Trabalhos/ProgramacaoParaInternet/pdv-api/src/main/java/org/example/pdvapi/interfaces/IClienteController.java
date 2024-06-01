@@ -5,6 +5,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
+import org.example.pdvapi.dto.ClienteDTO;
 import org.example.pdvapi.entity.ClienteEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,8 +22,8 @@ public interface IClienteController {
             @ApiResponse (responseCode = "201", description = "Cliente criado com sucesso"),
             @ApiResponse (responseCode = "400", description = "Parâmetros inválidos")
     })
-    @PostMapping
-    ResponseEntity<ClienteEntity> insert(@RequestBody @Valid ClienteEntity cliente, UriComponentsBuilder uriBuilder);
+    @PostMapping()
+    ResponseEntity<ClienteDTO> insert(@RequestBody @Valid ClienteDTO cliente, UriComponentsBuilder uriBuilder);
 
     @Operation(summary = "Atualiza um cliente")
     @ApiResponses(value = {
@@ -31,7 +32,7 @@ public interface IClienteController {
             @ApiResponse (responseCode = "400", description = "Parâmetros inválidos")
     })
     @PutMapping("/{id}")
-    ResponseEntity<ClienteEntity> update(@PathVariable Long id, @RequestBody @Valid ClienteEntity cliente);
+    ResponseEntity<ClienteDTO> update(@PathVariable Long id, @RequestBody @Valid ClienteDTO cliente);
 
     @Operation(summary = "Deleta um cliente")
     @ApiResponses(value = {
@@ -48,8 +49,8 @@ public interface IClienteController {
             @ApiResponse (responseCode = "204", description = "Cliente não encontrado"),
             @ApiResponse (responseCode = "400", description = "Parâmetros inválidos")
     })
-    @GetMapping("/{id}")
-    ResponseEntity<ClienteEntity> findById(@PathVariable Long id);
+    @GetMapping("/search/{id}")
+    ResponseEntity<ClienteDTO> findById(@PathVariable Long id);
 
     @Operation(summary = "Busca todos os clientes")
     @ApiResponses(value = {
@@ -57,7 +58,7 @@ public interface IClienteController {
             @ApiResponse (responseCode = "204", description = "Nenhum cliente encontrado")
     })
     @GetMapping("/all")
-    ResponseEntity<List<ClienteEntity>> findAll();
+    ResponseEntity<List<ClienteDTO>> findAll();
 
     @Operation(summary = "Busca os clientes pelo nome")
     @ApiResponses(value = {
@@ -65,7 +66,7 @@ public interface IClienteController {
             @ApiResponse (responseCode = "204", description = "Nenhum cliente encontrado"),
             @ApiResponse (responseCode = "400", description = "Parâmetros inválidos")
     })
-    @GetMapping()
-    ResponseEntity<List<ClienteEntity>> findByNome(@RequestParam String nome);
+    @GetMapping("/search")
+    ResponseEntity<List<ClienteDTO>> findByNome(@RequestParam String nome);
 
 }

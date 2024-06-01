@@ -1,5 +1,6 @@
 package org.example.pdvapi.services;
 
+import org.example.pdvapi.dto.ClienteDTO;
 import org.example.pdvapi.entity.ClienteEntity;
 import org.example.pdvapi.repositories.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ public class ClienteService {
     @Autowired
     private ClienteRepository clienteRepository;
 
-    public ResponseEntity<ClienteEntity> insert(ClienteEntity cliente) {
+    public ResponseEntity<ClienteDTO> insert(ClienteDTO cliente) {
         clienteRepository.save(cliente);
         return ResponseEntity.ok(cliente);
     }
@@ -47,7 +48,7 @@ public class ClienteService {
         return ResponseEntity.ok(cliente.get());
     }
 
-    public ResponseEntity<List<ClienteEntity>> findAll() {
+    public ResponseEntity<List<ClienteDTO>> findAll() {
         List<ClienteEntity> clientes = clienteRepository.findAll();
         if (clientes.isEmpty()) {
             return ResponseEntity.notFound().build();
@@ -55,8 +56,8 @@ public class ClienteService {
         return ResponseEntity.ok(clientes);
     }
 
-    public ResponseEntity<List<ClienteEntity>> findByNomeContaining(String nome) {
-        List<ClienteEntity> clientes = clienteRepository.findByNomeContaining(nome);
+    public ResponseEntity<List<ClienteDTO>> findByNomeContaining(String nome) {
+        List<ClienteDTO> clientes = clienteRepository.findByNomeContaining(nome);
         if (clientes.isEmpty()) {
             return  ResponseEntity.notFound().build();
         }
