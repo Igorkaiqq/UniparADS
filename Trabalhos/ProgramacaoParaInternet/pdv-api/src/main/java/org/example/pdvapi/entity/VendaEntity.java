@@ -10,7 +10,7 @@ import lombok.Setter;
 import org.example.pdvapi.validation.SomenteLetras;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import java.util.Date;
+import java.sql.Date;
 
 @Entity
 @Setter

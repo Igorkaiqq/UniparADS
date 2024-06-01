@@ -1,5 +1,6 @@
 package org.example.pdvapi.controllers;
 
+import org.example.pdvapi.dto.ClienteDTO;
 import org.example.pdvapi.entity.ClienteEntity;
 import org.example.pdvapi.interfaces.IClienteController;
 import org.example.pdvapi.services.ClienteService;
@@ -18,7 +19,8 @@ public class ClienteController implements IClienteController {
     private ClienteService clienteService;
 
     @Override
-    public ResponseEntity<ClienteEntity> insert(@RequestBody ClienteEntity cliente, UriComponentsBuilder uriBuilder) {
+    public ResponseEntity<ClienteDTO> insert(@RequestBody ClienteDTO cliente, UriComponentsBuilder uriBuilder) {
+        ClienteEntity entity = new ClienteEntity(cliente.getNome(), cliente.getCpf(), cliente.getEmail());
         clienteService.insert(cliente);
         URI uri = uriBuilder.path("/clientes/{id}").buildAndExpand(cliente.getId()).toUri();
         return ResponseEntity.created(uri).body(cliente);

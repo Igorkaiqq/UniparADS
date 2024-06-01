@@ -48,7 +48,7 @@ public interface IProdutoController {
             @ApiResponse (responseCode = "400", description = "Parâmetros inválidos"),
             @ApiResponse (responseCode = "204", description = "Produto não encontrado")
     })
-    @GetMapping("/{id}")
+    @GetMapping("/search/{id}")
     ResponseEntity<ProdutoEntity> findById(@PathVariable Long id);
 
     @Operation(summary = "Busca todos os produtos")
@@ -65,7 +65,7 @@ public interface IProdutoController {
             @ApiResponse (responseCode = "204", description = "Nenhum produto encontrado"),
             @ApiResponse (responseCode = "400", description = "Parâmetros inválidos")
     })
-    @GetMapping()
+    @GetMapping("/search")
     ResponseEntity<List<ProdutoEntity>> findByDescricao(@RequestParam String nome);
 
 }

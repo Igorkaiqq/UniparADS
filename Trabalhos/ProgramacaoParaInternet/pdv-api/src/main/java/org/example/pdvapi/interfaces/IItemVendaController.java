@@ -48,7 +48,7 @@ public interface IItemVendaController {
             @ApiResponse (responseCode = "204", description = "Item de venda não encontrado"),
             @ApiResponse (responseCode = "400", description = "Parâmetros inválidos")
     })
-    @GetMapping("/{id}")
+    @GetMapping("/search/{id}")
     ResponseEntity<ItemVendaEntity> findById(@PathVariable Long id);
 
     @Operation(summary = "Busca todos os itens de venda")
