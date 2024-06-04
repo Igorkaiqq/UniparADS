@@ -12,6 +12,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
+@RequestMapping("/itens")
 public class ItemVendaController implements IItemVendaController {
 
     @Autowired

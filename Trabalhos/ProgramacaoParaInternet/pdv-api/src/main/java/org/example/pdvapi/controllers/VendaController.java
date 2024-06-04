@@ -12,6 +12,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
+@RequestMapping("/vendas")
 public class VendaController implements IVendaController {
 
     @Autowired

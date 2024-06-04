@@ -18,7 +18,7 @@ public class PdvApiApplication {
     @EventListener(ContextRefreshedEvent.class)
     public void openSwaggerUI() {
       try {
-          String url = "http://localhost:8080/swagger-ui.html";
+          String url = "http://localhost:8080/swagger-ui/index.html";
         if (Desktop.isDesktopSupported()) {
           Desktop.getDesktop().browse(new URI(url));
         } else {

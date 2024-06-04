@@ -13,14 +13,14 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
+@RequestMapping("/clientes")
 public class ClienteController implements IClienteController {
 
     @Autowired
     private ClienteService clienteService;
 
     @Override
-    public ResponseEntity<ClienteDTO> insert(@RequestBody ClienteDTO cliente, UriComponentsBuilder uriBuilder) {
-        ClienteEntity entity = new ClienteEntity(cliente.getNome(), cliente.getCpf(), cliente.getEmail());
+    public ResponseEntity<ClienteEntity> insert(@RequestBody ClienteEntity cliente, UriComponentsBuilder uriBuilder) {
         clienteService.insert(cliente);
         URI uri = uriBuilder.path("/clientes/{id}").buildAndExpand(cliente.getId()).toUri();
         return ResponseEntity.created(uri).body(cliente);
