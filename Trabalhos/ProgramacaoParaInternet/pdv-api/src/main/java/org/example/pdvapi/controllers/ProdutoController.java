@@ -13,6 +13,7 @@ import java.util.List;
 
 
 @RestController
+@RequestMapping("/produtos")
 public class ProdutoController implements IProdutoController {
 
     @Autowired
@@ -32,7 +33,6 @@ public class ProdutoController implements IProdutoController {
 
     @Override
     public ResponseEntity<Void> delete(@PathVariable Long id) {
-
         return produtoService.delete(id);
     }
 
@@ -45,6 +45,7 @@ public class ProdutoController implements IProdutoController {
     public ResponseEntity<List<ProdutoEntity>> findAll() {
         return produtoService.findAll();
     }
+
     @Override
     public ResponseEntity<List<ProdutoEntity>> findByDescricao(@RequestParam String descricao) {
         return produtoService.findByDescricaoContaining(descricao);

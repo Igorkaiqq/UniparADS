@@ -42,7 +42,7 @@ public class ItemVendaEntity {
     private Double valorTotal;
 
     @NotNull
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "VendaId", referencedColumnName = "Id")
     @Schema(description = "Venda relacionada ao item", example = "1")
     private VendaEntity venda;

@@ -1,6 +1,5 @@
 package org.example.pdvapi.controllers.handler;
 
-import io.swagger.annotations.Api;
 import org.example.pdvapi.exceptions.ApiException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

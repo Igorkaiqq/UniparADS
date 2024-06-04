@@ -16,7 +16,7 @@ public class ClienteService {
     @Autowired
     private ClienteRepository clienteRepository;
 
-    public ResponseEntity<ClienteDTO> insert(ClienteDTO cliente) {
+    public ResponseEntity<ClienteEntity> insert(ClienteEntity cliente) {
         clienteRepository.save(cliente);
         return ResponseEntity.ok(cliente);
     }
@@ -48,7 +48,7 @@ public class ClienteService {
         return ResponseEntity.ok(cliente.get());
     }
 
-    public ResponseEntity<List<ClienteDTO>> findAll() {
+    public ResponseEntity<List<ClienteEntity>> findAll() {
         List<ClienteEntity> clientes = clienteRepository.findAll();
         if (clientes.isEmpty()) {
             return ResponseEntity.notFound().build();
@@ -56,8 +56,8 @@ public class ClienteService {
         return ResponseEntity.ok(clientes);
     }
 
-    public ResponseEntity<List<ClienteDTO>> findByNomeContaining(String nome) {
-        List<ClienteDTO> clientes = clienteRepository.findByNomeContaining(nome);
+    public ResponseEntity<List<ClienteEntity>> findByNomeContaining(String nome) {
+        List<ClienteEntity> clientes = clienteRepository.findByNomeContaining(nome);
         if (clientes.isEmpty()) {
             return  ResponseEntity.notFound().build();
         }

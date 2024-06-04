@@ -9,9 +9,9 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ClienteRepository extends JpaRepository<ClienteDTO, Long> {
+public interface ClienteRepository extends JpaRepository<ClienteEntity, Long> {
 
     @Query
-    public List<ClienteDTO> findByNomeContaining(String nome);
+    public List<ClienteEntity> findByNomeContaining(String nome);
 
 }

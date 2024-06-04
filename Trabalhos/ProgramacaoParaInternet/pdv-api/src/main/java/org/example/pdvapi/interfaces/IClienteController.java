@@ -23,7 +23,7 @@ public interface IClienteController {
             @ApiResponse (responseCode = "400", description = "Parâmetros inválidos")
     })
     @PostMapping()
-    ResponseEntity<ClienteDTO> insert(@RequestBody @Valid ClienteDTO cliente, UriComponentsBuilder uriBuilder);
+    ResponseEntity<ClienteEntity> insert(@RequestBody @Valid ClienteEntity cliente, UriComponentsBuilder uriBuilder);
 
     @Operation(summary = "Atualiza um cliente")
     @ApiResponses(value = {
@@ -32,7 +32,7 @@ public interface IClienteController {
             @ApiResponse (responseCode = "400", description = "Parâmetros inválidos")
     })
     @PutMapping("/{id}")
-    ResponseEntity<ClienteDTO> update(@PathVariable Long id, @RequestBody @Valid ClienteDTO cliente);
+    ResponseEntity<ClienteEntity> update(@PathVariable Long id, @RequestBody @Valid ClienteEntity cliente);
 
     @Operation(summary = "Deleta um cliente")
     @ApiResponses(value = {
@@ -50,7 +50,7 @@ public interface IClienteController {
             @ApiResponse (responseCode = "400", description = "Parâmetros inválidos")
     })
     @GetMapping("/search/{id}")
-    ResponseEntity<ClienteDTO> findById(@PathVariable Long id);
+    ResponseEntity<ClienteEntity> findById(@PathVariable Long id);
 
     @Operation(summary = "Busca todos os clientes")
     @ApiResponses(value = {
@@ -58,7 +58,7 @@ public interface IClienteController {
             @ApiResponse (responseCode = "204", description = "Nenhum cliente encontrado")
     })
     @GetMapping("/all")
-    ResponseEntity<List<ClienteDTO>> findAll();
+    ResponseEntity<List<ClienteEntity>> findAll();
 
     @Operation(summary = "Busca os clientes pelo nome")
     @ApiResponses(value = {
@@ -67,6 +67,6 @@ public interface IClienteController {
             @ApiResponse (responseCode = "400", description = "Parâmetros inválidos")
     })
     @GetMapping("/search")
-    ResponseEntity<List<ClienteDTO>> findByNome(@RequestParam String nome);
+    ResponseEntity<List<ClienteEntity>> findByNome(@RequestParam String nome);
 
 }

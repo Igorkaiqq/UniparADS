@@ -34,7 +34,7 @@ public class VendaEntity {
 
     @NotNull
     @JoinColumn(name = "ClienteId", referencedColumnName = "Id")
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.PERSIST)
     @Schema(description = "Cliente relacionado a venda")
     private ClienteEntity cliente;
 
