@@ -1,5 +1,6 @@
 package org.example.pdvapi.controllers;
 
+import org.example.pdvapi.entity.ProdutoEntity;
 import org.example.pdvapi.entity.VendaEntity;
 import org.example.pdvapi.interfaces.IVendaController;
 import org.example.pdvapi.services.VendaService;
@@ -44,6 +45,15 @@ public class VendaController implements IVendaController {
     @Override
     public ResponseEntity<List<VendaEntity>> findAll() {
         return ResponseEntity.ok(vendaService.findAll());
+    }
+
+    @Override
+    public ResponseEntity<Double> calcular(List<ProdutoEntity> produtos) {
+        double valorTotal = 0.0;
+        for (ProdutoEntity produto : produtos) {
+            valorTotal += produto.getPreco();
+        }
+        return ResponseEntity.ok(valorTotal);
     }
 
 }

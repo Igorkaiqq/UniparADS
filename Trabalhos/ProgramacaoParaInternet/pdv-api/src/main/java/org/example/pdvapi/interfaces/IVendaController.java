@@ -5,6 +5,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
+import org.example.pdvapi.entity.ProdutoEntity;
 import org.example.pdvapi.entity.VendaEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -58,6 +59,9 @@ public interface IVendaController {
     })
     @GetMapping("/all")
     ResponseEntity<List<VendaEntity>> findAll();
+
+    @PutMapping("/calcular-total")
+    ResponseEntity<Double> calcular( @RequestBody List<ProdutoEntity> produtos);
 
 
 }
