@@ -1,11 +1,14 @@
 package org.example.pdvapi.services;
 
 import org.example.pdvapi.entity.ItemVendaEntity;
+import org.example.pdvapi.entity.ProdutoEntity;
 import org.example.pdvapi.repositories.ItemVendaRepository;
+import org.example.pdvapi.repositories.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ItemVendaService {
@@ -13,8 +16,18 @@ public class ItemVendaService {
     @Autowired
     private ItemVendaRepository itemVendaRepository;
 
+    @Autowired
+    private ProdutoRepository produtoRepository;
+
     public void insert(ItemVendaEntity itemVenda) {
-        itemVendaRepository.save(itemVenda);
+        Optional<ProdutoEntity> produto = produtoRepository.findById(itemVenda.getProduto().getId());
+
+        if (produto != null) {
+            itemVenda.setProduto(produto.get());
+            itemVendaRepository.save(itemVenda);
+        } else {
+            throw new RuntimeException("Produto não encontrado");
+        }
     }
 
     public ItemVendaEntity update(ItemVendaEntity itemVenda){

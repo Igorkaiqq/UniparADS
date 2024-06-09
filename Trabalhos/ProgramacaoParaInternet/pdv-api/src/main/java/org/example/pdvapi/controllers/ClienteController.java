@@ -38,6 +38,7 @@ public class ClienteController implements IClienteController {
 
     @Override
     public ResponseEntity<ClienteEntity> findById(@PathVariable Long id) {
+
         return clienteService.findById(id);
     }
 

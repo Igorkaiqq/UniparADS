@@ -1,8 +1,10 @@
 package org.example.pdvapi.controllers;
 
 import org.example.pdvapi.entity.ItemVendaEntity;
+import org.example.pdvapi.entity.VendaEntity;
 import org.example.pdvapi.interfaces.IItemVendaController;
 import org.example.pdvapi.services.ItemVendaService;
+import org.example.pdvapi.services.VendaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,9 +19,15 @@ public class ItemVendaController implements IItemVendaController {
 
     @Autowired
     private ItemVendaService itemVendaService;
+    @Autowired
+    private VendaService vendaService;
 
     @Override
     public ResponseEntity<ItemVendaEntity> insert (@RequestBody ItemVendaEntity itemVenda, UriComponentsBuilder uriBuilder ){
+
+        VendaEntity venda = itemVenda.getVenda();
+        vendaService.insert(venda);
+        
         itemVendaService.insert(itemVenda);
         URI uri = uriBuilder.path("/itens-venda/{id}").buildAndExpand(itemVenda.getId()).toUri();
         return ResponseEntity.created(uri).body(itemVenda);
