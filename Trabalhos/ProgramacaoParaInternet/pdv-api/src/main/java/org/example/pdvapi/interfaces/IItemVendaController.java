@@ -59,5 +59,7 @@ public interface IItemVendaController {
     @GetMapping("/all")
     ResponseEntity<List<ItemVendaEntity>> findAll();
 
+    @PutMapping("/calcular-itemVenda")
+    ResponseEntity<Double> calcularItemVenda( @PathVariable Double preco, @PathVariable Integer quantidade);
 
 }
