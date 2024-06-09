@@ -32,7 +32,9 @@ public class SecurityConfigurations {
                                                         "/v3/api-docs/**").permitAll()
                         .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
                         .requestMatchers(HttpMethod.POST, "/auth/registrar").hasRole("ADMIN")
-                        .anyRequest().permitAll())
+                        .requestMatchers(HttpMethod.GET, "/clientes/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/produtos/**").hasRole("ADMIN")
+                        .anyRequest().authenticated())
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
