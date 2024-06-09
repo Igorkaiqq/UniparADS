@@ -40,16 +40,20 @@ public class AuthorizationService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return usuarioRepository.findByLogin(username);
+        UserDetails user = usuarioRepository.findByLogin(username);
+        if (user == null) {
+            throw new UsernameNotFoundException("User not found with username: " + username);
+        }
+        return user;
     }
 
-    public ResponseEntity<String> login(@Valid AuthenticationDTO authenticationDTO) {
+    public ResponseEntity<LoginResponseDTO> login(@Valid AuthenticationDTO authenticationDTO) {
         authenticationManager = applicationContext.getBean(AuthenticationManager.class);
         var usuarioSenha = new UsernamePasswordAuthenticationToken(authenticationDTO.login(), authenticationDTO.senha());
         var auth = this.authenticationManager.authenticate(usuarioSenha);
         if (auth.isAuthenticated()) {
             var token = tokenService.generateToken((UsuarioEntity) auth.getPrincipal());
-            return ResponseEntity.ok(new LoginResponseDTO(token).token());
+            return ResponseEntity.ok(new LoginResponseDTO(token));
         }
         return ResponseEntity.badRequest().build();
     }

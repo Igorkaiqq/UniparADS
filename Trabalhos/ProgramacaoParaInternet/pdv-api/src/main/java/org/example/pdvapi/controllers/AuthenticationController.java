@@ -3,6 +3,7 @@ package org.example.pdvapi.controllers;
 
 import jakarta.validation.Valid;
 import org.example.pdvapi.dto.AuthenticationDTO;
+import org.example.pdvapi.dto.LoginResponseDTO;
 import org.example.pdvapi.dto.RegistrarUsuarioDTO;
 import org.example.pdvapi.interfaces.IAuthenticationController;
 import org.example.pdvapi.services.AuthorizationService;
@@ -20,7 +21,8 @@ public class AuthenticationController implements IAuthenticationController {
     private AuthorizationService authorizationService;
 
     @Override
-    public ResponseEntity<String> login(@RequestBody @Valid AuthenticationDTO authenticationDTO) {
+    public ResponseEntity<LoginResponseDTO> login(@RequestBody @Valid AuthenticationDTO authenticationDTO) {
+        System.out.println(authenticationDTO.login() + " " + authenticationDTO.senha());
         return authorizationService.login(authenticationDTO);
     }
 
