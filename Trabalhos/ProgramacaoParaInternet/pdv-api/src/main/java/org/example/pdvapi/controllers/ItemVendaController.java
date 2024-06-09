@@ -27,7 +27,7 @@ public class ItemVendaController implements IItemVendaController {
 
         VendaEntity venda = itemVenda.getVenda();
         vendaService.insert(venda);
-        
+
         itemVendaService.insert(itemVenda);
         URI uri = uriBuilder.path("/itens-venda/{id}").buildAndExpand(itemVenda.getId()).toUri();
         return ResponseEntity.created(uri).body(itemVenda);
@@ -52,6 +52,12 @@ public class ItemVendaController implements IItemVendaController {
     @Override
     public ResponseEntity<List<ItemVendaEntity>> findAll (){
         return ResponseEntity.ok(itemVendaService.findAll());
+    }
+
+    @Override
+    public ResponseEntity<Double> calcularItemVenda(Double preco, Integer quantidade) {
+        Double total = preco * quantidade;
+        return ResponseEntity.ok(total);
     }
 
 }
