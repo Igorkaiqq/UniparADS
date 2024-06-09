@@ -2,7 +2,9 @@ package org.example.pdvapi.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.deser.std.DateDeserializers;
+import com.fasterxml.jackson.databind.ser.std.DateSerializer;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
@@ -29,7 +31,7 @@ public class VendaEntity {
     private Long id;
 
     @NotNull
-    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "MMM'.' dd, yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "yyyy-MM-dd")
     @Column(name = "Data")
     @Schema(description = "Data da venda", example = "01/01/2021")
     private Date data;
