@@ -48,7 +48,7 @@ public class ItemVendaEntity {
     private VendaEntity venda;
 
     @NotNull
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "ProdutoId", referencedColumnName = "Id")
     @Schema(description = "Produto relacionado ao item", example = "1")
     private ProdutoEntity produto;
