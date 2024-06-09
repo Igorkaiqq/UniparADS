@@ -1,5 +1,8 @@
 package org.example.pdvapi.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.deser.std.DateDeserializers;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
@@ -26,15 +29,14 @@ public class VendaEntity {
     private Long id;
 
     @NotNull
-    @NotEmpty
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "MMM'.' dd, yyyy")
     @Column(name = "Data")
     @Schema(description = "Data da venda", example = "01/01/2021")
     private Date data;
 
     @NotNull
     @JoinColumn(name = "ClienteId", referencedColumnName = "Id")
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne
     @Schema(description = "Cliente relacionado a venda")
     private ClienteEntity cliente;
 
