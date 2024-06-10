@@ -14,9 +14,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+
+
 @Configuration
 @EnableWebSecurity
-public class SecurityConfigurations {
+public class SecurityConfigurations  {
 
     @Autowired
     SecurityFilter securityFilter;
@@ -48,5 +50,6 @@ public class SecurityConfigurations {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
 
 }

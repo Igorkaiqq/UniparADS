@@ -1,13 +1,16 @@
 package org.example.pdvapi.controllers;
 
-
 import jakarta.validation.Valid;
+import org.example.pdvapi.controllers.handler.ExceptionHandlerController;
 import org.example.pdvapi.dto.AuthenticationDTO;
 import org.example.pdvapi.dto.LoginResponseDTO;
 import org.example.pdvapi.dto.RegistrarUsuarioDTO;
+import org.example.pdvapi.exceptions.ApiException;
+import org.example.pdvapi.exceptions.InvalidCredentialsException;
 import org.example.pdvapi.interfaces.IAuthenticationController;
 import org.example.pdvapi.services.AuthorizationService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,15 +24,18 @@ public class AuthenticationController implements IAuthenticationController {
     private AuthorizationService authorizationService;
 
     @Override
-    public ResponseEntity<LoginResponseDTO> login(@RequestBody @Valid AuthenticationDTO authenticationDTO) {
-        System.out.println(authenticationDTO.login() + " " + authenticationDTO.senha());
-        return authorizationService.login(authenticationDTO);
+    public ResponseEntity<LoginResponseDTO> login(@RequestBody @Valid AuthenticationDTO authenticationDTO) throws ApiException {
+        try {
+            LoginResponseDTO loginResponseDTO = authorizationService.login(authenticationDTO);
+            return ResponseEntity.ok(loginResponseDTO);
+        } catch (InvalidCredentialsException ex) {
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build(); // Retorna 401 Unauthorized
+        }
     }
+
 
     @Override
     public ResponseEntity<String> registrar(@RequestBody @Valid RegistrarUsuarioDTO usuario) {
         return authorizationService.registrarUsuario(usuario);
     }
-
-
 }
