@@ -5,13 +5,17 @@ import org.example.pdvapi.dto.AuthenticationDTO;
 import org.example.pdvapi.dto.LoginResponseDTO;
 import org.example.pdvapi.dto.RegistrarUsuarioDTO;
 import org.example.pdvapi.entity.UsuarioEntity;
+import org.example.pdvapi.exceptions.ApiException;
+import org.example.pdvapi.exceptions.InvalidCredentialsException;
 import org.example.pdvapi.infra.security.TokenService;
 import org.example.pdvapi.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -47,16 +51,21 @@ public class AuthorizationService implements UserDetailsService {
         return user;
     }
 
-    public ResponseEntity<LoginResponseDTO> login(@Valid AuthenticationDTO authenticationDTO) {
-        authenticationManager = applicationContext.getBean(AuthenticationManager.class);
-        var usuarioSenha = new UsernamePasswordAuthenticationToken(authenticationDTO.login(), authenticationDTO.senha());
-        var auth = this.authenticationManager.authenticate(usuarioSenha);
-        if (auth.isAuthenticated()) {
-            var token = tokenService.generateToken((UsuarioEntity) auth.getPrincipal());
-            return ResponseEntity.ok(new LoginResponseDTO(token));
+    public LoginResponseDTO login(@Valid AuthenticationDTO authenticationDTO) throws ApiException {
+        try {
+            authenticationManager = applicationContext.getBean(AuthenticationManager.class);
+            var usuarioSenha = new UsernamePasswordAuthenticationToken(authenticationDTO.login(), authenticationDTO.senha());
+            var auth = this.authenticationManager.authenticate(usuarioSenha);
+            if (auth.isAuthenticated()) {
+                var token = tokenService.generateToken((UsuarioEntity) auth.getPrincipal());
+                return new LoginResponseDTO(token);
+            }
+        } catch (AuthenticationException ex) {
+            throw new InvalidCredentialsException("Usuário ou senha inválidos");
         }
-        return ResponseEntity.badRequest().build();
+        return null;
     }
+
 
     public ResponseEntity<String> registrarUsuario(RegistrarUsuarioDTO usuario) {
         if (usuarioRepository.findByLogin(usuario.login()) != null || usuarioRepository.findByEmail(usuario.email()) != null){

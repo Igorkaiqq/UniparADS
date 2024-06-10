@@ -8,7 +8,7 @@ import java.util.List;
 
 @Getter
 @Setter
-public class ApiException {
+public class ApiException extends Exception {
 
     private List<String> errors;
 
