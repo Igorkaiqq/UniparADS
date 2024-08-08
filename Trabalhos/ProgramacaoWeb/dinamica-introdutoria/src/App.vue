@@ -1,17 +1,17 @@
 <template>
-  <div id = "app">
+  <div id="app">
     <header>
-      <img src="https://jolluand.com.br/site/image/data/Uniforme%20Profissional/xLogo%20Empresas/Unipar.gif">
+      <img src="https://jolluand.com.br/site/image/data/Uniforme%20Profissional/xLogo%20Empresas/Unipar.gif" alt="Logo">
       <h1>Bem vindo a minha página</h1>
     </header>
     <main>
-      <section class = "user-info">
-        <h2 id = "sobre">Sobre mim</h2>
-        <p><strong>Nome: </strong> <span>{{user.name || 'Carregando...'}}</span></p>
-        <p><strong>Idade: </strong> <span>{{user.age || 'Carregando...'}}</span></p>
-        <p><strong>Sobre mim: </strong> <span>{{user.about || 'Carregando...'}}</span></p>
+      <section class="user-info">
+        <h2 id="sobre">Sobre mim</h2>
+        <p><strong>Nome: </strong> <span>{{ user.name }}</span></p>
+        <p><strong>Idade: </strong> <span>{{ user.age }}</span></p>
+        <p><strong>Sobre mim: </strong> <span>{{ user.aboutme }}</span></p>
       </section>
-      <footer id = "copy">
+      <footer id="copy">
         <p>Copyright © 2024</p>
       </footer>
     </main>
@@ -26,22 +26,26 @@ export default {
     }
   },
   created() {
-    this.fetchUserData()
+    this.fetchUserData();
   },
   methods: {
-    fetchUserData() {
-      fetch('https://e699-177-91-39-96.ngrok-free.app/api/user', {
-        headers: {
-          'ngrok-skip-browser-warning': 'true'
+    async fetchUserData() {
+      try {
+        const apiUrl = 'https://a285-177-91-39-96.ngrok-free.app/api/user';
+        const response = await fetch(apiUrl, {
+          headers: {
+            'ngrok-skip-browser-warning': 'true'
+          }
+        });
+        if (!response.ok) {
+          throw new Error('a resposta do servidor nao deu certo');
         }
-      })
-          .then(response => response.json())
-          .then(data => {
-            this.user = data;
-          })
-          .catch(error => {
-            console.error('Erro ao buscar dados da API:', error);
-          });
+        const data = await response.json();
+        console.log(data);
+        this.user = data;
+      } catch (error) {
+        console.error('Erro ao buscar dados da API:', error);
+      }
     }
   }
 }
@@ -85,6 +89,7 @@ header {
   align-items: center;
   justify-content: center;
 }
+
 .user-info {
   margin-top: 20px;
 }
