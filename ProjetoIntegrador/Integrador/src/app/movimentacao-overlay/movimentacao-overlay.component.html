@@ -1,0 +1,13 @@
+<div class="overlay" *ngIf="isVisible">
+  <div class="overlay-content">
+    <div class="option receita">
+      <span>RECEITA</span>
+      <span class="icon">+</span>
+    </div>
+    <div class="option despesas">
+      <span>DESPESAS</span>
+      <span class="icon">−</span>
+    </div>
+    <button (click)="closeOverlay()">Fechar</button>
+  </div>
+</div>

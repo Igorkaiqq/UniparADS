@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="header">
+        <h1>Expert Wallet</h1>
+        <div class="buttons">
+            <button class="button-criar" (click)="overlay.openOverlay()">Criar Movimentação</button>
+            <button class="button-visualizar">Visualizar Movimentações</button>
+          </div>
+          <app-movimentacao-overlay #overlay></app-movimentacao-overlay>
+    </div>
+    <div class="container">
+        <div class="main">
+            <div class="card-row">
+                <div class="card saldo">
+                    <h2>Saldo</h2>
+                    <p>R$xx.xxx.xxx,xx</p>
+                </div>
+                <div class="card receitas">
+                    <h2>Receitas</h2>
+                    <p>R$xx.xxx.xxx,xx</p>
+                </div>
+                <div class="card despesas">
+                    <h2>Despesas</h2>
+                    <p>R$xx.xxx.xxx,xx</p>
+                </div>
+            </div>
+            <div class="card-row">
+                <div class="card">
+                    <h3>Moradia</h3>
+                    <p>R$xx.xxx.xxx,xx</p>
+                </div>
+                <div class="card">
+                    <h3>Cartão</h3>
+                    <p>R$xx.xxx.xxx,xx</p>
+                </div>
+                <div class="card">
+                    <h3>Transporte</h3>
+                    <p>R$xx.xxx.xxx,xx</p>
+                </div>
+                <div class="card">
+                    <h3>Lazer</h3>
+                    <p>R$xx.xxx.xxx,xx</p>
+                </div>
+            </div>
+            <div class="card-row">
+                <div class="card">
+                    <h3>Top 5 Despesas</h3>
+                </div>
+                <div class="card">
+                    <h3>Top 5 Receitas</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay">
+        <div class="overlay-content">
+            <div class="overlay-button">
+                <div class="receita" onclick="toggleOverlay()">RECEITA</div>
+                <div class="despesa" onclick="toggleOverlay()">DESPESAS</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleOverlay() {
+            const overlay = document.getElementById('overlay');
+            overlay.style.display = overlay.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>
