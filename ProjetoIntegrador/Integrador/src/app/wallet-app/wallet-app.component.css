@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.button-criar {
+  background-color: #B200FF;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-visualizar {
+  background-color: #FFBB00;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  height: calc(100vh - 100px);
+  gap: 20px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  min-width: 150px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.card.saldo { background-color: #6c8cf7; color: #fff; }
+.card.receitas { background-color: #78e08f; color: #fff; }
+.card.despesas { background-color: #f76c6c; color: #fff; }
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-content {
+  background-color: #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+.overlay-button {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.overlay-button div {
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.receita {
+  color: green;
+  border: 2px solid green;
+}
+
+.despesa {
+  color: red;
+  border: 2px solid red;
+}

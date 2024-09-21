@@ -1,0 +1,80 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d3d3d3;
+    padding: 10px;
+  }
+  
+  .logo, .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img, .user-info img {
+    width: 30px;
+    margin-right: 10px;
+  }
+  
+  .back-button {
+    background-color: #fdd835;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .table-container {
+    margin: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .progress-bar {
+    width: 100px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .progress {
+    height: 10px;
+    background-color: green;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: #d3d3d3;
+  }
+  
+  button {
+    padding: 10px;
+    border: 1px solid;
+    cursor: pointer;
+  }
+  
+  .create-goal {
+    color: green;
+    border-color: green;
+  }
+  
+  .edit-goal {
+    color: blue;
+    border-color: blue;
+  }
+  
+  .delete-goal {
+    color: red;
+    border-color: red;
+  }

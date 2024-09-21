@@ -1,0 +1,64 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #b3b3b3;
+  }
+  
+  .login-box {
+    text-align: center;
+    background-color: #e0e0e0;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    font-family: 'Arial', sans-serif;
+    color: #000;
+  }
+  
+  h1 span {
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .fa-wallet {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn-login {
+    background-color: #32cd32;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+  
+  .btn-login:hover {
+    background-color: #28a745;
+  }
+  
+  .create-account {
+    display: block;
+    margin-top: 20px;
+    color: #000;
+    text-decoration: underline;
+  }
+  

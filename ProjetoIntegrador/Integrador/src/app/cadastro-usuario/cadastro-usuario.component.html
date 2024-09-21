@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>CRIAR CONTA</h1>
+    <form [formGroup]="criarContaForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">Nome de Usuário:</label>
+        <input id="username" class="form-control" formControlName="username" type="text" />
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Senha:</label>
+        <input id="password" class="form-control" formControlName="password" type="password" />
+      </div>
+  
+      <div class="form-group">
+        <label for="confirmPassword">Repita a Senha:</label>
+        <input id="confirmPassword" class="form-control" formControlName="confirmPassword" type="password" />
+      </div>
+  
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input id="email" class="form-control" formControlName="email" type="email" />
+      </div>
+  
+      <div class="buttons">
+        <button type="submit" class="btn btn-success">SALVAR</button>
+        <button type="button" class="btn btn-danger" (click)="onCancel()">CANCELAR</button>
+      </div>
+    </form>
+  </div>
+  
