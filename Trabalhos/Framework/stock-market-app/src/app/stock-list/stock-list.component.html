@@ -1,0 +1,40 @@
+<div class="main-container">
+  <h1 class="main-title">Cotações de Hoje</h1>
+
+  <h2 class="section-title">Ações</h2>
+  <div class="card-grid">
+    <div class="card" *ngFor="let stock of stocks$ | async">
+      <div class="stock-info">
+        <strong>{{ stock.simbolo }}</strong> - {{ stock.nomeEmpresa }}
+      </div>
+      <div class="price-container">
+        <span class="previous-price">{{ stock.previousPrice | currency }}</span>
+>
+        <span class="current-price" [ngClass]="stock.isRising ? 'price-up' : 'price-down'">
+          {{ stock.preco | currency }}
+        </span>
+        <span class="arrow" [ngClass]="stock.isRising ? 'arrow-up' : 'arrow-down'">
+          {{ stock.isRising ? '↑' : '↓' }}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Fundos Imobiliários</h2>
+  <div class="card-grid">
+    <div class="card" *ngFor="let fund of funds$ | async">
+      <div class="stock-info">
+        <strong>{{ fund.simbolo }}</strong> - {{ fund.nomeEmpresa }}
+      </div>
+      <div class="price-container">
+        <span class="previous-price">{{ fund.previousPrice | currency }}</span>
+        <span class="current-price" [ngClass]="fund.isRising ? 'price-up' : 'price-down'">
+          {{ fund.preco | currency }}
+        </span>
+        <span class="arrow" [ngClass]="fund.isRising ? 'arrow-up' : 'arrow-down'">
+          {{ fund.isRising ? '↑' : '↓' }}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

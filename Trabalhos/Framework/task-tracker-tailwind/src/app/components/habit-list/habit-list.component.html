@@ -1,0 +1,27 @@
+<div class="container mx-auto">
+  <h1 class="text-3xl font-bold mb-6">Habit Tracker</h1>
+  <table class="min-w-full bg-white">
+    <thead>
+    <tr>
+      <th class="py-2 px-4 bg-gray-200 text-gray-600 font-bold uppercase text-sm">Data</th>
+      <th class="py-2 px-4 bg-gray-200 text-gray-600 font-bold uppercase text-sm">Habito I</th>
+      <th class="py-2 px-4 bg-gray-200 text-gray-600 font-bold uppercase text-sm">Habito II</th>
+      <th class="py-2 px-4 bg-gray-200 text-gray-600 font-bold uppercase text-sm">Habito III</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let habito of habitos">
+      <td class="py-2 px-4 border-b">{{ habito.date | date }}</td>
+      <td class="py-2 px-4 border-b text-center">
+        <input type="checkbox" class="form-checkbox h-5 w-5" [checked]="habito.habitoI">
+      </td>
+      <td class="py-2 px-4 border-b text-center">
+        <input type="checkbox" class="form-checkbox h-5 w-5" [checked]="habito.habitoII">
+      </td>
+      <td class="py-2 px-4 border-b text-center">
+        <input type="checkbox" class="form-checkbox h-5 w-5" [checked]="habito.habitoIII">
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>

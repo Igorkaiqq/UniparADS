@@ -1,0 +1,102 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 2.5em;
+  color: #003366;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  font-size: 1.5em;
+  color: #003366;
+  margin: 20px 0;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.stock-info {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.price-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.previous-price {
+  font-size: 1em;
+  color: #888;
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+
+.current-price.price-up {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: green;
+}
+
+.current-price.price-down {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: red;
+}
+
+.arrow {
+  font-size: 1.5em;
+  margin-left: 10px;
+}
+
+.arrow-up {
+  color: green;
+}
+
+.arrow-down {
+  color: red;
+}
+
+
+h2.section-title {
+  background-color: #003366;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.card {
+  background-color: #e6f7ff;
+}

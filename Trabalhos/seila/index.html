@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Switches</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Dashboard de Switches</h2>
+<table>
+    <thead>
+    <tr>
+        <th>REGISTRO</th>
+        <th>DATA</th>
+        <th>HORA</th>
+        <th>HOSTNAME</th>
+        <th>IP_ADDRESS</th>
+        <th>MAC_ADDRESS</th>
+        <th>MARCA</th>
+        <th>MODELO</th>
+        <th>NUM_SERIE</th>
+        <th>VERSAO</th>
+        <th>IMOBILIZADO</th>
+    </tr>
+    </thead>
+    <tbody id="switchTableBody">
+    <!-- Dados serão inseridos aqui -->
+    </tbody>
+</table>
+
+<script>
+    // Dados simulados da tabela
+    const switches = [
+        {
+            REGISTRO: 1,
+            DATA: '2024-08-21',
+            HORA: '12:00:00',
+            HOSTNAME: 'Switch01',
+            IP_ADDRESS: '192.168.0.1',
+            MAC_ADDRESS: '00:1A:2B:3C:4D:5E',
+            MARCA: 'Cisco',
+            MODELO: 'XYZ123',
+            NUM_SERIE: 'ABC123456',
+            VERSAO: 'v1.0',
+            IMOBILIZADO: '12345'
+        },
+        {
+            REGISTRO: 2,
+            DATA: '2024-08-21',
+            HORA: '12:05:00',
+            HOSTNAME: 'Switch02',
+            IP_ADDRESS: '192.168.0.2',
+            MAC_ADDRESS: '00:1A:2B:3C:4D:5F',
+            MARCA: 'HP',
+            MODELO: 'ABC456',
+            NUM_SERIE: 'DEF789101',
+            VERSAO: 'v1.2',
+            IMOBILIZADO: '54321'
+        }
+    ];
+
+    // Função para preencher a tabela
+    function loadTableData(items) {
+        const tableBody = document.getElementById('switchTableBody');
+        let dataHtml = '';
+
+        items.forEach(item => {
+            dataHtml += `<tr>
+                    <td>${item.REGISTRO}</td>
+                    <td>${item.DATA}</td>
+                    <td>${item.HORA}</td>
+                    <td>${item.HOSTNAME}</td>
+                    <td>${item.IP_ADDRESS}</td>
+                    <td>${item.MAC_ADDRESS}</td>
+                    <td>${item.MARCA}</td>
+                    <td>${item.MODELO}</td>
+                    <td>${item.NUM_SERIE}</td>
+                    <td>${item.VERSAO}</td>
+                    <td>${item.IMOBILIZADO}</td>
+                </tr>`;
+        });
+
+        tableBody.innerHTML = dataHtml;
+    }
+
+    // Carregar os dados ao carregar a página
+    document.addEventListener('DOMContentLoaded', function() {
+        loadTableData(switches);
+    });
+</script>
+
+</body>
+</html>
