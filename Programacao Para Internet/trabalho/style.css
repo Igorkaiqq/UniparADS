@@ -1,0 +1,405 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #e10600 0%, #000000 100%);
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+
+.cabecalho h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    height: 80px;
+    width: auto;
+    max-width: 150px;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.3));
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+h2 {
+    color: #e10600;
+    border-bottom: 2px solid #e10600;
+    padding-bottom: 8px;
+    margin-top: 30px;
+    font-size: 1.5rem;
+}
+
+.tabelas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.nomesTabela {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.nomesTabela h2 {
+    width: 48%;
+    text-align: center;
+    background-color: #e10600;
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    margin: 0;
+    border: none;
+}
+
+.tabelas {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #e10600;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+span {
+    display: block;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-left: 4px solid #e10600;
+    margin: 20px 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.flag {
+    display: inline-block;
+    width: 25px;
+    height: 18px;
+    margin-right: 8px;
+    vertical-align: middle;
+    background-size: cover;
+    border-radius: 2px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.flag::before {
+    content: attr(data-fallback);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: bold;
+    color: black;
+    background-color: #f0f0f0;
+}
+
+.flag[style*="background-image"]::before {
+    display: none;
+}
+
+.flag::after {
+    content: attr(data-country);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+.flag:hover::after {
+    opacity: 1;
+    visibility: visible;
+    bottom: calc(100% + 5px);
+}
+
+.podio {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 200px;
+    margin: 40px 0;
+    gap: 20px;
+}
+
+.podio-posicao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.podio-posicao:nth-child(1) {
+    height: 150px;
+    order: 2;
+}
+
+.podio-posicao:nth-child(2) {
+    height: 120px;
+    order: 1;
+}
+
+.podio-posicao:nth-child(3) {
+    height: 90px;
+    order: 3;
+}
+
+.podio-degrau {
+    width: 100px;
+    background: linear-gradient(to right, #e10600, #b80500);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 -3px 5px rgba(0,0,0,0.2);
+}
+
+.podio-posicao:nth-child(1) .podio-degrau {
+    height: 150px;
+    background: linear-gradient(to right, #ffd700, #daa520);
+}
+
+.podio-posicao:nth-child(2) .podio-degrau {
+    height: 120px;
+    background: linear-gradient(to right, #c0c0c0, #a0a0a0);
+}
+
+.podio-posicao:nth-child(3) .podio-degrau {
+    height: 90px;
+    background: linear-gradient(to right, #cd7f32, #a05a2c);
+}
+
+.podio-piloto {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    white-space: nowrap;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.podio-piloto .flag {
+    margin-right: 5px;
+}
+
+.podio-numero {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.tabela-construtores {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.tabela-construtores th {
+    background-color: #e10600;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.tabela-construtores td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tabela-construtores tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.tabela-construtores tr:hover {
+    background-color: #f1f1f1;
+}
+
+.equipe-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.equipe-logo {
+    width: 30px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Cores das equipes */
+.equipe-redbull { background-color: rgba(54, 113, 198, 0.1); }
+.equipe-mclaren { background-color: rgba(245, 128, 32, 0.1); }
+.equipe-mercedes { background-color: rgba(108, 211, 191, 0.1); }
+.equipe-ferrari { background-color: rgba(249, 21, 54, 0.1); }
+
+.etapas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.etapa-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+}
+
+.etapa-titulo {
+    color: #e10600;
+    margin-top: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+tr:nth-child(1) {
+    background-color: #fff9e6;
+}
+
+tr:nth-child(2) {
+    background-color: #f8f8f8;
+}
+
+tr:nth-child(3) {
+    background-color: #f5efe6;
+}
+
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .cabecalho h1 {
+        margin: 15px 0;
+        font-size: 1.4rem;
+    }
+
+    .tabelas {
+        flex-direction: column;
+    }
+
+    .nomesTabela {
+        flex-direction: column;
+    }
+
+    .nomesTabela h2 {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    table {
+        margin-bottom: 20px;
+    }
+
+    .podio {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .podio-posicao {
+        width: 80%;
+        height: auto !important;
+        margin-bottom: 20px;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .podio-degrau {
+        width: 100%;
+        height: 60px !important;
+        border-radius: 5px;
+    }
+
+    .podio-piloto {
+        position: static;
+        transform: none;
+        margin-bottom: 0;
+        margin-right: 10px;
+    }
+
+    .podio-numero {
+        top: auto;
+        bottom: 10px;
+    }
+}

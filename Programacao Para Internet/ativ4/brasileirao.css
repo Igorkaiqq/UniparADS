@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    border-width: 1px;
+    border-color: #dddddd;
+    width: 600px;
+    text-align: center;
+}
+
+td, th {
+    border: none;
+    border-bottom: 1px solid #DDDDDD;;
+}
+
+td:nth-child(3),
+td:nth-child(5),
+td:nth-child(7),
+td:nth-child(9),
+td:nth-child(11){
+    background-color: #F7F7F7;
+}
+
+tr:nth-child(n+2) td:nth-child(2) {
+    color: #666666;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: start;
+}
+
+tr:nth-child(n+2) td:nth-child(1) {
+    color: #003366;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+tr:nth-child(1) {
+    color: #999999;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+td:nth-child(3) {
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+}
+tr:nth-child(n+2) td:nth-child(n+4) {
+    color: #666666;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+tr:nth-child(5) td:nth-child(1) {
+    color: #1398BE;
+}
+
+tr:nth-child(n+6) td:nth-child(1) {
+    color: #DE9800;
+}
+
+tr:nth-child(n+13) td:nth-child(1) {
+    color: #CCCCCC;
+}
+
+tr:nth-child(n+18) td:nth-child(1) {
+    color: #DDDDDD;
+}
+
+tr:nth-child(5),
+tr:nth-child(17){
+    border: none;
+    border-bottom: 2px solid #CCCCCC;
+}
+
+td:nth-child(n+3):not(td:nth-child(11)){
+    width: 30px;
+}
+
+.faixa {
+    margin-right: 16px;
+    font-size: 10px;
+    font-family: sans-serif;
+    text-align: start;
+}
+
+.libertadores {
+    color: #1F4EA0;
+}
+
+.pre-libertadores {
+    color: #69B3E7;
+}
+
+.sul-americana {
+    color: #F8C300;
+}
+
+.rebaixados {
+    color: #C62828;
+}
+
+.tr:nth-child(23) {
+    font-size: 10px;
+}
