@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atividade 2 Bimestre</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <h1>Trabalho do 2 Bimestre de Introdução de Programação para Internet</h1>
+
+<section id="Triangulo">
+  <h2>Encontre o triangulo</h2>
+  <label>Lado X:</label>
+  <input type="number" id="ladoX"><br>
+  <label>Lado Y:</label>
+  <input type="number" id="ladoY"><br>
+  <label>Lado Z:</label>
+  <input type="number" id="ladoZ"><br>
+  <button id="verificarTriangulo">Enviar</button><br>
+  <h3 id="resultadoTriangulo"></h3>
+</section>
+
+<section id="IMC">
+  <h2>Encontre o IMC</h2>
+  <label>Altura:</label>
+  <input type="number" id="altura"><br>
+  <label>Peso:</label>
+  <input type="number" id="peso"><br>
+  <button id="verificarIMC">Calcular IMC</button><br>
+  <h3 id="resultadoIMC"></h3>
+  <h4 id="indicesIMC"></h4>
+</section>
+
+<section id="CalculadoraImposto">
+  <h2>Calculadora Imposto na transferencia de Veiculos</h2>
+  <label>Valor do carro:</label>
+  <input type="number" id="valorCarro"><br>
+  <label>Ano do carro:</label>
+  <input type="number" id="anoCarro"><br>
+  <button id="verificarImposto">Calcular Imposto</button><br>
+  <h3 id="resultadoImposto"></h3>
+</section>
+
+<section id="CalculadoraSalario">
+  <h2>Calculadora Salario</h2>
+  <label>Tabela de Aumento</label>
+  <table id="tabelaAumento">
+    <tr>
+      <th>Codigo</th>
+      <th>Cargo</th>
+      <th>Percentual</th>
+    </tr>
+    <tr>
+      <th>101</th>
+      <th>Gerente</th>
+      <th>10%</th>
+    </tr>
+    <tr>
+      <th>102</th>
+      <th>Engenheiro</th>
+      <th>20%</th>
+    </tr>
+    <tr>
+      <th>103</th>
+      <th>Técnico</th>
+      <th>30%</th>
+    </tr>
+  </table>
+  <br>
+  <label>Qual seu salário?</label>
+  <input type="number" id="salario"><br>
+  <label>Qual seu cargo?</label>
+  <input type="text" id="cargo"><br>
+  <button id="verificarSalario">Calcular Aumento</button>
+  <h3 id="resultadoSalario"></h3>
+</section>
+
+<section id="CalculadoraCreditoBancario">
+  <h2>Calculadora de Crédito Bancario</h2>
+  <table id="tabelaCreditoBancario">
+    <tr>
+      <th>Saldo Médio</th>
+      <th>Percentual</th>
+    </tr>
+    <tr>
+      <th>De 0 a 200</th>
+      <th>Nenhum crédito</th>
+    </tr>
+    <tr>
+      <th>De 201 a 400</th>
+      <th>20%</th>
+    </tr>
+    <tr>
+      <th>De 401 a 600</th>
+      <th>30%</th>
+    </tr>
+    <tr>
+      <th>Acima de 500</th>
+      <th>40%</th>
+    </tr>
+  </table>
+  <label>Qual seu saldo?</label>
+  <input type="number" id="saldoCredito"><br>
+  <button id="verificarCreditoBancario">Calcular Crédito</button>
+  <h2 id="resultadoCredito"></h2>
+</section>
+
+<section id="Lanchonete">
+  <h2>Lanchonete</h2>
+  <table id="tabelaLanchonete">
+    <tr>
+      <th>Produto</th>
+      <th>Preço</th>
+    </tr>
+    <tr>
+      <th>Cachorro Quente</th>
+      <th>R$11,00</th>
+    </tr>
+    <tr>
+      <th>Bauru</th>
+      <th>R$8,50</th>
+    </tr>
+    <tr>
+      <th>Misto Quente</th>
+      <th>R$8,00</th>
+    </tr>
+    <tr>
+      <th>Hamburguer</th>
+      <th>R$9,00</th>
+    </tr>
+    <tr>
+      <th>Cheeseburger</th>
+      <th>R$10,00</th>
+    </tr>
+    <tr>
+      <th>Refrigerante</th>
+      <th>R$4,50</th>
+    </tr>
+  </table>
+  <label>Qual produto deseja?</label>
+  <input type="text" id="produto"><br>
+  <label>Quantidade</label>
+  <input type="number" id="quantidade"><br>
+  <button id="calcularLanchonete">Calcular valor</button><br>
+  <h3 id="resultadoLanchonete"></h3>
+</section>
+
+<section>
+  <h2>Sistema de Vendas</h2>
+  <label>Preço do Produto</label>
+  <input type="number" id="valorProduto"><br>
+  <label for="codigoPagamento">Condição de pagamento:</label>
+  <select id="codigoPagamento" >
+    <option value="">--Selecione--</option>
+    <option value="1">a - À vista em dinheiro ou cheque (10% desconto)</option>
+    <option value="2">b - À vista no cartão (15% desconto)</option>
+    <option value="3">c - Em 2x sem juros</option>
+    <option value="4">d - Em 2x com 10% de juros</option>
+  </select><br>
+  <button id="verificarVenda">Calcular Pagamento</button><br>
+  <h3 id="resultadoVenda"></h3>
+</section>
+
+<section>
+  <h2>Pagamento Professor</h2>
+  <label>Nível do professor (1, 2 ou 3):</label>
+  <select id="nivel" >
+    <option value="">--Selecione--</option>
+    <option value="1">Nível 1 - R$12,00/hora</option>
+    <option value="2">Nível 2 - R$17,00/hora</option>
+    <option value="3">Nível 3 - R$25,00/hora</option>
+  </select><br><br>
+  <label>Horas/aula por semana:</label>
+  <input type="number" id="horasAula" ><br><br>
+
+  <button id="calcularHoras">Calcular Salário</button>
+
+  <p id="salarioProfessor"></p>
+</section>
+</body>
+<script src="js/app.js"></script>
+</html>
