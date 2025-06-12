@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+:root {
+  --unipar-vermelho: #CC0000;
+  --unipar-vermelho-hover: #A30000;
+  --unipar-cinza-escuro: #222222;
+  --unipar-cinza-medio: #555555;
+  --unipar-cinza-claro: #f0f0f0;
+  --unipar-azul-detalhe: #4D90FE;
+  --texto-branco: #ffffff;
+  --texto-principal: var(--unipar-cinza-escuro);
+  --fundo-pagina: #ffffff;
+  --fundo-secao-alternativo: var(--unipar-cinza-claro);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: var(--fundo-pagina);
+  color: var(--texto-principal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header {
+  background-color: var(--fundo-pagina);
+  color: var(--texto-principal);
+  padding: 0.8rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  border-bottom: 3px solid var(--unipar-vermelho);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+img.logo {
+  max-height: 55px;
+  margin-right: 20px;
+}
+
+.title-group {
+  text-align: left;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: var(--unipar-cinza-escuro);
+}
+
+header p {
+  margin: 0.1rem 0 0 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--unipar-cinza-medio);
+}
+
+main {
+  padding: 2.5rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 2.5rem;
+  background-color: var(--fundo-pagina);
+  padding: 1.8rem 2rem;
+  border-radius: 6px;
+  border: 1px solid var(--unipar-cinza-claro);
+}
+
+section h2 {
+  color: var(--unipar-cinza-escuro);
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  border-bottom: 3px solid var(--unipar-vermelho);
+  padding-bottom: 0.6rem;
+  display: inline-block;
+}
+
+section h3 {
+  color: var(--unipar-vermelho);
+  margin-top: 1.8rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+ul, ol {
+  padding-left: 1.8rem;
+}
+
+ul li, ol li {
+  margin-bottom: 0.7rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+table, th, td {
+  border: 1px solid #e0e0e0;
+}
+
+th {
+  background-color: var(--unipar-cinza-escuro);
+  color: var(--texto-branco);
+  padding: 0.9rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95em;
+}
+
+td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+}
+
+a {
+  color: var(--unipar-vermelho);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover, a:focus {
+  color: var(--unipar-vermelho-hover);
+  text-decoration: underline;
+}
+
+.button, input[type="submit"], button {
+  display: inline-block;
+  background-color: var(--unipar-vermelho);
+  color: var(--texto-branco);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover, input[type="submit"]:hover, button:hover {
+  background-color: var(--unipar-vermelho-hover);
+  color: var(--texto-branco);
+  text-decoration: none;
+}
+
+nav.breadcrumb {
+  margin-bottom: 1.8rem;
+  font-size: 0.9em;
+  color: var(--unipar-cinza-medio);
+}
+
+nav.breadcrumb a {
+  color: var(--unipar-vermelho);
+  font-weight: 500;
+}
+
+nav.breadcrumb a:hover, nav.breadcrumb a:focus {
+  color: var(--unipar-vermelho-hover);
+}
+
+footer {
+  background-color: var(--unipar-cinza-escuro);
+  color: #bbbbbb;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  font-size: 0.85em;
+}
+
+footer p {
+  margin: 0.5em 0;
+}
+
+footer a {
+  color: var(--texto-branco);
+  font-weight: 500;
+}
+
+footer a:hover {
+  color: var(--unipar-vermelho);
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 0.5rem 1rem;
+  }
+
+  img.logo {
+    margin-bottom: 10px;
+    margin-right: 0;
+    max-height: 45px;
+  }
+
+  header {
+    padding: 0.5rem 1rem;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  main {
+    padding: 2rem 3%;
+  }
+
+  section {
+    padding: 1.2rem 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.45rem;
+  }
+
+  section h3 {
+    font-size: 1.15rem;
+  }
+}
